@@ -1,0 +1,24 @@
+# Local recovery and development artifacts
+*.jsonl
+exact-index.html
+recovered-*.html
+extract-*.js
+fix-recovered-svg.js
+generate-pages.js
+list-index-actions.js
+recover-original.js
+scan-archive-snapshots.js
+ui-baseline/
+UI-BASELINE.md
+
+# Generated legacy pages not used by the active landing page
+en/
+fa/
+site.css
+site.js
+PHASE-2-WEBSITE-COPY.md
+
+# Local tooling
+.vercel/
+.DS_Store
+Thumbs.db
