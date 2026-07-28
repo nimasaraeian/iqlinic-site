@@ -208,11 +208,13 @@ const alternates = (type) => `<link rel="alternate" hreflang="en" href="${hrefs(
   <link rel="alternate" hreflang="x-default" href="${hrefs(type,"en")}">`;
 
 function nav(c, lang, article = false) {
-  const prefix = article ? "../../" : "../";
+  const languageLink = (target) => article
+    ? `/${target}/insights/${slugs[target]}/`
+    : `/${target}/insights/`;
   return `<header><nav class="nav shell">
     <a class="logo" href="/${lang}/" aria-label="iQlinic ${c.home}"><img src="/assets/iqlinic-brand.png" alt="iQlinic"><span>CLINICAL INTELLIGENCE</span></a>
     <div class="navlinks"><a href="/${lang}/">${c.home}</a><a aria-current="page" href="/${lang}/insights/">${c.nav}</a></div>
-    <div class="actions"><div class="languages" aria-label="Language"><a href="${article?hrefs("article","en"):"/en/insights/"}">EN</a><a href="${article?hrefs("article","tr"):"/tr/insights/"}">TR</a><a href="${article?hrefs("article","fa"):"/fa/insights/"}">FA</a></div><a class="button small ghost" href="mailto:contact@iqlinic.com">${c.cta}</a><button class="menu" aria-label="Menu"><i></i><i></i></button></div>
+    <div class="actions"><div class="languages" aria-label="Language"><a${lang==="en"?' class="active"':""} href="${languageLink("en")}">EN</a><a${lang==="tr"?' class="active"':""} href="${languageLink("tr")}">TR</a><a${lang==="fa"?' class="active"':""} href="${languageLink("fa")}">FA</a></div><a class="button small ghost" href="mailto:contact@iqlinic.com">${c.cta}</a><button class="menu" aria-label="Menu"><i></i><i></i></button></div>
   </nav></header>`;
 }
 function footer(c, lang) {
