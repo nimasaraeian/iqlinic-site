@@ -11,9 +11,7 @@ scan-archive-snapshots.js
 ui-baseline/
 UI-BASELINE.md
 
-# Generated legacy pages not used by the active landing page
-en/
-fa/
+# Generated legacy files not used by the active landing page
 site.css
 site.js
 PHASE-2-WEBSITE-COPY.md
