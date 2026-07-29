@@ -211,9 +211,11 @@ function nav(c, lang, article = false) {
   const languageLink = (target) => article
     ? `/${target}/insights/${slugs[target]}/`
     : `/${target}/insights/`;
+  const solutionLink = lang==="tr" ? "/tr/dis-klinikleri-icin-yapay-zeka/" : `/${lang}/dental-clinic-ai-software/`;
+  const solutionLabel = lang==="tr" ? "Yapay Zekâ Yazılımı" : lang==="fa" ? "نرم‌افزار هوش مصنوعی" : "AI Software";
   return `<header><nav class="nav shell">
     <a class="logo" href="/${lang}/" aria-label="iQlinic ${c.home}"><img src="/assets/iqlinic-brand.png" alt="iQlinic"><span>CLINICAL INTELLIGENCE</span></a>
-    <div class="navlinks"><a href="/${lang}/">${c.home}</a><a aria-current="page" href="/${lang}/insights/">${c.nav}</a></div>
+    <div class="navlinks"><a href="/${lang}/">${c.home}</a><a href="${solutionLink}">${solutionLabel}</a><a aria-current="page" href="/${lang}/insights/">${c.nav}</a></div>
     <div class="actions"><div class="languages" aria-label="Language"><a${lang==="en"?' class="active"':""} href="${languageLink("en")}">EN</a><a${lang==="tr"?' class="active"':""} href="${languageLink("tr")}">TR</a><a${lang==="fa"?' class="active"':""} href="${languageLink("fa")}">FA</a></div><a class="button small ghost" href="mailto:contact@iqlinic.com">${c.cta}</a><button class="menu" aria-label="Menu"><i></i><i></i></button></div>
   </nav></header>`;
 }
@@ -242,6 +244,7 @@ function hub(c, lang) {
 }
 function article(c, lang) {
   const url=hrefs("article",lang);
+  const solutionLink = lang==="tr" ? "/tr/dis-klinikleri-icin-yapay-zeka/" : `/${lang}/dental-clinic-ai-software/`;
   const schema = [
     {"@context":"https://schema.org","@type":"Article","headline":c.title,"description":c.description,"image":[`${site}/assets/iqlinic-brand.png`],"datePublished":published,"dateModified":published,"author":{"@type":"Organization","name":"iQlinic Editorial Team","url":site},"publisher":{"@type":"Organization","name":"iQlinic","logo":{"@type":"ImageObject","url":`${site}/assets/iqlinic-brand.png`}},"mainEntityOfPage":{"@type":"WebPage","@id":url},"inLanguage":lang},
     {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":c.home,"item":`${site}/${lang}/`},{"@type":"ListItem","position":2,"name":c.insights,"item":hrefs("hub",lang)},{"@type":"ListItem","position":3,"name":c.shortTitle,"item":url}]}
@@ -253,7 +256,7 @@ function article(c, lang) {
   <div class="article-visual" role="img" aria-label="${c.shortTitle}"><div class="journey"><span>${c.artA}</span><i></i><span>?</span><i></i><span>${c.artB}</span></div></div>
   <div class="article-body article-shell">${c.body}
     <section class="references"><h2>${lang==="tr"?"Kaynaklar":lang==="fa"?"منابع":"References"}</h2><ol>${c.refs.map(([n,u])=>`<li><a href="${u}" rel="noopener noreferrer">${n}</a></li>`).join("")}</ol></section>
-    <aside class="article-cta"><div class="insights-kicker"><i></i>${c.ctaKicker}</div><h2>${c.ctaTitle}</h2><p>${c.ctaBody}</p><a class="button primary" href="mailto:contact@iqlinic.com">${c.cta} ↗</a></aside>
+    <aside class="article-cta"><div class="insights-kicker"><i></i>${c.ctaKicker}</div><h2>${c.ctaTitle}</h2><p>${c.ctaBody}</p><a class="button primary" href="${solutionLink}">${c.cta} ↗</a></aside>
   </div></article>
 </main>${footer(c,lang)}<script>const m=document.querySelector(".menu"),n=document.querySelector(".navlinks");m?.addEventListener("click",()=>n?.classList.toggle("open"));</script></body></html>`;
 }
