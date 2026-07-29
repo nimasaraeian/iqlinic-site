@@ -216,7 +216,7 @@ function nav(c, lang, article = false) {
   return `<header><nav class="nav shell">
     <a class="logo" href="/${lang}/" aria-label="iQlinic ${c.home}"><img src="/assets/iqlinic-brand.png" alt="iQlinic"><span>CLINICAL INTELLIGENCE</span></a>
     <div class="navlinks"><a href="/${lang}/">${c.home}</a><a href="${solutionLink}">${solutionLabel}</a><a aria-current="page" href="/${lang}/insights/">${c.nav}</a></div>
-    <div class="actions"><div class="languages" aria-label="Language"><a${lang==="en"?' class="active"':""} href="${languageLink("en")}">EN</a><a${lang==="tr"?' class="active"':""} href="${languageLink("tr")}">TR</a><a${lang==="fa"?' class="active"':""} href="${languageLink("fa")}">FA</a></div><a class="button small ghost" href="mailto:contact@iqlinic.com">${c.cta}</a><button class="menu" aria-label="Menu"><i></i><i></i></button></div>
+    <div class="actions"><div class="languages" aria-label="Language"><a${lang==="en"?' class="active"':""} href="${languageLink("en")}">EN</a><a${lang==="tr"?' class="active"':""} href="${languageLink("tr")}">TR</a><a${lang==="fa"?' class="active"':""} href="${languageLink("fa")}">FA</a></div><a class="button small ghost" href="mailto:contact@iqlinic.ir">${c.cta}</a><button class="menu" aria-label="Menu"><i></i><i></i></button></div>
   </nav></header>`;
 }
 function footer(c, lang) {
@@ -240,7 +240,7 @@ function hub(c, lang) {
 <body class="insights-page">${nav(c,lang)}<div class="noise"></div><main>
   <section class="insights-hero shell"><div class="insights-kicker"><i></i>${c.insights} / iQlinic</div><h1>${c.hubTitle}</h1><p>${c.hubLead}</p><div class="topic-row"><span>${c.category}</span><span>Patient 360</span><span>Clinical Operations</span><span>Responsible AI</span></div></section>
   <section class="insights-grid shell${lang==="fa"?" insights-list":""}">${lang==="fa"?`<a class="featured-article" href="/fa/insights/ai-dental-clinic/"><div class="article-art"><div class="rings"></div><strong>02</strong><span>هوش مصنوعی کلینیک</span><span>تصمیم‌یار مسئولانه</span></div><div class="article-card-copy"><div class="article-meta"><span>راهنمای جامع</span><i></i><span>۱۸ دقیقه مطالعه</span></div><h2>هوش مصنوعی کلینیک دندانپزشکی؛ از ابزار نمایشی تا تصمیم واقعی</h2><p>کاربردهای واقعی، ریسک‌ها، معیار انتخاب ابزار، شاخص‌های موفقیت و یک نقشه اجرای ۹۰ روزه برای مدیران کلینیک.</p><span class="read-link">مطالعه راهنمای جامع ↗</span></div></a>`:""}<a class="featured-article" href="/${lang}/insights/${slugs[lang]}/"><div class="article-art"><div class="rings"></div><strong>01</strong><span>${c.artA}</span><span>${c.artB}</span></div><div class="article-card-copy"><div class="article-meta"><span>${c.category}</span><i></i><span>${c.read}</span></div><h2>${c.title}</h2><p>${c.deck}</p><span class="read-link">${c.hubRead} ↗</span></div></a></section>
-</main>${footer(c,lang)}<script>const m=document.querySelector(".menu"),n=document.querySelector(".navlinks");m?.addEventListener("click",()=>n?.classList.toggle("open"));</script></body></html>`;
+</main>${footer(c,lang)}<script>const m=document.querySelector(".menu"),n=document.querySelector(".navlinks");m?.addEventListener("click",()=>n?.classList.toggle("open"));</script><script src="/contact-widget.js?v=1"></script></body></html>`;
 }
 function article(c, lang) {
   const url=hrefs("article",lang);
@@ -258,7 +258,7 @@ function article(c, lang) {
     <section class="references"><h2>${lang==="tr"?"Kaynaklar":lang==="fa"?"منابع":"References"}</h2><ol>${c.refs.map(([n,u])=>`<li><a href="${u}" rel="noopener noreferrer">${n}</a></li>`).join("")}</ol></section>
     <aside class="article-cta"><div class="insights-kicker"><i></i>${c.ctaKicker}</div><h2>${c.ctaTitle}</h2><p>${c.ctaBody}</p><a class="button primary" href="${solutionLink}">${c.cta} ↗</a></aside>
   </div></article>
-</main>${footer(c,lang)}<script>const m=document.querySelector(".menu"),n=document.querySelector(".navlinks");m?.addEventListener("click",()=>n?.classList.toggle("open"));</script></body></html>`;
+</main>${footer(c,lang)}<script>const m=document.querySelector(".menu"),n=document.querySelector(".navlinks");m?.addEventListener("click",()=>n?.classList.toggle("open"));</script><script src="/contact-widget.js?v=1"></script></body></html>`;
 }
 for (const [lang,c] of Object.entries(content)) {
   fs.mkdirSync(`${lang}/insights/${slugs[lang]}`, {recursive:true});
