@@ -241,7 +241,7 @@ const alternates = () => `<link rel="alternate" hreflang="en" href="${url("en")}
   <link rel="alternate" hreflang="tr" href="${url("tr")}">
   <link rel="alternate" hreflang="fa" href="${url("fa")}">
   <link rel="alternate" hreflang="x-default" href="${url("en")}">`;
-const mail = c => `mailto:contact@iqlinic.com?subject=${encodeURIComponent(c.subject)}`;
+const mail = c => `mailto:contact@iqlinic.ir?subject=${encodeURIComponent(c.subject)}`;
 
 function render(lang) {
   const c = copy[lang];
@@ -288,6 +288,7 @@ function render(lang) {
   </main>
   <footer><div class="shell footer"><a class="logo" href="/${lang}/"><img src="/assets/iqlinic-brand.png" alt="iQlinic"></a><p>${c.description}</p><div><a href="/en/${routes.en}/">English</a><a href="/tr/${routes.tr}/">Türkçe</a><a href="/fa/${routes.fa}/">فارسی</a></div><small>© 2026 iQlinic</small></div></footer>
   <script>const m=document.querySelector(".menu"),n=document.querySelector(".navlinks");m?.addEventListener("click",()=>n?.classList.toggle("open"));const o=new IntersectionObserver(e=>e.forEach(x=>x.isIntersecting&&x.target.classList.add("visible")),{threshold:.08});document.querySelectorAll(".reveal").forEach(x=>o.observe(x));document.addEventListener("mousemove",e=>{const g=document.querySelector(".cursor-glow");if(g)g.style.transform=\`translate(\${e.clientX-300}px,\${e.clientY-300}px)\`});</script>
+  <script src="/contact-widget.js?v=1"></script>
 </body></html>`;
 }
 
