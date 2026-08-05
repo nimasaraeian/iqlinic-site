@@ -1,3 +1,4 @@
 User-agent: *
 Allow: /
 Sitemap: https://www.iqlinic.ir/sitemap.xml
+# Deployment refresh: 2026-08-05
