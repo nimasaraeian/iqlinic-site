@@ -76,3 +76,125 @@
   const footer = document.querySelector("body > footer");
   document.body.insertBefore(section, footer || null);
 })();
+
+/* Editorial SEO enhancements shared by all Insights pages. */
+(() => {
+  const path = location.pathname;
+  const language = document.documentElement.lang || document.body.dataset.pageLang || path.split("/")[1] || "en";
+
+  if (language === "fa" && path === "/fa/dental-clinic-ai-software/") {
+    const h1 = document.querySelector("main h1");
+    if (h1) h1.innerHTML = "نرم افزار هوش مصنوعی کلینیک دندانپزشکی<em>از داده پراکنده تا اقدام بعدی توضیح‌پذیر.</em>";
+    const xDefault = document.querySelector('link[rel="alternate"][hreflang="x-default"]');
+    if (xDefault) xDefault.href = "https://www.iqlinic.ir/fa/dental-clinic-ai-software/";
+  }
+
+  if (language === "fa" && path === "/fa/insights/") {
+    const h1 = document.querySelector(".insights-hero h1");
+    const deck = document.querySelector(".insights-hero>p");
+    if (h1) h1.innerHTML = "مقالات هوش مصنوعی<br><em>کلینیک دندانپزشکی.</em>";
+    if (deck) deck.textContent = "راهنماهای پژوهش‌محور و اجرایی درباره هوش مصنوعی کلینیک دندانپزشکی، یکپارچه‌سازی داده، منشی هوشمند، بازگشت بیمار، حریم خصوصی و سنجش پایلوت AI.";
+    const xDefault = document.querySelector('link[rel="alternate"][hreflang="x-default"]');
+    if (xDefault) xDefault.href = "https://www.iqlinic.ir/fa/insights/";
+  }
+
+  const topics = [
+    {
+      re: /(patient-treatment-plan-follow-up|why-dental-patients-do-not-return-after-treatment-plan|tedavi-plani-alan-hastalar-neden-geri-donmuyor)/,
+      image: "https://images.unsplash.com/photo-1777331903190-341a3dd0441b?auto=format&fit=crop&w=1600&q=82",
+      alt: {fa:"پیگیری بازگشت بیمار در کلینیک دندانپزشکی با کمک هوش مصنوعی",en:"Dentist discussing treatment follow-up with a patient in a modern dental clinic",tr:"Modern diş kliniğinde hasta takip görüşmesi yapan diş hekimi"},
+      related: ["/fa/insights/dental-clinic-ai-receptionist/","/fa/insights/dental-clinic-ai-decision-support/"]
+    },
+    {
+      re: /(ai-dental-clinic-guide|\/ai-dental-clinic\/|dis-klinigi-yapay-zeka-rehberi)/,
+      image: "https://images.pexels.com/photos/4269490/pexels-photo-4269490.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      alt: {fa:"دندانپزشک در حال استفاده از کامپیوتر و نرم افزار هوش مصنوعی در کلینیک دندانپزشکی",en:"Dentist using a computer and digital software in a dental clinic",tr:"Diş kliniğinde bilgisayar ve dijital yazılım kullanan diş hekimi"},
+      related: ["/fa/insights/dental-clinic-ai-data-integration/","/fa/insights/dental-clinic-ai-buying-guide/"]
+    },
+    {
+      re: /(decision-support|karar-destek)/,
+      image: "https://images.pexels.com/photos/6502162/pexels-photo-6502162.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      alt: {fa:"بررسی تصویر دندان روی مانیتور به عنوان نمونه پشتیبانی تصمیم در کلینیک دندانپزشکی",en:"Dental professionals reviewing a dental image on a computer monitor",tr:"Bilgisayar ekranında dental görüntüyü inceleyen diş hekimleri"},
+      related: ["/fa/insights/ai-dental-clinic/","/fa/insights/dental-clinic-ai-pilot-metrics/"]
+    },
+    {
+      re: /(data-integration|veri-entegrasyonu)/,
+      image: "https://images.pexels.com/photos/6627359/pexels-photo-6627359.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      alt: {fa:"یکپارچه سازی داده کلینیک دندانپزشکی روی لپ تاپ برای استفاده از هوش مصنوعی",en:"Dentist reviewing digital patient data on a laptop with a patient",tr:"Hasta ile birlikte dizüstü bilgisayarda dijital verileri inceleyen diş hekimi"},
+      related: ["/fa/insights/dental-clinic-ai-data-privacy/","/fa/insights/dental-clinic-ai-buying-guide/"]
+    },
+    {
+      re: /(buying-guide|satin-alma-rehberi)/,
+      image: "https://images.unsplash.com/photo-1642844819197-5f5f21b89ff8?auto=format&fit=crop&w=1600&q=82",
+      alt: {fa:"کلینیک دندانپزشکی مدرن برای ارزیابی و خرید نرم افزار هوش مصنوعی",en:"Modern dental treatment room representing dental AI software evaluation",tr:"Yapay zeka yazılımı değerlendirmesini temsil eden modern diş kliniği"},
+      related: ["/fa/insights/dental-clinic-ai-pilot-metrics/","/fa/insights/dental-clinic-ai-data-privacy/"]
+    },
+    {
+      re: /(pilot-metrics|pilot-metrikleri)/,
+      image: "https://images.unsplash.com/photo-1657470179447-0f5aa16daa91?auto=format&fit=crop&w=1600&q=82",
+      alt: {fa:"دندانپزشک در محیط واقعی کلینیک برای ارزیابی پایلوت هوش مصنوعی",en:"Dentist working with a patient in a real clinical environment for AI pilot evaluation",tr:"Yapay zeka pilot değerlendirmesi için klinik ortamında çalışan diş hekimi"},
+      related: ["/fa/insights/dental-clinic-ai-buying-guide/","/fa/insights/dental-clinic-ai-data-integration/"]
+    },
+    {
+      re: /(receptionist|resepsiyonisti)/,
+      image: "https://images.pexels.com/photos/6812439/pexels-photo-6812439.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      alt: {fa:"پذیرش کلینیک دندانپزشکی و نمونه کاربرد منشی هوش مصنوعی برای ارتباط با بیمار",en:"Dental clinic reception illustrating an AI receptionist workflow",tr:"Yapay zeka resepsiyonist iş akışını temsil eden diş kliniği resepsiyonu"},
+      related: ["/fa/insights/patient-treatment-plan-follow-up/","/fa/insights/dental-clinic-ai-data-privacy/"]
+    },
+    {
+      re: /(data-privacy|veri-gizliligi)/,
+      image: "https://images.pexels.com/photos/6809664/pexels-photo-6809664.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      alt: {fa:"گفت‌وگوی بیمار با پذیرش کلینیک دندانپزشکی در زمینه حریم خصوصی و مدیریت داده",en:"Patient speaking with dental clinic reception about care and data handling",tr:"Diş kliniği resepsiyonunda hasta iletişimi ve veri yönetimi"},
+      related: ["/fa/insights/dental-clinic-ai-data-integration/","/fa/insights/dental-clinic-ai-buying-guide/"]
+    }
+  ];
+
+  const topic = topics.find(item => item.re.test(path));
+  const visual = document.querySelector(".article-visual");
+  if (!topic || !visual) return;
+
+  const alt = topic.alt[language] || topic.alt.en;
+  const img = document.createElement("img");
+  img.src = topic.image;
+  img.alt = alt;
+  img.width = 1600;
+  img.height = 900;
+  img.loading = "eager";
+  img.decoding = "async";
+  img.fetchPriority = "high";
+  img.style.cssText = "position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;opacity:1;z-index:0";
+  Array.from(visual.children).forEach(child => child.style.display = "none");
+  visual.prepend(img);
+  visual.setAttribute("aria-label", alt);
+
+  const og = document.querySelector('meta[property="og:image"]');
+  if (og) og.content = topic.image;
+  let twitter = document.querySelector('meta[name="twitter:image"]');
+  if (!twitter) {
+    twitter = document.createElement("meta");
+    twitter.name = "twitter:image";
+    document.head.appendChild(twitter);
+  }
+  twitter.content = topic.image;
+
+  document.querySelectorAll('script[type="application/ld+json"]').forEach(node => {
+    try {
+      const data = JSON.parse(node.textContent);
+      const list = Array.isArray(data) ? data : [data];
+      list.forEach(item => {
+        if (["Article","BlogPosting","NewsArticle"].includes(item?.["@type"])) item.image = [topic.image];
+      });
+      node.textContent = JSON.stringify(Array.isArray(data) ? list : list[0]);
+    } catch (_) {}
+  });
+
+  if (language === "fa" && !document.querySelector(".seo-related-links")) {
+    const cta = document.querySelector(".article-cta");
+    const container = document.createElement("aside");
+    container.className = "seo-related-links";
+    container.style.cssText = "margin:64px 0 0;padding:30px;border:1px solid rgba(110,210,252,.22);border-radius:18px;background:rgba(8,20,32,.62)";
+    const related = topic.related.map((href, index) => `<a href="${href}" style="display:block;color:#9fdfff;text-decoration:none;padding:9px 0">${index === 0 ? "راهنمای مرتبط بعدی" : "مطالعه تکمیلی"} ↗</a>`).join("");
+    container.innerHTML = `<div class="insights-kicker"><i></i>مسیر مطالعه پیشنهادی</div><h2 style="margin:14px 0 12px;font-size:27px">هوش مصنوعی کلینیک دندانپزشکی را عمیق‌تر بررسی کنید</h2><a href="/fa/dental-clinic-ai-software/" style="display:block;color:#d9f5ff;text-decoration:none;padding:9px 0;font-weight:700">نرم افزار هوش مصنوعی کلینیک دندانپزشکی ↗</a><a href="/fa/demo/" style="display:block;color:#9fdfff;text-decoration:none;padding:9px 0">مشاهده دموی iQlinic ↗</a>${related}`;
+    (cta || document.querySelector(".article-body"))?.insertAdjacentElement(cta ? "beforebegin" : "beforeend", container);
+  }
+})();
