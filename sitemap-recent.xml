@@ -1,12 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://www.iqlinic.ir/fa/</loc><lastmod>2026-08-11</lastmod></url>
+  <url><loc>https://www.iqlinic.ir/en/</loc><lastmod>2026-08-11</lastmod></url>
+  <url><loc>https://www.iqlinic.ir/tr/</loc><lastmod>2026-08-11</lastmod></url>
+  <url><loc>https://www.iqlinic.ir/fa/demo/</loc><lastmod>2026-08-11</lastmod></url>
+  <url><loc>https://www.iqlinic.ir/en/demo/</loc><lastmod>2026-08-11</lastmod></url>
+  <url><loc>https://www.iqlinic.ir/tr/demo/</loc><lastmod>2026-08-11</lastmod></url>
   <url><loc>https://www.iqlinic.ir/en/insights/dental-clinic-ai-automation/</loc><lastmod>2026-08-11</lastmod></url>
   <url><loc>https://www.iqlinic.ir/tr/insights/dis-klinigi-yapay-zeka-otomasyonu/</loc><lastmod>2026-08-11</lastmod></url>
   <url><loc>https://www.iqlinic.ir/fa/insights/dental-clinic-ai-automation/</loc><lastmod>2026-08-11</lastmod></url>
   <url><loc>https://www.iqlinic.ir/en/insights/</loc><lastmod>2026-08-11</lastmod></url>
   <url><loc>https://www.iqlinic.ir/tr/insights/</loc><lastmod>2026-08-11</lastmod></url>
   <url><loc>https://www.iqlinic.ir/fa/insights/</loc><lastmod>2026-08-11</lastmod></url>
-  <url><loc>https://www.iqlinic.ir/fa/</loc><lastmod>2026-08-08</lastmod></url>
   <url><loc>https://www.iqlinic.ir/fa/dental-clinic-ai-software/</loc><lastmod>2026-08-08</lastmod></url>
   <url><loc>https://www.iqlinic.ir/fa/insights/patient-treatment-plan-follow-up/</loc><lastmod>2026-08-08</lastmod></url>
   <url><loc>https://www.iqlinic.ir/en/insights/why-dental-patients-do-not-return-after-treatment-plan/</loc><lastmod>2026-08-08</lastmod></url>
