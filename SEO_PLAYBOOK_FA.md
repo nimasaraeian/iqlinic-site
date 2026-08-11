@@ -5,6 +5,24 @@ Last updated: 2026-08-11
 ## North-star objective
 Build topical authority in Persian around operational AI for dental clinics, with the commercial cluster led by iQlinic rather than competing internally across multiple near-duplicate pages.
 
+## Mandatory trilingual release standard
+Every new editorial article must be published as one coordinated release in **Persian, English and Turkish on the same day**. A release is not complete until all three localized pages are live.
+
+For every article release:
+- create high-quality localized Persian, English and Turkish versions; do not publish literal machine translations without language-specific editing;
+- localize title, H1, meta description, CTA copy, image alt text, internal anchors and search terminology for each market;
+- add each version to its language-specific Insights hub;
+- use self-referencing canonicals on all three URLs;
+- add reciprocal `hreflang` links for `fa`, `en`, `tr` plus `x-default` on all three pages;
+- add the complete three-URL cluster to `sitemap.xml` with reciprocal hreflang annotations;
+- add all three fresh URLs to `sitemap-recent.xml` with the accurate publication date;
+- confirm `index,follow` and absence of blocking `X-Robots-Tag` headers on the public production URLs;
+- verify all three production pages return HTTP 200 after deployment;
+- keep both sitemaps discoverable through `robots.txt`;
+- when direct Google Search Console / URL Inspection access is available, request indexing for all three canonicals; otherwise use sitemap discovery and explicitly state that direct Request Indexing could not be performed.
+
+Do not intentionally release one language first and leave the other two for later unless the user explicitly overrides this standard for that specific article.
+
 ## Keyword ownership
 
 | Search intent | Primary page | Notes |
@@ -43,7 +61,7 @@ Use varied, descriptive anchors. Avoid repeating the exact same anchor excessive
 - Search-intent-led title and meta description.
 - `index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1`.
 - Self-referencing canonical.
-- Correct reciprocal hreflang where translations exist.
+- Correct reciprocal hreflang across all three mandatory language versions.
 - Article schema + BreadcrumbList schema.
 - FAQ schema only when the visible article contains a genuine FAQ section.
 - Published and modified dates must be accurate.
