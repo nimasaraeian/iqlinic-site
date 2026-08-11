@@ -1,6 +1,6 @@
 # iQlinic Persian SEO Playbook
 
-Last updated: 2026-08-08
+Last updated: 2026-08-11
 
 ## North-star objective
 Build topical authority in Persian around operational AI for dental clinics, with the commercial cluster led by iQlinic rather than competing internally across multiple near-duplicate pages.
@@ -20,6 +20,7 @@ Build topical authority in Persian around operational AI for dental clinics, wit
 | پایلوت هوش مصنوعی کلینیک دندانپزشکی | `/fa/insights/dental-clinic-ai-pilot-metrics/` | Evaluation / proof intent. |
 | حریم خصوصی داده هوش مصنوعی کلینیک | `/fa/insights/dental-clinic-ai-data-privacy/` | Governance intent. |
 | سیستم پشتیبان تصمیم هوش مصنوعی کلینیک | `/fa/insights/dental-clinic-ai-decision-support/` | Decision-support intent. |
+| اتوماسیون هوش مصنوعی کلینیک دندانپزشکی | `/fa/insights/dental-clinic-ai-automation/` | Workflow automation / operational AI intent. |
 | بازگشت بیمار کلینیک دندانپزشکی | `/fa/insights/patient-treatment-plan-follow-up/` | Patient recovery / continuity intent. |
 
 ## Anti-cannibalization rules
