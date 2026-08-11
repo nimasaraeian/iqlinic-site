@@ -1,0 +1,125 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+<title id="title">Dental clinic AI automation hero</title>
+<desc id="desc">A premium modern dental clinic reception with staff reviewing an AI-assisted operational dashboard.</desc>
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#eef8fb"/><stop offset=".52" stop-color="#d9eef3"/><stop offset="1" stop-color="#b8dce6"/></linearGradient>
+  <linearGradient id="wall" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#f9fcfd"/><stop offset="1" stop-color="#e6f3f6"/></linearGradient>
+  <linearGradient id="desk" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#ffffff"/><stop offset="1" stop-color="#d9e9ed"/></linearGradient>
+  <linearGradient id="screen" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0b1b28"/><stop offset="1" stop-color="#123849"/></linearGradient>
+  <linearGradient id="teal" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#4ed1df"/><stop offset="1" stop-color="#117d9a"/></linearGradient>
+  <linearGradient id="skin" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f2c6a5"/><stop offset="1" stop-color="#d99570"/></linearGradient>
+  <radialGradient id="glow"><stop stop-color="#8be8f1" stop-opacity=".62"/><stop offset="1" stop-color="#8be8f1" stop-opacity="0"/></radialGradient>
+  <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="18" stdDeviation="22" flood-color="#183a48" flood-opacity=".18"/></filter>
+  <filter id="soft" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="24"/></filter>
+</defs>
+
+<rect width="1600" height="900" fill="url(#bg)"/>
+<circle cx="228" cy="224" r="290" fill="url(#glow)"/>
+<rect x="0" y="0" width="930" height="650" fill="url(#wall)"/>
+<path d="M0 0h980v84c-145 20-277 25-430 17C367 91 187 60 0 72Z" fill="#fff" opacity=".8"/>
+<path d="M0 88c207 26 405 43 600 20 119-14 247-38 380-24" fill="none" stroke="#7fd6e2" stroke-width="8" opacity=".38"/>
+
+<!-- architectural details -->
+<rect x="560" y="215" width="225" height="270" rx="18" fill="#f4fbfc" stroke="#d8e8ec"/>
+<rect x="590" y="248" width="165" height="204" rx="10" fill="#c5e5ea"/>
+<path d="M613 410c44-62 78-86 136-124" fill="none" stroke="#8acbd4" stroke-width="22" opacity=".65"/>
+<path d="M612 376c51-29 86-43 142-50" fill="none" stroke="#e5b9a0" stroke-width="11" opacity=".5"/>
+
+<!-- waiting area -->
+<g opacity=".88">
+  <rect x="356" y="590" width="210" height="94" rx="28" fill="#7eb6c4"/>
+  <rect x="375" y="648" width="28" height="94" rx="12" fill="#517d88"/>
+  <rect x="520" y="648" width="28" height="94" rx="12" fill="#517d88"/>
+  <ellipse cx="686" cy="692" rx="88" ry="24" fill="#a0c4cc" opacity=".45"/>
+  <rect x="675" y="610" width="18" height="90" rx="8" fill="#7a9da6"/>
+  <ellipse cx="684" cy="600" rx="56" ry="13" fill="#eff8f9"/>
+  <path d="M680 584c8-42 17-61 34-85M680 584c-24-42-32-64-30-91M680 584c31-34 52-46 74-47" stroke="#69a879" stroke-width="8" fill="none" stroke-linecap="round"/>
+</g>
+
+<!-- rear staff silhouette -->
+<g opacity=".65">
+  <circle cx="844" cy="394" r="25" fill="url(#skin)"/>
+  <path d="M807 433q36-30 74 0l15 126h-107Z" fill="#1597a8"/>
+  <rect x="816" y="548" width="27" height="92" rx="12" fill="#0d7284"/><rect x="855" y="548" width="27" height="92" rx="12" fill="#0d7284"/>
+</g>
+
+<!-- reception wall and tooth icon -->
+<rect x="1080" y="0" width="520" height="620" fill="#e8d5c2" opacity=".78"/>
+<path d="M1393 95c-25-21-69-15-85 14-18 32 5 67 19 91 11 18 14 67 35 69 19 2 20-36 30-50 11 16 11 52 31 50 22-2 24-51 36-69 15-24 37-59 19-91-16-29-60-35-85-14Z" fill="none" stroke="#eafaff" stroke-width="15" filter="url(#shadow)"/>
+<rect x="1240" y="310" width="285" height="198" rx="22" fill="#0d2b3a" filter="url(#shadow)"/>
+<rect x="1262" y="335" width="241" height="38" rx="10" fill="#1a6c84"/>
+<g fill="#dff8fb" opacity=".9"><rect x="1266" y="400" width="56" height="10" rx="5"/><rect x="1340" y="400" width="128" height="10" rx="5"/><rect x="1266" y="432" width="56" height="10" rx="5"/><rect x="1340" y="432" width="104" height="10" rx="5"/><rect x="1266" y="464" width="56" height="10" rx="5"/><rect x="1340" y="464" width="142" height="10" rx="5"/></g>
+
+<!-- curved desk -->
+<path d="M545 641c225-61 452-72 704-20 140 29 256 79 351 150V900H615c-30-67-53-157-70-259Z" fill="url(#desk)" filter="url(#shadow)"/>
+<path d="M550 642c256-74 592-70 824 12 81 29 157 66 226 111" fill="none" stroke="#fff" stroke-width="22" opacity=".95"/>
+
+<!-- desktop monitor -->
+<g filter="url(#shadow)">
+  <rect x="900" y="478" width="225" height="150" rx="14" fill="#243c45"/>
+  <rect x="914" y="492" width="197" height="121" rx="8" fill="url(#screen)"/>
+  <rect x="990" y="628" width="46" height="49" rx="10" fill="#78929b"/>
+  <rect x="955" y="669" width="116" height="15" rx="8" fill="#91a8af"/>
+  <g fill="#55d6df"><rect x="936" y="520" width="70" height="12" rx="6"/><rect x="936" y="546" width="145" height="8" rx="4" opacity=".55"/><rect x="936" y="568" width="106" height="8" rx="4" opacity=".35"/></g>
+</g>
+
+<!-- staff member 1 -->
+<g filter="url(#shadow)">
+  <ellipse cx="1178" cy="332" rx="62" ry="73" fill="url(#skin)"/>
+  <path d="M1118 320c1-65 35-102 88-91 32 7 52 33 54 75-26-15-52-35-79-55-12 30-32 51-63 71Z" fill="#3b2a29"/>
+  <path d="M1122 423q70-47 144 0l48 225h-242Z" fill="url(#teal)"/>
+  <path d="M1181 405l-16 43 31 34 32-34-17-43" fill="#f0c2a1"/>
+  <path d="M1068 546c-59 23-81 73-92 120l41 13c16-47 39-73 76-82Z" fill="#1294a7"/>
+  <circle cx="1002" cy="674" r="24" fill="url(#skin)"/>
+</g>
+
+<!-- staff member 2 -->
+<g filter="url(#shadow)">
+  <ellipse cx="1371" cy="463" rx="60" ry="69" fill="url(#skin)"/>
+  <path d="M1317 454c-4-58 30-94 82-91 40 3 61 28 66 71-32-18-62-37-94-57-8 31-27 53-54 77Z" fill="#3c2c2a"/>
+  <path d="M1320 544q67-41 137-6l99 218-221 74-89-200Z" fill="#202a31"/>
+  <path d="M1452 382q70 55 41 159" fill="none" stroke="#3c2c2a" stroke-width="28" stroke-linecap="round"/>
+  <path d="M1328 603c-45 25-75 57-90 91l42 18c20-27 44-47 73-60Z" fill="#202a31"/>
+  <circle cx="1257" cy="698" r="23" fill="url(#skin)"/>
+</g>
+
+<!-- tablet and AI dashboard -->
+<g transform="rotate(-4 1185 610)" filter="url(#shadow)">
+  <rect x="1030" y="535" width="350" height="235" rx="28" fill="#152832"/>
+  <rect x="1046" y="550" width="318" height="202" rx="18" fill="#f5fbfc"/>
+  <rect x="1067" y="570" width="86" height="162" rx="12" fill="#e7f3f5"/>
+  <circle cx="1091" cy="595" r="11" fill="#4ccbd7"/>
+  <rect x="1110" y="588" width="29" height="7" rx="4" fill="#7b9aa5"/>
+  <circle cx="1091" cy="633" r="11" fill="#86c5ce"/>
+  <rect x="1110" y="626" width="29" height="7" rx="4" fill="#7b9aa5"/>
+  <circle cx="1091" cy="671" r="11" fill="#a9d7dd"/>
+  <rect x="1110" y="664" width="29" height="7" rx="4" fill="#7b9aa5"/>
+  <rect x="1170" y="570" width="77" height="58" rx="12" fill="#e4f1f3"/><rect x="1257" y="570" width="84" height="58" rx="12" fill="#e4f1f3"/>
+  <text x="1193" y="605" font-family="Arial,sans-serif" font-size="27" font-weight="700" fill="#14394a">28</text><text x="1288" y="605" font-family="Arial,sans-serif" font-size="27" font-weight="700" fill="#14394a">16</text>
+  <rect x="1170" y="644" width="171" height="88" rx="14" fill="#e9f5f6"/>
+  <path d="M1190 705l31-18 31 7 31-30 35 19" fill="none" stroke="#20a9bd" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="1215" cy="683" r="23" fill="none" stroke="#3cc9d3" stroke-width="8" stroke-dasharray="90 54"/>
+</g>
+
+<!-- hand interactions -->
+<path d="M1090 542c25 22 51 42 80 61" stroke="url(#skin)" stroke-width="29" stroke-linecap="round"/><circle cx="1178" cy="610" r="18" fill="url(#skin)"/>
+<path d="M1302 615c-20 9-38 22-56 39" stroke="url(#skin)" stroke-width="27" stroke-linecap="round"/><circle cx="1238" cy="660" r="17" fill="url(#skin)"/>
+
+<!-- workflow overlay -->
+<g opacity=".96" filter="url(#shadow)">
+  <rect x="130" y="170" width="315" height="88" rx="25" fill="#0b2838"/>
+  <circle cx="182" cy="214" r="25" fill="#35cbd8"/><path d="M170 214l9 9 17-20" fill="none" stroke="#fff" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="222" y="197" width="165" height="13" rx="7" fill="#e9fbfd"/><rect x="222" y="220" width="118" height="9" rx="5" fill="#80b6c3"/>
+  <rect x="170" y="302" width="360" height="104" rx="28" fill="#ffffff" opacity=".92"/>
+  <circle cx="220" cy="354" r="28" fill="#cceef2"/><path d="M207 354h26M220 341v26" stroke="#158fa4" stroke-width="6" stroke-linecap="round"/>
+  <rect x="265" y="331" width="186" height="13" rx="7" fill="#2e5564"/><rect x="265" y="357" width="128" height="10" rx="5" fill="#87aab4"/>
+  <rect x="130" y="450" width="300" height="82" rx="24" fill="#0b2838"/>
+  <circle cx="181" cy="491" r="22" fill="#64dbe3"/><path d="M170 491h22" stroke="#fff" stroke-width="6" stroke-linecap="round"/>
+  <rect x="220" y="475" width="155" height="12" rx="6" fill="#effcfd"/><rect x="220" y="498" width="105" height="9" rx="5" fill="#7fafbb"/>
+  <path d="M445 215c74 18 106 64 99 131" fill="none" stroke="#2db7c7" stroke-width="5" stroke-dasharray="8 10"/>
+  <path d="M530 354c61 25 111 82 130 147" fill="none" stroke="#2db7c7" stroke-width="5" stroke-dasharray="8 10"/>
+</g>
+
+<!-- foreground vignette -->
+<rect width="1600" height="900" fill="none" stroke="#072431" stroke-width="90" opacity=".05"/>
+</svg>
