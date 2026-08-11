@@ -2,39 +2,24 @@
   const language = document.documentElement.lang || document.body.dataset.pageLang || "en";
   const copy = {
     en: {
-      eyebrow: "CONTACT iQLINIC",
-      title: "Start a focused conversation.",
+      eyebrow: "CONTACT iQLINIC", title: "Start a focused conversation.",
       description: "Choose the channel that works best for you. We usually reply within one business day.",
-      email: "Email",
-      emailHint: "contact@iqlinic.ir",
-      whatsapp: "WhatsApp",
-      whatsappHint: "Message our team",
-      telegram: "Telegram",
-      telegramHint: "Start a private chat",
+      email: "Email", emailHint: "contact@iqlinic.ir", whatsapp: "WhatsApp", whatsappHint: "Message our team",
+      telegram: "Telegram", telegramHint: "Start a private chat",
       message: "Hello iQlinic, I would like to learn more about your clinical intelligence solution for dental clinics."
     },
     tr: {
-      eyebrow: "iQLINIC İLETİŞİM",
-      title: "Odaklı bir görüşme başlatalım.",
+      eyebrow: "iQLINIC İLETİŞİM", title: "Odaklı bir görüşme başlatalım.",
       description: "Size en uygun kanalı seçin. Genellikle bir iş günü içinde yanıt veririz.",
-      email: "E-posta",
-      emailHint: "contact@iqlinic.ir",
-      whatsapp: "WhatsApp",
-      whatsappHint: "Ekibimize yazın",
-      telegram: "Telegram",
-      telegramHint: "Özel sohbet başlatın",
+      email: "E-posta", emailHint: "contact@iqlinic.ir", whatsapp: "WhatsApp", whatsappHint: "Ekibimize yazın",
+      telegram: "Telegram", telegramHint: "Özel sohbet başlatın",
       message: "Merhaba iQlinic, diş klinikleri için klinik zekâ çözümünüz hakkında daha fazla bilgi almak istiyorum."
     },
     fa: {
-      eyebrow: "ارتباط با iQlinic",
-      title: "یک گفت‌وگوی هدفمند را شروع کنیم.",
+      eyebrow: "ارتباط با iQlinic", title: "یک گفت‌وگوی هدفمند را شروع کنیم.",
       description: "مسیر ارتباطی مناسب خود را انتخاب کنید؛ معمولاً طی یک روز کاری پاسخ می‌دهیم.",
-      email: "ایمیل",
-      emailHint: "contact@iqlinic.ir",
-      whatsapp: "واتساپ",
-      whatsappHint: "پیام به تیم ما",
-      telegram: "تلگرام",
-      telegramHint: "شروع گفت‌وگوی خصوصی",
+      email: "ایمیل", emailHint: "contact@iqlinic.ir", whatsapp: "واتساپ", whatsappHint: "پیام به تیم ما",
+      telegram: "تلگرام", telegramHint: "شروع گفت‌وگوی خصوصی",
       message: "سلام iQlinic، برای آشنایی بیشتر با راهکار هوشمندی بالینی ویژه کلینیک‌های دندانپزشکی پیام می‌دهم."
     }
   };
@@ -66,18 +51,12 @@
 
   const section = document.createElement("section");
   section.className = "contact-hub contact-section shell";
-  section.innerHTML = `
-    <div class="contact-intro">
-      <span>${text.eyebrow}</span>
-      <h2>${text.title}</h2>
-      <p>${text.description}</p>
-    </div>
-    ${channels}`;
+  section.innerHTML = `<div class="contact-intro"><span>${text.eyebrow}</span><h2>${text.title}</h2><p>${text.description}</p></div>${channels}`;
   const footer = document.querySelector("body > footer");
   document.body.insertBefore(section, footer || null);
 })();
 
-/* Editorial SEO enhancements shared by all Insights pages. */
+/* Editorial SEO and hero-image enhancements shared by all Insights pages. */
 (() => {
   const path = location.pathname;
   const language = document.documentElement.lang || document.body.dataset.pageLang || path.split("/")[1] || "en";
@@ -99,6 +78,16 @@
   }
 
   const topics = [
+    {
+      re: /(dental-clinic-ai-automation|dis-klinigi-yapay-zeka-otomasyonu)/,
+      image: "/assets/insights/dental-clinic-ai-automation-hero.svg",
+      alt: {
+        fa: "تیم کلینیک دندانپزشکی در حال بررسی داشبورد اتوماسیون هوش مصنوعی و اولویت‌های عملیاتی",
+        en: "Dental clinic staff reviewing an AI automation dashboard and operational priorities",
+        tr: "Diş kliniği ekibinin yapay zekâ otomasyon panelini ve operasyon önceliklerini incelemesi"
+      },
+      related: ["/fa/insights/dental-clinic-ai-receptionist/","/fa/insights/dental-clinic-ai-pilot-metrics/"]
+    },
     {
       re: /(patient-treatment-plan-follow-up|why-dental-patients-do-not-return-after-treatment-plan|tedavi-plani-alan-hastalar-neden-geri-donmuyor)/,
       image: "https://images.unsplash.com/photo-1777331903190-341a3dd0441b?auto=format&fit=crop&w=1600&q=82",
@@ -167,22 +156,23 @@
   visual.prepend(img);
   visual.setAttribute("aria-label", alt);
 
+  const absoluteImage = topic.image.startsWith("/") ? `https://www.iqlinic.ir${topic.image}` : topic.image;
   const og = document.querySelector('meta[property="og:image"]');
-  if (og) og.content = topic.image;
+  if (og) og.content = absoluteImage;
   let twitter = document.querySelector('meta[name="twitter:image"]');
   if (!twitter) {
     twitter = document.createElement("meta");
     twitter.name = "twitter:image";
     document.head.appendChild(twitter);
   }
-  twitter.content = topic.image;
+  twitter.content = absoluteImage;
 
   document.querySelectorAll('script[type="application/ld+json"]').forEach(node => {
     try {
       const data = JSON.parse(node.textContent);
       const list = Array.isArray(data) ? data : [data];
       list.forEach(item => {
-        if (["Article","BlogPosting","NewsArticle"].includes(item?.["@type"])) item.image = [topic.image];
+        if (["Article","BlogPosting","NewsArticle"].includes(item?.["@type"])) item.image = [absoluteImage];
       });
       node.textContent = JSON.stringify(Array.isArray(data) ? list : list[0]);
     } catch (_) {}
