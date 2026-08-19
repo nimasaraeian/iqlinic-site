@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+<title>iQlinic AI Decision Engine — End-to-End Algorithm Flow</title>
+<desc>Technical diagram showing how a patient file number and clinical data are retrieved, processed, represented, analyzed by a multi-task AI model, constrained by clinic rules and converted into treatment-continuity, timing, doctor and appointment-slot decision support.</desc>
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#050912"/><stop offset="1" stop-color="#071426"/></linearGradient>
+  <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0b1730"/><stop offset="1" stop-color="#08111f"/></linearGradient>
+  <linearGradient id="ai" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#1b1645"/><stop offset="1" stop-color="#0c1530"/></linearGradient>
+  <filter id="glow"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0 0L9 3L0 6Z" fill="#72d9ff"/></marker>
+  <style>
+    text{font-family:Inter,Arial,sans-serif;fill:#eaf5ff}.muted{fill:#8da2b8}.tiny{font-size:13px}.small{font-size:15px}.label{font-size:13px;font-weight:700;letter-spacing:1.3px}.h{font-size:21px;font-weight:700}.title{font-size:34px;font-weight:800}.sub{font-size:17px;fill:#a9b9cb}.panel{fill:url(#panel);stroke:#2f6692;stroke-width:1.2}.card{fill:#0b1628;stroke:#244d70;stroke-width:1}.flow{stroke:#72d9ff;stroke-width:2;fill:none;marker-end:url(#arrow)}.dot{fill:#58d2ff}.violet{fill:#8c7cff}.green{fill:#68e2b6}.yellow{fill:#f2c84b}.pink{fill:#ff7d98}.orange{fill:#ffa74f}
+  </style>
+</defs>
+<rect width="1600" height="900" fill="url(#bg)"/>
+<circle cx="1260" cy="80" r="290" fill="#402b8c" opacity=".08"/><circle cx="350" cy="760" r="300" fill="#1e95bb" opacity=".06"/>
+<text x="800" y="52" text-anchor="middle" class="title">iQlinic AI Decision Engine — End-to-End Algorithm Flow</text>
+<text x="800" y="82" text-anchor="middle" class="sub">From Patient File Number to Intelligent Treatment, Continuity &amp; Optimal Scheduling</text>
+
+<!-- Input -->
+<rect x="30" y="115" width="260" height="690" rx="24" class="panel"/>
+<text x="55" y="150" class="label" fill="#72d9ff">1 / INPUT &amp; DATA SOURCES</text>
+<rect x="50" y="172" width="220" height="94" rx="14" class="card"/><text x="68" y="198" class="h">Patient Query</text><text x="68" y="225" class="small muted">Patient File Number</text><rect x="68" y="238" width="132" height="14" rx="7" fill="#102743"/><circle cx="215" cy="245" r="8" class="dot"/>
+<text x="55" y="304" class="label muted">CONNECTED CONTEXT</text>
+<g class="small"><rect x="50" y="321" width="220" height="51" rx="11" class="card"/><text x="68" y="353">Demographics &amp; Patient Profile</text><rect x="50" y="380" width="220" height="51" rx="11" class="card"/><text x="68" y="412">Clinical Records &amp; Diagnoses</text><rect x="50" y="439" width="220" height="51" rx="11" class="card"/><text x="68" y="471">Treatment History &amp; Plans</text><rect x="50" y="498" width="220" height="51" rx="11" class="card"/><text x="68" y="530">Appointments &amp; Visit History</text><rect x="50" y="557" width="220" height="51" rx="11" class="card"/><text x="68" y="589">Provider &amp; Specialty Data</text><rect x="50" y="616" width="220" height="51" rx="11" class="card"/><text x="68" y="648">Schedules &amp; Availability</text><rect x="50" y="675" width="220" height="51" rx="11" class="card"/><text x="68" y="707">Imaging, Notes &amp; Documents</text><rect x="50" y="734" width="220" height="51" rx="11" class="card"/><text x="68" y="766">Business Rules &amp; Constraints</text></g>
+
+<!-- Processing -->
+<path d="M290 460H330" class="flow"/>
+<rect x="330" y="115" width="300" height="690" rx="24" class="panel" stroke="#4ba883"/>
+<text x="355" y="150" class="label" fill="#68e2b6">2 / RETRIEVAL &amp; PROCESSING</text>
+<g class="small"><rect x="355" y="176" width="250" height="62" rx="12" class="card" stroke="#377f66"/><text x="377" y="204" class="h">Fetch Patient Data</text><text x="377" y="225" class="tiny muted">Read-only source retrieval</text><path d="M480 238V256" class="flow"/>
+<rect x="355" y="258" width="250" height="62" rx="12" class="card" stroke="#377f66"/><text x="377" y="286" class="h">Validate &amp; Normalize</text><text x="377" y="307" class="tiny muted">Completeness · codes · units</text><path d="M480 320V338" class="flow"/>
+<rect x="355" y="340" width="250" height="62" rx="12" class="card" stroke="#377f66"/><text x="377" y="368" class="h">Feature Engineering</text><text x="377" y="389" class="tiny muted">Clinical + behavioral features</text><path d="M480 402V420" class="flow"/>
+<rect x="355" y="422" width="250" height="62" rx="12" class="card" stroke="#377f66"/><text x="377" y="450" class="h">Text / Image Encoding</text><text x="377" y="471" class="tiny muted">Notes · imaging · documents</text><path d="M480 484V502" class="flow"/>
+<rect x="355" y="504" width="250" height="62" rx="12" class="card" stroke="#377f66"/><text x="377" y="532" class="h">Temporal Features</text><text x="377" y="553" class="tiny muted">Visit + treatment timeline</text><path d="M480 566V584" class="flow"/>
+<rect x="355" y="586" width="250" height="92" rx="12" fill="#0c2225" stroke="#4bbd91"/><text x="377" y="616" class="h">Patient Representation</text><text x="377" y="640" class="tiny muted">Unified decision vector</text><g transform="translate(378 654)"><circle cx="0" cy="0" r="8" class="green"/><circle cx="25" cy="0" r="8" class="green"/><circle cx="50" cy="0" r="8" class="green"/><circle cx="75" cy="0" r="8" class="green"/><circle cx="100" cy="0" r="8" class="green"/><circle cx="125" cy="0" r="8" class="green"/><circle cx="150" cy="0" r="8" class="green"/></g></g>
+
+<!-- AI engine -->
+<path d="M630 460H670" class="flow"/>
+<rect x="670" y="115" width="590" height="690" rx="24" fill="url(#ai)" stroke="#7764c5" stroke-width="1.2"/>
+<text x="695" y="150" class="label" fill="#a894ff">3 / MULTI-TASK AI ENGINE</text>
+<text x="710" y="188" class="tiny muted">PATIENT VECTOR</text><rect x="710" y="204" width="82" height="475" rx="18" fill="#0a1722" stroke="#4f8d75"/>
+<g class="green"><circle cx="751" cy="239" r="10"/><circle cx="751" cy="286" r="10"/><circle cx="751" cy="333" r="10"/><circle cx="751" cy="380" r="10"/><circle cx="751" cy="427" r="10"/><circle cx="751" cy="474" r="10"/><circle cx="751" cy="521" r="10"/><circle cx="751" cy="568" r="10"/><circle cx="751" cy="615" r="10"/></g>
+<text x="860" y="188" class="tiny muted">SHARED REPRESENTATION LEARNING</text><rect x="825" y="204" width="190" height="475" rx="20" fill="#101430" stroke="#6c5ca7"/>
+<g stroke="#5f6f91" stroke-width="1" opacity=".6"><path d="M792 239L870 250M792 286L870 250M792 333L870 330M792 380L870 410M792 427L870 490M792 474L870 570M792 568L870 570M792 615L870 610"/><path d="M890 250L950 280M890 330L950 280M890 410L950 390M890 490L950 500M890 570L950 610M890 610L950 610"/></g>
+<g class="violet"><circle cx="880" cy="250" r="11"/><circle cx="880" cy="330" r="11"/><circle cx="880" cy="410" r="11"/><circle cx="880" cy="490" r="11"/><circle cx="880" cy="570" r="11"/><circle cx="965" cy="280" r="11"/><circle cx="965" cy="390" r="11"/><circle cx="965" cy="500" r="11"/><circle cx="965" cy="610" r="11"/></g>
+<text x="1040" y="188" class="tiny muted">TASK-SPECIFIC HEADS</text>
+<g><rect x="1035" y="204" width="195" height="82" rx="13" fill="#1c1a0a" stroke="#d1a62a"/><circle cx="1059" cy="230" r="7" class="yellow"/><text x="1077" y="232" class="small" fill="#ffe36a">Treatment Type</text><text x="1077" y="255" class="tiny muted">Multi-label ranking</text><text x="1077" y="274" class="tiny">Preventive · Restorative · …</text>
+<rect x="1035" y="298" width="195" height="82" rx="13" fill="#0b241d" stroke="#51b48c"/><circle cx="1059" cy="324" r="7" class="green"/><text x="1077" y="326" class="small" fill="#8af0c8">Continuity of Care</text><text x="1077" y="349" class="tiny muted">Previous doctor / specialty</text><text x="1077" y="368" class="tiny">Continue · Refer · Review</text>
+<rect x="1035" y="392" width="195" height="82" rx="13" fill="#0b2030" stroke="#3e94c4"/><circle cx="1059" cy="418" r="7" class="dot"/><text x="1077" y="420" class="small" fill="#7edcff">Optimal Timing</text><text x="1077" y="443" class="tiny muted">Days / weeks prediction</text><text x="1077" y="462" class="tiny">1w · 2w · 1m · 3m</text>
+<rect x="1035" y="486" width="195" height="82" rx="13" fill="#28131c" stroke="#c25772"/><circle cx="1059" cy="512" r="7" class="pink"/><text x="1077" y="514" class="small" fill="#ff9caf">Best Doctor</text><text x="1077" y="537" class="tiny muted">Learning-to-rank</text><text x="1077" y="556" class="tiny">Fit · continuity · capacity</text>
+<rect x="1035" y="580" width="195" height="82" rx="13" fill="#2a1d0c" stroke="#c88737"/><circle cx="1059" cy="606" r="7" class="orange"/><text x="1077" y="608" class="small" fill="#ffc272">Best Time Slot</text><text x="1077" y="631" class="tiny muted">Available-slot ranking</text><text x="1077" y="650" class="tiny">Today · Tomorrow · Next</text></g>
+
+<!-- Decision layer -->
+<path d="M1260 460H1292" class="flow"/>
+<rect x="1292" y="115" width="278" height="690" rx="24" class="panel" stroke="#3c87a9"/>
+<text x="1316" y="150" class="label" fill="#72d9ff">4 / DECISION &amp; ACTION</text>
+<rect x="1316" y="178" width="230" height="84" rx="13" class="card"/><text x="1337" y="205" class="h">Safety &amp; Rules</text><text x="1337" y="229" class="tiny muted">Clinical boundaries · policy</text><text x="1337" y="249" class="tiny muted">Human review requirements</text>
+<path d="M1431 262V281" class="flow"/><rect x="1316" y="284" width="230" height="104" rx="13" class="card"/><text x="1337" y="311" class="h">Constraint Checking</text><text x="1337" y="335" class="tiny muted">Doctor availability</text><text x="1337" y="355" class="tiny muted">Specialty · capacity · timing</text><text x="1337" y="375" class="tiny muted">Patient context</text>
+<path d="M1431 388V407" class="flow"/><rect x="1316" y="410" width="230" height="104" rx="13" fill="#0b2028" stroke="#3a9db6"/><text x="1337" y="437" class="h">Scoring &amp; Ranking</text><text x="1337" y="461" class="tiny muted">Combine model outputs + rules</text><text x="1337" y="481" class="tiny muted">Rank feasible recommendations</text><text x="1337" y="501" class="tiny muted">Attach explanation signals</text>
+<text x="1318" y="555" class="label muted">USER-FACING OUTPUT</text>
+<g class="small"><rect x="1316" y="571" width="230" height="45" rx="10" class="card"/><circle cx="1338" cy="593" r="6" class="yellow"/><text x="1354" y="599">Treatment decision support</text><rect x="1316" y="624" width="230" height="45" rx="10" class="card"/><circle cx="1338" cy="646" r="6" class="green"/><text x="1354" y="652">Continuity recommendation</text><rect x="1316" y="677" width="230" height="45" rx="10" class="card"/><circle cx="1338" cy="699" r="6" class="dot"/><text x="1354" y="705">Optimal next-visit time</text><rect x="1316" y="730" width="230" height="45" rx="10" class="card"/><circle cx="1338" cy="752" r="6" class="pink"/><text x="1354" y="758">Doctor + time-slot ranking</text></g>
+
+<!-- feedback -->
+<path d="M1430 806C1430 850 520 850 210 816" fill="none" stroke="#73859a" stroke-width="1.4" stroke-dasharray="7 7" marker-end="url(#arrow)"/><rect x="633" y="821" width="365" height="36" rx="18" fill="#07111e" stroke="#274258"/><text x="816" y="844" text-anchor="middle" class="tiny muted">Feedback loop: outcomes · patient behavior · treatment results</text>
+<text x="800" y="886" text-anchor="middle" class="tiny muted">Conceptual decision-support architecture · Final clinical diagnosis and treatment decisions remain with qualified dental professionals.</text>
+</svg>
