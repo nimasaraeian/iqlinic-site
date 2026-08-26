@@ -2,4 +2,5 @@ User-agent: *
 Allow: /
 Sitemap: https://www.iqlinic.ir/sitemap.xml
 Sitemap: https://www.iqlinic.ir/sitemap-recent.xml
-# SEO recrawl refresh: 2026-08-11
+Sitemap: https://www.iqlinic.ir/sitemap-ai-dentistry.xml
+# SEO recrawl refresh: 2026-08-26
