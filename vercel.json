@@ -6,6 +6,31 @@
       "source": "/",
       "destination": "/fa/",
       "permanent": true
+    },
+    {
+      "source": "/fa/insights/ai-orthodontics/",
+      "destination": "/fa/insights/ai-orthodontics-dentistry/",
+      "permanent": true
+    },
+    {
+      "source": "/en/insights/ai-orthodontics/",
+      "destination": "/en/insights/ai-orthodontics-dentistry/",
+      "permanent": true
+    },
+    {
+      "source": "/fa/insights/ai-dental-implant-dentistry/",
+      "destination": "/fa/insights/ai-dental-implants/",
+      "permanent": true
+    },
+    {
+      "source": "/en/insights/ai-dental-implant-dentistry/",
+      "destination": "/en/insights/ai-dental-implants/",
+      "permanent": true
+    },
+    {
+      "source": "/tr/insights/implant-dis-hekimliginde-yapay-zeka/",
+      "destination": "/tr/insights/dis-implantlarinda-yapay-zeka/",
+      "permanent": true
     }
   ],
   "headers": [
