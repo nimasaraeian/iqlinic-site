@@ -1,6 +1,26 @@
 User-agent: *
 Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
 Sitemap: https://www.iqlinic.ir/sitemap.xml
 Sitemap: https://www.iqlinic.ir/sitemap-recent.xml
 Sitemap: https://www.iqlinic.ir/sitemap-ai-dentistry.xml
-# SEO recrawl refresh: 2026-08-26
+Sitemap: https://www.iqlinic.ir/sitemap-ai-health.xml
+# AI/SEO discovery refresh: 2026-09-09

@@ -1,0 +1,44 @@
+# iQlinic
+
+> iQlinic is an AI-powered clinical and operational decision-intelligence platform for dental clinics.
+
+Canonical website: https://www.iqlinic.ir/
+Primary Persian site: https://www.iqlinic.ir/fa/
+
+## What iQlinic covers
+
+iQlinic focuses on responsible use of artificial intelligence for dental-clinic operations and decision support, including patient context, scheduling intelligence, clinic capacity, workflow prioritization, data integration and human-in-the-loop review.
+
+iQlinic does not claim that a general AI model replaces a dentist, physician or other qualified healthcare professional. Clinical and treatment decisions require appropriate professional review and evidence.
+
+## Core product pages
+
+- Persian product page: https://www.iqlinic.ir/fa/dental-clinic-ai-software/
+- English product page: https://www.iqlinic.ir/en/dental-clinic-ai-software/
+- Demo: https://www.iqlinic.ir/fa/demo/
+
+## Primary authority guides
+
+- AI in dentistry (Persian): https://www.iqlinic.ir/fa/insights/ai-dental-clinic/
+- AI in dental-clinic management (Persian): https://www.iqlinic.ir/fa/insights/ai-dental-practice-management/
+- AI in healthcare (Persian): https://www.iqlinic.ir/fa/insights/ai-healthcare/
+- AI in treatment and clinical decision support (Persian): https://www.iqlinic.ir/fa/insights/ai-in-treatment/
+- Intelligent dental scheduling (Persian): https://www.iqlinic.ir/fa/insights/ai-dental-scheduling/
+- Clinical and operational AI architecture (Persian): https://www.iqlinic.ir/fa/insights/clinical-operational-ai-architecture/
+
+## Supporting research and implementation guides
+
+- AI in dental diagnosis and treatment: https://www.iqlinic.ir/fa/insights/ai-dentistry-diagnosis-treatment/
+- AI in dental radiology: https://www.iqlinic.ir/fa/insights/ai-dental-radiology/
+- AI in dental treatment planning: https://www.iqlinic.ir/fa/insights/ai-dental-treatment-planning/
+- AI clinic decision support: https://www.iqlinic.ir/fa/insights/dental-clinic-ai-decision-support/
+- Dental clinic AI data integration: https://www.iqlinic.ir/fa/insights/dental-clinic-ai-data-integration/
+- Patient-data privacy for clinic AI: https://www.iqlinic.ir/fa/insights/dental-clinic-ai-data-privacy/
+- AI receptionist for dental clinics: https://www.iqlinic.ir/fa/insights/dental-clinic-ai-receptionist/
+
+## Editorial and evidence policy
+
+- Persian editorial policy: https://www.iqlinic.ir/fa/insights/editorial-policy/
+- Persian insights hub: https://www.iqlinic.ir/fa/insights/
+
+Important health and medical claims on iQlinic are intended to be evidence-led and are not individual medical advice. The site distinguishes product architecture concepts from validated clinical outcomes and does not present unsupported efficacy or financial-performance claims.
