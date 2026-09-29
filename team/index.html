@@ -17,138 +17,159 @@
 <script defer src="/_vercel/insights/script.js"></script>
 <title>iQlinic · Team</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="Nima Saraeian — AI Product Manager · Dr. Reza Safaralizadeh — Dentist, Specialist, PhD">
+<meta name="description" content="Curriculum vitae — Nima Saraeian (AI Product Manager) and Dr. Reza Safaralizadeh (Dentist, Specialist, PhD)">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300;1,9..144,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#f7f6f2; --ink:#141824; --ink2:#454c5c; --muted:#7a8190; --line:rgba(20,24,36,.09);
-  --blue:#2f5bea; --teal:#12a39a; --gold:#a8832f; --gold2:#c9a45a;
-  --tintN:radial-gradient(70% 60% at 20% 30%,rgba(47,91,234,.13),transparent 70%),radial-gradient(50% 50% at 90% 90%,rgba(18,163,154,.10),transparent 70%);
-  --tintR:radial-gradient(70% 60% at 20% 30%,rgba(201,164,90,.18),transparent 70%),radial-gradient(50% 50% at 90% 90%,rgba(47,91,234,.07),transparent 70%);
-  --chip:rgba(255,255,255,.7); color-scheme:light;
+  --bg:#eef0f4; --paper:#ffffff; --ink:#172033; --ink2:#3d4658; --muted:#6c7587; --rule:#d9dee7;
+  --navy:#1b3150; --navy2:#142740; --side-ink:#e9eef7; --side-mute:#a9b6cc;
+  --acc:#2f5bea; --acc-soft:rgba(47,91,234,.10);
+  --shadow:0 30px 60px -30px rgba(23,32,51,.35),0 2px 6px rgba(23,32,51,.06);
+  color-scheme:light;
 }
 @media (prefers-color-scheme:dark){:root{
-  --bg:#0a0e18; --ink:#eef1f7; --ink2:#c1c7d4; --muted:#8a93a6; --line:rgba(255,255,255,.08);
-  --blue:#7b9cff; --teal:#3fd8c9; --gold:#d8b46d; --gold2:#ecd29d;
-  --tintN:radial-gradient(70% 60% at 20% 30%,rgba(91,124,255,.16),transparent 70%),radial-gradient(50% 50% at 90% 90%,rgba(63,216,201,.08),transparent 70%);
-  --tintR:radial-gradient(70% 60% at 20% 30%,rgba(216,180,109,.14),transparent 70%),radial-gradient(50% 50% at 90% 90%,rgba(91,124,255,.08),transparent 70%);
-  --chip:rgba(255,255,255,.05); color-scheme:dark;
+  --bg:#070a12; --paper:#0f1522; --ink:#e8ecf4; --ink2:#c0c7d5; --muted:#8b94a7; --rule:#263049;
+  --navy:#142646; --navy2:#0f1d37; --acc:#7b9cff; --acc-soft:rgba(123,156,255,.12);
+  --shadow:0 30px 60px -30px rgba(0,0,0,.8); color-scheme:dark;
 }}
+.reza{--acc:#a8832f;--acc-soft:rgba(168,131,47,.12)}
+@media (prefers-color-scheme:dark){.reza{--acc:#d8b46d;--acc-soft:rgba(216,180,109,.12)}}
 :root:not([data-lang="tr"]) .l-tr{display:none!important}
 :root[data-lang="tr"] .l-en{display:none!important}
 *{box-sizing:border-box;margin:0;padding:0}
-html{scroll-snap-type:y mandatory;scroll-behavior:smooth;overflow-x:clip;-webkit-text-size-adjust:100%}
-body{background:var(--bg);color:var(--ink);font:400 16px/1.6 Inter,system-ui,-apple-system,Segoe UI,sans-serif;-webkit-font-smoothing:antialiased}
+html{scroll-behavior:smooth;overflow-x:clip;-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--ink);font:400 15px/1.55 "Noto Serif",Georgia,serif;-webkit-font-smoothing:antialiased;
+  background-image:radial-gradient(60% 40% at 10% 0%,rgba(47,91,234,.07),transparent 70%),radial-gradient(50% 40% at 100% 60%,rgba(201,164,90,.08),transparent 70%);background-attachment:fixed}
 a{color:inherit;text-decoration:none}
 
-/* fixed corner: animated logo + wordmark */
-.corner{position:fixed;z-index:20;top:max(18px,env(safe-area-inset-top));left:24px;display:flex;align-items:center;gap:10px;pointer-events:none}
-.logo3d{position:relative;width:64px;height:64px;pointer-events:auto}
+/* fixed chrome */
+.topfade{position:fixed;z-index:19;inset:0 0 auto 0;height:0;pointer-events:none}
+.corner{position:fixed;z-index:20;top:max(16px,env(safe-area-inset-top));left:22px;display:flex;align-items:center;gap:10px}
+.logo3d{position:relative;width:62px;height:62px}
 .logo3d::before{content:"";position:absolute;inset:-6px;border-radius:50%;background:radial-gradient(closest-side,rgba(91,124,255,.28),transparent);filter:blur(4px)}
-.topfade{position:fixed;z-index:19;left:0;right:0;top:0;height:0;pointer-events:none}
 .logo3d canvas{position:absolute;inset:0;width:100%!important;height:100%!important;opacity:0;transition:opacity .8s}
 .logo3d.gl canvas{opacity:1}
 .logo3d .fb{position:absolute;inset:14%;width:72%;border-radius:50%;animation:coin 6s linear infinite;transition:opacity .6s}
 .logo3d.gl .fb{opacity:0}
 @keyframes coin{to{transform:perspective(300px) rotateY(360deg)}}
-.corner .wm{font:700 19px/1 Inter,sans-serif;letter-spacing:-.02em}
-.corner .wm span{color:var(--blue)}
+.wm{font:700 18px/1 Inter,sans-serif;letter-spacing:-.02em}
+.wm span{color:#2f5bea}
+@media (prefers-color-scheme:dark){.wm span{color:#7b9cff}}
+.tools{position:fixed;z-index:20;top:max(26px,calc(env(safe-area-inset-top) + 10px));right:22px;display:flex;gap:8px;font-family:Inter,sans-serif}
+.seg,.lang{display:flex;padding:3px;border-radius:999px;background:color-mix(in srgb,var(--paper) 75%,transparent);border:1px solid var(--rule);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+.seg a,.lang button{border:0;background:none;color:var(--muted);font:600 12px Inter,sans-serif;padding:6px 12px;border-radius:999px;cursor:pointer;transition:all .3s;white-space:nowrap}
+.seg a.on,.lang button[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
 
-.tools{position:fixed;z-index:20;top:max(28px,calc(env(safe-area-inset-top) + 10px));right:24px;display:flex;gap:10px;align-items:center}
-.lang{display:flex;padding:3px;border-radius:999px;background:var(--chip);border:1px solid var(--line);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
-.lang button{border:0;background:none;color:var(--muted);font:600 12px Inter,sans-serif;padding:6px 11px;border-radius:999px;cursor:pointer;transition:all .3s}
-.lang button[aria-pressed="true"]{background:var(--ink);color:var(--bg)}
+/* CV sheet */
+.page{padding:120px 24px 40px;scroll-margin-top:0}
+.page+.page{padding-top:90px}
+.cv{position:relative;max-width:1080px;margin:0 auto;display:grid;grid-template-columns:320px 1fr;background:var(--paper);border-radius:22px;box-shadow:var(--shadow)}
+.side{position:relative;background:linear-gradient(180deg,var(--navy),var(--navy2));color:var(--side-ink);border-radius:22px 0 0 22px;padding:0 28px 34px}
+.main{padding:40px 46px 36px}
 
-.dots{position:fixed;z-index:20;right:28px;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:12px}
-.dots a{width:10px;height:10px;border-radius:50%;background:var(--line);border:1px solid var(--muted);opacity:.6;transition:all .4s}
-.dots a.on{background:var(--ink);opacity:1;transform:scale(1.25)}
-
-/* pages */
-.page{position:relative;min-height:100vh;min-height:100svh;scroll-snap-align:start;display:grid;grid-template-columns:.9fr 1.1fr;align-items:center;gap:56px;padding:110px max(40px,calc((100vw - 1180px)/2)) 60px;overflow:hidden}
-.page::before{content:"";position:absolute;inset:0;z-index:-1}
-#nima::before{background:var(--tintN)}
-#reza::before{background:var(--tintR)}
-
-/* portrait with pop-out */
-.pf{position:relative;width:min(440px,100%);justify-self:center;aspect-ratio:886/1016;--px:0;--py:0;--acc:#5b7cff;--acc2:#3fd8c9}
-.pf.gold{--acc:#d8b46d;--acc2:#f0d9a6}
-.pf .bg{position:absolute;left:0;right:0;top:21%;bottom:0;border-radius:50% 50% 28px 28px / 34% 34% 28px 28px;background:radial-gradient(110% 70% at 50% 8%,color-mix(in srgb,var(--acc) 40%,#131b33) 0%,#0e1424 55%,#0a0f1b 100%);border:1px solid rgba(255,255,255,.08);box-shadow:0 40px 70px -35px rgba(10,15,30,.55);transform:translate3d(calc(var(--px)*-7px),calc(var(--py)*-5px),0);transition:transform .5s cubic-bezier(.2,.8,.2,1);overflow:hidden}
-.pf .bg::after{content:"";position:absolute;left:-40%;top:0;width:40%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.07),transparent);transform:skewX(-12deg);animation:sheen 8s ease-in-out infinite}
+/* photo pops out of the sheet */
+.pf{position:relative;width:100%;aspect-ratio:886/1016;margin-top:-64px;--px:0;--py:0;--g:#5b7cff;--g2:#3fd8c9}
+.reza .pf{--g:#d8b46d;--g2:#f0d9a6}
+.pf .bg{position:absolute;left:0;right:0;top:22%;bottom:0;border-radius:50% 50% 16px 16px / 34% 34% 16px 16px;background:radial-gradient(110% 70% at 50% 8%,color-mix(in srgb,var(--g) 38%,#16223f),#0d1426 60%,#0a101d);border:1px solid rgba(255,255,255,.1);transform:translate3d(calc(var(--px)*-6px),calc(var(--py)*-4px),0);transition:transform .5s cubic-bezier(.2,.8,.2,1);overflow:hidden}
+.pf .bg::after{content:"";position:absolute;left:-40%;top:0;width:40%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.08),transparent);transform:skewX(-12deg);animation:sheen 8s ease-in-out infinite}
 @keyframes sheen{0%,60%{left:-40%}100%{left:130%}}
-.pf .glow{position:absolute;left:18%;right:18%;top:4%;height:46%;border-radius:50%;background:radial-gradient(closest-side,color-mix(in srgb,var(--acc) 55%,transparent),transparent);filter:blur(18px);opacity:.7}
-.pf .person{position:absolute;inset:0;transform:translate3d(calc(var(--px)*12px),calc(var(--py)*7px),0) rotateY(calc(var(--px)*4deg));transform-origin:50% 100%;transition:transform .5s cubic-bezier(.2,.8,.2,1);filter:drop-shadow(0 22px 26px rgba(0,0,0,.45)) drop-shadow(0 0 1.2px color-mix(in srgb,var(--acc2) 70%,transparent))}
-.pf .person img{position:absolute;inset:0;width:100%;height:100%;display:block;clip-path:inset(0 round 0 0 28px 28px);transform-origin:50% 100%;animation:breathe 7s ease-in-out infinite}
+.pf .glow{position:absolute;left:16%;right:16%;top:6%;height:44%;border-radius:50%;background:radial-gradient(closest-side,color-mix(in srgb,var(--g) 55%,transparent),transparent);filter:blur(16px);opacity:.7}
+.pf .person{position:absolute;inset:0;transform:translate3d(calc(var(--px)*10px),calc(var(--py)*6px),0) rotateY(calc(var(--px)*4deg));transform-origin:50% 100%;transition:transform .5s cubic-bezier(.2,.8,.2,1);filter:drop-shadow(0 18px 22px rgba(0,0,0,.5)) drop-shadow(0 0 1.2px color-mix(in srgb,var(--g2) 70%,transparent))}
+.pf .person img{position:absolute;inset:0;width:100%;height:100%;display:block;clip-path:inset(0 round 0 0 16px 16px);transform-origin:50% 100%;animation:breathe 7s ease-in-out infinite}
 @keyframes breathe{50%{transform:translateY(-1%) scale(1.01)}}
 
-/* text column — items drop in one after another */
-.txt{max-width:560px}
-.kick{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
-.kick .nt{text-transform:none;letter-spacing:.04em}
-.kick::before{content:"";width:20px;height:1.5px;border-radius:2px;background:var(--blue)}
-#reza .kick::before{background:var(--gold)}
-h2{font-family:Fraunces,Georgia,serif;font-weight:300;font-size:clamp(40px,5.2vw,68px);line-height:1.02;letter-spacing:-.025em;margin:14px 0 10px}
-h2 em{font-style:italic;font-weight:400}
-#nima h2 em{color:var(--blue)}
-#reza h2 em{color:var(--gold)}
-h2 small{font-size:.5em;color:var(--gold);margin-right:.15em;vertical-align:.55em}
-.role{font-size:18px;color:var(--ink2);font-weight:500}
-.lead{margin-top:18px;font-size:16.5px;color:var(--ink2);max-width:500px}
-.nums{display:flex;gap:30px;flex-wrap:wrap;margin:26px 0 6px}
-.nums div{font-size:13px;color:var(--muted);line-height:1.3}
-.nums b{display:block;font-family:Fraunces,Georgia,serif;font-weight:400;font-size:34px;color:var(--ink);letter-spacing:-.02em;margin-bottom:4px}
-#nima .nums b{color:var(--blue)}
-#reza .nums b{color:var(--gold)}
-.list{list-style:none;margin-top:22px;display:grid;gap:12px}
-.list li{position:relative;padding-left:22px;font-size:15.5px;color:var(--ink2)}
-.list li::before{content:"";position:absolute;left:0;top:.62em;width:8px;height:8px;border-radius:50%;background:var(--blue);box-shadow:0 0 0 4px color-mix(in srgb,var(--blue) 15%,transparent)}
-#reza .list li::before{background:var(--gold);box-shadow:0 0 0 4px color-mix(in srgb,var(--gold) 18%,transparent)}
-.list li b{color:var(--ink);font-weight:600}
-.contact{display:flex;flex-wrap:wrap;gap:8px;margin-top:26px}
-.contact a,.contact span{font-size:13px;padding:8px 14px;border-radius:999px;background:var(--chip);border:1px solid var(--line);color:var(--ink2);transition:transform .3s,border-color .3s}
-.contact a:hover{transform:translateY(-2px);border-color:var(--muted);color:var(--ink)}
-.next{position:absolute;left:50%;bottom:22px;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:4px;font-size:12px;color:var(--muted);animation:nudge 2.4s ease-in-out infinite}
-.next svg{width:18px;height:18px}
-@keyframes nudge{50%{transform:translate(-50%,6px)}}
+.side{--dot:#8fb0ff}.reza .side{--dot:#f0d9a6}
+.side .nm{font-weight:700;font-size:23px;line-height:1.15;letter-spacing:.04em;text-transform:uppercase;text-align:center;margin-top:18px}
+.side .sub{font-family:Inter,sans-serif;font-size:12.5px;color:var(--side-mute);text-align:center;margin-top:8px;line-height:1.5}
+.side h4{font-family:Inter,sans-serif;font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--side-mute);margin:28px 0 12px;display:flex;align-items:center;gap:10px}
+.side h4::after{content:"";flex:1;height:1px;background:rgba(255,255,255,.14)}
+.stat{margin-bottom:12px}
+.stat b{display:block;font-size:30px;font-weight:700;line-height:1.05;color:#fff}
+.reza .stat b{color:#f0d9a6}
+.stat>span{font-family:Inter,sans-serif;font-size:12.5px;color:var(--side-mute)}
+.side ul{list-style:none;display:grid;gap:7px;font-family:Inter,sans-serif;font-size:13px}
+.side li{position:relative;padding-left:14px;line-height:1.4}
+.side li::before{content:"";position:absolute;left:0;top:.5em;width:5px;height:5px;border-radius:50%;background:var(--dot)}
+.side .ct{display:grid;gap:6px;font-family:Inter,sans-serif;font-size:12.5px;margin-top:14px}
+.side .ct>a,.side .ct>span{display:block;padding:7px 10px;border-radius:9px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);overflow-wrap:anywhere;transition:background .3s}
+.side .ct>a:hover{background:rgba(255,255,255,.12)}
+.lng{font-family:Inter,sans-serif;font-size:13px;display:grid;gap:4px}
+.lng b{color:#fff;font-weight:600}
 
-/* staged reveal (only when JS is running; content is fully visible otherwise) */
-.js .page .ri{opacity:0;transform:translateY(22px);filter:blur(4px)}
-.js .page .pf{opacity:0;transform:translateX(-40px) scale(.96)}
-.js .page.in .ri{animation:riIn .8s cubic-bezier(.2,.8,.2,1) forwards;animation-delay:calc(var(--i)*140ms + 350ms)}
-.js .page.in .pf{animation:pfIn 1.1s cubic-bezier(.2,.8,.2,1) forwards}
-@keyframes riIn{to{opacity:1;transform:none;filter:none}}
-@keyframes pfIn{to{opacity:1;transform:none}}
+.kick{font-family:Inter,sans-serif;font-size:11.5px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--acc)}
+.main h1{font-size:clamp(30px,3.6vw,42px);font-weight:700;color:var(--navy);line-height:1.12;margin:6px 0 8px;letter-spacing:-.01em}
+@media (prefers-color-scheme:dark){.main h1{color:#fff}}
+.role{font-family:Inter,sans-serif;font-size:14px;color:var(--muted);line-height:1.55}
+.meta{font-family:Inter,sans-serif;font-size:13px;color:var(--ink2);margin-top:6px}
+.sec{margin-top:26px}
+.sec h3{font-family:Inter,sans-serif;font-size:12.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--navy);padding-bottom:7px;border-bottom:1.5px solid var(--rule);margin-bottom:12px;display:flex;align-items:center;gap:10px}
+@media (prefers-color-scheme:dark){.sec h3{color:#dfe6f5}}
+.sec h3::before{content:"";width:18px;height:2px;border-radius:2px;background:var(--acc)}
+.main p{color:var(--ink2)}
+.job{margin-top:14px}
+.job:first-of-type{margin-top:0}
+.job .hd{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:baseline}
+.job h5{font-size:15.5px;font-weight:700;color:var(--ink)}
+.job h5 i{font-style:normal;color:var(--acc)}
+.job .when{font-family:Inter,sans-serif;font-size:12.5px;color:var(--muted);white-space:nowrap}
+.job .note{font-size:13.5px;font-style:italic;color:var(--muted);margin-top:1px}
+.main ul{list-style:none;margin-top:6px;display:grid;gap:5px}
+.main li{position:relative;padding-left:18px;color:var(--ink2);font-size:14.5px}
+.main li::before{content:"";position:absolute;left:3px;top:.62em;width:6px;height:6px;border-radius:50%;background:var(--acc)}
+.chips{display:flex;flex-wrap:wrap;gap:7px}
+.chips>span{font-family:Inter,sans-serif;font-size:12.5px;font-weight:500;padding:6px 11px;border-radius:8px;background:var(--acc-soft);color:var(--ink)}
+.tk{display:grid;grid-template-columns:1fr 1fr;gap:10px 22px}
+.tk div{font-size:14px;color:var(--ink2)}
+.tk b{display:block;font-family:Inter,sans-serif;font-size:12.5px;color:var(--acc);margin-bottom:1px}
+.ed{margin-top:10px}
+.ed:first-of-type{margin-top:0}
+.ed h6{font-size:15px;font-weight:700;color:var(--ink)}
+.ed>span{display:block;font-family:Inter,sans-serif;font-size:12.5px;color:var(--muted)}
+.foot{margin-top:26px;font-size:12px;font-style:italic;color:var(--muted)}
+.next{display:flex;justify-content:center;margin:34px 0 0}
+.next a{font-family:Inter,sans-serif;font-size:13px;font-weight:600;padding:11px 18px;border-radius:999px;background:var(--ink);color:var(--paper);display:inline-flex;gap:8px;align-items:center;transition:transform .3s}
+.next a:hover{transform:translateY(-2px)}
+.next svg{width:15px;height:15px}
+footer{text-align:center;padding:30px 0 50px;font-family:Inter,sans-serif;font-size:12px;color:var(--muted)}
 
-@media (max-width:900px){
-  html{scroll-snap-type:y proximity}
-  .page{grid-template-columns:1fr;gap:26px;padding:100px 20px 70px;align-content:start}
-  .pf{width:min(300px,74vw)}
-  .js .page .pf{transform:translateY(30px) scale(.96)}
-  .txt{max-width:none}
-  .dots{right:12px}
-  .corner{left:16px;top:max(12px,env(safe-area-inset-top))}
-  .logo3d{width:52px;height:52px}
-  .corner .wm{font-size:17px}
-  .tools{right:16px;top:max(22px,calc(env(safe-area-inset-top) + 8px))}
-  .nums{gap:22px}
-  .nums b{font-size:28px}
-  .role{font-size:16.5px}
-  .lead{font-size:15.5px}
-  .list li{font-size:15px}
-  .next{display:none}
-  .dots{display:none}
-  .nums{display:grid;grid-template-columns:repeat(3,auto);justify-content:start;gap:20px}
-  .nums b{font-size:26px}
-  .nums div{font-size:12px}
-  .topfade{height:calc(78px + env(safe-area-inset-top));background:color-mix(in srgb,var(--bg) 78%,transparent);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);mask-image:linear-gradient(#000 70%,transparent);-webkit-mask-image:linear-gradient(#000 70%,transparent)}
+/* staged reveal — only when JS runs */
+.js .rv{opacity:0;transform:translateY(16px);filter:blur(3px)}
+.js .rv.in{opacity:1;transform:none;filter:none;transition:opacity .7s ease,transform .8s cubic-bezier(.2,.8,.2,1),filter .7s ease;transition-delay:var(--d,0ms)}
+.js .cv{opacity:0;transform:translateY(30px)}
+.js .cv.in{opacity:1;transform:none;transition:opacity .8s ease,transform 1s cubic-bezier(.2,.8,.2,1)}
+.js .pf{opacity:0;transform:translateY(40px) scale(.95)}
+.js .cv.in .pf{opacity:1;transform:none;transition:opacity .9s .25s ease,transform 1.1s .25s cubic-bezier(.2,.8,.2,1)}
+
+@media (max-width:860px){
+  .page{padding:96px 12px 24px}
+  .page+.page{padding-top:70px}
+  .cv{grid-template-columns:1fr;border-radius:18px}
+  .side{border-radius:18px 18px 0 0;padding:0 20px 24px}
+  .pf{width:min(260px,70%);margin:-56px auto 0}
+  .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:4px 12px}
+  .nima .stats{grid-template-columns:repeat(2,1fr)}
+  .stat b{font-size:24px}
+  .stat>span{font-size:11.5px}
+  .side ul{grid-template-columns:1fr 1fr;gap:6px 14px}
+  .main{padding:26px 20px 26px}
+  .tk{grid-template-columns:1fr}
+  .corner{left:12px;top:max(10px,env(safe-area-inset-top))}
+  .logo3d{width:50px;height:50px}
+  .wm{display:none}
+  .tools{right:12px;top:max(18px,calc(env(safe-area-inset-top) + 8px))}
+  .seg a,.lang button{padding:6px 9px}
+  .topfade{height:calc(72px + env(safe-area-inset-top));background:color-mix(in srgb,var(--bg) 80%,transparent);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);mask-image:linear-gradient(#000 70%,transparent);-webkit-mask-image:linear-gradient(#000 70%,transparent)}
+  .main li{font-size:14px}
 }
+@media (max-width:370px){.seg a{padding:6px 7px;font-size:11px}}
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation:none!important;transition:none!important}
-  .js .page .ri,.js .page .pf{opacity:1!important;transform:none!important;filter:none!important}
+  .js .rv,.js .cv,.js .pf{opacity:1!important;transform:none!important;filter:none!important}
   html{scroll-behavior:auto}
 }
-@media print{.corner,.tools,.dots,.next{display:none}.js .page .ri,.js .page .pf{opacity:1;transform:none;filter:none}.page{page-break-after:always}}
+@media print{.topfade,.corner,.tools,.next{display:none}.js .rv,.js .cv,.js .pf{opacity:1;transform:none;filter:none}.page{page-break-after:always}}
 </style>
 
 </head>
@@ -159,63 +180,228 @@ h2 small{font-size:.5em;color:var(--gold);margin-right:.15em;vertical-align:.55e
   <div class="wm"><span>iQ</span>linic</div>
 </div>
 <div class="tools">
-  <div class="lang" role="group" aria-label="Language">
-    <button type="button" data-lang="en" aria-pressed="true">EN</button>
-    <button type="button" data-lang="tr" aria-pressed="false">TR</button>
-  </div>
+  <nav class="seg" aria-label="Profiles"><a href="#nima" data-k="nima">Nima</a><a href="#reza" data-k="reza">Dr. Reza</a></nav>
+  <div class="lang" role="group" aria-label="Language"><button type="button" data-lang="en" aria-pressed="true">EN</button><button type="button" data-lang="tr" aria-pressed="false">TR</button></div>
 </div>
-<nav class="dots" aria-label="Pages"><a href="#nima" data-k="nima" aria-label="Nima Saraeian"></a><a href="#reza" data-k="reza" aria-label="Dr. Reza Safaralizadeh"></a></nav>
 
-<section class="page" id="nima">
-  <div class="pf"><div class="bg"></div><div class="glow"></div><div class="person"><img src="/team/nima.webp" alt="Nima Saraeian"></div></div>
-  <div class="txt">
-    <div class="kick ri" style="--i:0"><span class="l-en">Founder</span><span class="l-tr">Kurucu</span> · <span class="nt">iQlinic</span></div>
-    <h2 class="ri" style="--i:1">Nima <em>Saraeian</em></h2>
-    <p class="role ri" style="--i:2"><span class="l-en">AI Product Manager — Applied AI &amp; Decision Intelligence</span><span class="l-tr">Yapay Zekâ Ürün Yöneticisi — Uygulamalı YZ ve Karar Zekâsı</span></p>
-    <p class="lead ri" style="--i:3"><span class="l-en">14+ years in business and marketing, 3+ years building applied-AI products. He turns real clinic data into clear, everyday decisions.</span><span class="l-tr">İş dünyası ve pazarlamada 14+ yıl, uygulamalı yapay zekâ ürünlerinde 3+ yıl. Gerçek klinik verilerini net, günlük kararlara dönüştürüyor.</span></p>
-    <div class="nums ri" style="--i:4">
-      <div><b>14+</b><span class="l-en">years experience</span><span class="l-tr">yıl deneyim</span></div>
-      <div><b>128K+</b><span class="l-en">patient records</span><span class="l-tr">hasta kaydı</span></div>
-      <div><b>446K+</b><span class="l-en">appointments analysed</span><span class="l-tr">analiz edilen randevu</span></div>
+<!-- ===================== NIMA ===================== -->
+<section class="page nima" id="nima">
+ <article class="cv">
+  <aside class="side">
+    <div class="pf"><div class="bg"></div><div class="glow"></div><div class="person"><img src="/team/nima.webp" alt="Nima Saraeian"></div></div>
+    <div class="nm">Nima<br>Saraeian</div>
+    <div class="sub"><span class="l-en">AI Product Manager<br>Applied AI &amp; Decision Intelligence</span><span class="l-tr">Yapay Zekâ Ürün Yöneticisi<br>Uygulamalı YZ ve Karar Zekâsı</span></div>
+    <h4 class="rv"><span class="l-en">Career Snapshot</span><span class="l-tr">Kariyer Özeti</span></h4>
+    <div class="stats">
+      <div class="stat rv"><b data-to="14" data-suf="+">14+</b><span><span class="l-en">years · business &amp; strategy</span><span class="l-tr">yıl · iş ve strateji</span></span></div>
+      <div class="stat rv"><b data-to="128" data-suf="K+">128K+</b><span><span class="l-en">patient records</span><span class="l-tr">hasta kaydı</span></span></div>
+      <div class="stat rv"><b data-to="446" data-suf="K+">446K+</b><span><span class="l-en">appointments</span><span class="l-tr">randevu</span></span></div>
+      <div class="stat rv"><b data-to="197" data-suf="">197</b><span><span class="l-en">regression tests</span><span class="l-tr">regresyon testi</span></span></div>
     </div>
-    <ul class="list">
-      <li class="ri" style="--i:5"><span class="l-en"><b>Founder &amp; AI Product Lead</b> — iQlinic, 2025–today</span><span class="l-tr"><b>Kurucu ve YZ Ürün Lideri</b> — iQlinic, 2025–günümüz</span></li>
-      <li class="ri" style="--i:6"><span class="l-en"><b>Founder &amp; Lecturer</b> — Lotus Business School, 2011–today</span><span class="l-tr"><b>Kurucu ve Eğitmen</b> — Lotus Business School, 2011–günümüz</span></li>
-      <li class="ri" style="--i:7"><span class="l-en"><b>Sales, marketing &amp; brand leadership</b> for 10+ brands, 2011–2022</span><span class="l-tr"><b>Satış, pazarlama ve marka liderliği</b> — 10+ marka, 2011–2022</span></li>
-      <li class="ri" style="--i:8"><span class="l-en"><b>M.A. E-Business</b> · B.A. Marketing — Urmia University</span><span class="l-tr"><b>E-İşletme Yüksek Lisansı</b> · Pazarlama Lisansı — Urmiye Üniversitesi</span></li>
-      <li class="ri" style="--i:9"><span class="l-en">Persian · English · Turkish</span><span class="l-tr">Farsça · İngilizce · Türkçe</span></li>
+    <h4 class="rv"><span class="l-en">Core Competencies</span><span class="l-tr">Temel Yetkinlikler</span></h4>
+    <ul>
+      <li class="rv"><span class="l-en">AI Product Strategy</span><span class="l-tr">YZ Ürün Stratejisi</span></li><li class="rv"><span class="l-en">Decision Intelligence</span><span class="l-tr">Karar Zekâsı</span></li><li class="rv"><span class="l-en">Product Discovery</span><span class="l-tr">Ürün Keşfi</span></li><li class="rv"><span class="l-en">AI Workflow Design</span><span class="l-tr">YZ İş Akışı Tasarımı</span></li><li class="rv"><span class="l-en">Healthcare AI</span><span class="l-tr">Sağlıkta Yapay Zekâ</span></li><li class="rv"><span class="l-en">Data-Driven Products</span><span class="l-tr">Veri Odaklı Ürünler</span></li><li class="rv"><span class="l-en">MVP &amp; Prototyping</span><span class="l-tr">MVP ve Prototipleme</span></li><li class="rv"><span class="l-en">Go-to-Market Strategy</span><span class="l-tr">Pazara Giriş Stratejisi</span></li>
     </ul>
-    <div class="contact ri" style="--i:10">
+    <h4 class="rv"><span class="l-en">Contact</span><span class="l-tr">İletişim</span></h4>
+    <div class="ct rv">
+      <span><span class="l-en">Istanbul, Türkiye · Open to remote &amp; international roles</span><span class="l-tr">İstanbul, Türkiye · Uzaktan ve uluslararası pozisyonlara açık</span></span>
       <a href="mailto:nimasaraeian65@gmail.com">nimasaraeian65@gmail.com</a>
       <a href="tel:+905362914170">+90 536 291 4170</a>
-      <a href="https://linkedin.com/in/nimasaraian" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://linkedin.com/in/nimasaraian" target="_blank" rel="noopener">linkedin.com/in/nimasaraian</a>
+      <a href="https://github.com/nimasaraeian" target="_blank" rel="noopener">github.com/nimasaraeian</a>
+      <a href="https://iqlinic.ir" target="_blank" rel="noopener">iqlinic.ir</a>
+    </div>
+    <h4 class="rv"><span class="l-en">Languages</span><span class="l-tr">Diller</span></h4>
+    <div class="lng rv">
+      <div><b><span class="l-en">Persian</span><span class="l-tr">Farsça</span></b> — <span class="l-en">Native</span><span class="l-tr">Ana dil</span></div>
+      <div><b><span class="l-en">English</span><span class="l-tr">İngilizce</span></b> — <span class="l-en">Working professional proficiency</span><span class="l-tr">Profesyonel çalışma yeterliliği</span></div>
+      <div><b><span class="l-en">Turkish</span><span class="l-tr">Türkçe</span></b> — <span class="l-en">Conversational</span><span class="l-tr">Günlük konuşma düzeyi</span></div>
+    </div>
+  </aside>
+
+  <div class="main">
+    <div class="kick rv"><span class="l-en">Curriculum Vitae</span><span class="l-tr">Özgeçmiş</span></div>
+    <h1 class="rv">Nima Saraeian</h1>
+    <div class="role rv"><span class="l-en">AI Product Manager | Applied AI &amp; Decision Intelligence</span><span class="l-tr">Yapay Zekâ Ürün Yöneticisi | Uygulamalı YZ ve Karar Zekâsı</span></div>
+
+    <div class="sec">
+      <h3 class="rv"><span class="l-en">Professional Summary</span><span class="l-tr">Profesyonel Özet</span></h3>
+      <p class="rv"><span class="l-en">AI Product Manager and business strategist with 14+ years of experience across marketing, business leadership, consumer behavior, and commercial strategy, plus 3+ years of hands-on applied AI product development. Founder and Product Lead of iQlinic, a real-world clinical decision-intelligence platform built on large operational datasets. Experienced in turning ambiguous business problems into product strategy, AI workflows, decision engines, data models, working prototypes, and market-ready positioning. Strong bridge between business stakeholders, domain experts, users, data, and technical delivery.</span><span class="l-tr">Pazarlama, iş liderliği, tüketici davranışı ve ticari strateji alanlarında 14+ yıllık deneyime ve 3+ yıllık uygulamalı yapay zekâ ürün geliştirme tecrübesine sahip Yapay Zekâ Ürün Yöneticisi ve iş stratejisti. Büyük operasyonel veri setleri üzerine kurulu, gerçek dünyada kullanılan klinik karar zekâsı platformu iQlinic’in Kurucusu ve Ürün Lideri. Belirsiz iş problemlerini ürün stratejisine, YZ iş akışlarına, karar motorlarına, veri modellerine, çalışan prototiplere ve pazara hazır konumlandırmaya dönüştürme konusunda deneyimli. İş paydaşları, alan uzmanları, kullanıcılar, veri ve teknik teslimat arasında güçlü bir köprü.</span></p>
+    </div>
+
+    <div class="sec">
+      <h3 class="rv"><span class="l-en">Professional Experience</span><span class="l-tr">Profesyonel Deneyim</span></h3>
+      <div class="job">
+        <div class="hd rv"><h5><span class="l-en">Founder &amp; AI Product Lead</span><span class="l-tr">Kurucu ve YZ Ürün Lideri</span> <i>| iQlinic</i></h5><span class="when"><span class="l-en">2025 – Present</span><span class="l-tr">2025 – Günümüz</span></span></div>
+        <div class="note rv"><span class="l-en">AI-powered clinical decision-intelligence platform for dental operations</span><span class="l-tr">Diş kliniği operasyonları için yapay zekâ destekli klinik karar zekâsı platformu</span></div>
+        <ul>
+          <li class="rv"><span class="l-en">Defined the product vision, architecture, roadmap, user workflows, and market positioning for an AI-first intelligence layer designed to complement existing clinic software rather than replace it.</span><span class="l-tr">Mevcut klinik yazılımlarının yerini almak yerine onları tamamlamak üzere tasarlanmış, YZ öncelikli bir zekâ katmanı için ürün vizyonunu, mimariyi, yol haritasını, kullanıcı iş akışlarını ve pazar konumlandırmasını tanımladı.</span></li>
+          <li class="rv"><span class="l-en">Built and validated workflows against real clinic data, including 128,000+ patient-search records, 446,000+ appointments, and 51 doctor profiles.</span><span class="l-tr">İş akışlarını 128.000+ hasta arama kaydı, 446.000+ randevu ve 51 hekim profili dahil gerçek klinik verileriyle oluşturdu ve doğruladı.</span></li>
+          <li class="rv"><span class="l-en">Designed Patient 360 Intelligence, patient recovery workflows, doctor-continuity logic, scheduling recommendations, and executive operational dashboards.</span><span class="l-tr">Hasta 360 Zekâsı, hasta geri kazanım iş akışları, hekim sürekliliği mantığı, randevu planlama önerileri ve yönetici operasyon panolarını tasarladı.</span></li>
+          <li class="rv"><span class="l-en">Implemented a strict read-only Microsoft SQL Server integration, local SQLite processing, Python/FastAPI services, pandas-based data workflows, and role-based access controls.</span><span class="l-tr">Katı salt okunur Microsoft SQL Server entegrasyonu, yerel SQLite işleme, Python/FastAPI servisleri, pandas tabanlı veri iş akışları ve rol tabanlı erişim kontrolleri uyguladı.</span></li>
+          <li class="rv"><span class="l-en">Prepared a protected desktop pilot using PyInstaller and host-specific licensing, with no exposed Python source files and approximately 197 automated regression tests.</span><span class="l-tr">PyInstaller ve cihaza özel lisanslama ile, açıkta Python kaynak dosyası bulunmayan ve yaklaşık 197 otomatik regresyon testine sahip korumalı bir masaüstü pilotu hazırladı.</span></li>
+          <li class="rv"><span class="l-en">Led competitive and market research across Iran and Türkiye, repositioning the product from conventional clinic management toward applied AI and decision intelligence.</span><span class="l-tr">İran ve Türkiye’de rekabet ve pazar araştırmalarına liderlik ederek ürünü klasik klinik yönetiminden uygulamalı yapay zekâ ve karar zekâsına doğru yeniden konumlandırdı.</span></li>
+        </ul>
+      </div>
+      <div class="job">
+        <div class="hd rv"><h5><span class="l-en">Independent AI Product &amp; Business Strategist</span><span class="l-tr">Bağımsız YZ Ürün ve İş Stratejisti</span> <i>| <span class="l-en">Consulting &amp; Independent Projects</span><span class="l-tr">Danışmanlık ve Bağımsız Projeler</span></i></h5><span class="when"><span class="l-en">2022 – Present</span><span class="l-tr">2022 – Günümüz</span></span></div>
+        <ul>
+          <li class="rv"><span class="l-en">Translate operational and commercial problems into AI product requirements, user journeys, decision rules, data structures, MVP scopes, validation plans, and implementation roadmaps.</span><span class="l-tr">Operasyonel ve ticari problemleri YZ ürün gereksinimlerine, kullanıcı yolculuklarına, karar kurallarına, veri yapılarına, MVP kapsamlarına, doğrulama planlarına ve uygulama yol haritalarına dönüştürüyor.</span></li>
+          <li class="rv"><span class="l-en">Design AI-enabled workflows, LLM-assisted research and automation systems, prioritization models, analytics dashboards, and human-in-the-loop processes.</span><span class="l-tr">YZ destekli iş akışları, LLM destekli araştırma ve otomasyon sistemleri, önceliklendirme modelleri, analitik panolar ve insan-döngüde süreçler tasarlıyor.</span></li>
+          <li class="rv"><span class="l-en">Conduct market research, competitor analysis, product differentiation, business-case development, and go-to-market planning for AI and digital products.</span><span class="l-tr">YZ ve dijital ürünler için pazar araştırması, rakip analizi, ürün farklılaştırma, iş gerekçesi geliştirme ve pazara giriş planlaması yürütüyor.</span></li>
+        </ul>
+      </div>
+      <div class="job">
+        <div class="hd rv"><h5><span class="l-en">Founder, Chairman &amp; Lecturer</span><span class="l-tr">Kurucu, Yönetim Kurulu Başkanı ve Eğitmen</span> <i>| Lotus Business School / Lotus Knowledge-Based Institute</i></h5><span class="when"><span class="l-en">2011 – Present</span><span class="l-tr">2011 – Günümüz</span></span></div>
+        <ul>
+          <li class="rv"><span class="l-en">Established and led a business education and advisory organization focused on practical management, marketing, negotiation, consumer behavior, decision psychology, and strategic thinking.</span><span class="l-tr">Pratik yönetim, pazarlama, müzakere, tüketici davranışı, karar psikolojisi ve stratejik düşünme odaklı bir işletme eğitimi ve danışmanlık kuruluşu kurdu ve yönetti.</span></li>
+          <li class="rv"><span class="l-en">Delivered training and consulting engagements for universities, banks, and organizations including Payam Noor University, Tehran Institute of Technology, Sepah Bank, Agricultural Bank, and the National Iranian Gas Company.</span><span class="l-tr">Payam Noor Üniversitesi, Tahran Teknoloji Enstitüsü, Sepah Bank, Tarım Bankası ve İran Ulusal Gaz Şirketi dahil üniversiteler, bankalar ve kurumlar için eğitim ve danışmanlık projeleri yürüttü.</span></li>
+          <li class="rv"><span class="l-en">Mentored professionals and managers in customer psychology, ethical persuasion, branding, negotiation, organizational behavior, and data-informed decision-making.</span><span class="l-tr">Profesyonellere ve yöneticilere müşteri psikolojisi, etik ikna, markalaşma, müzakere, örgütsel davranış ve veriye dayalı karar alma konularında mentorluk yaptı.</span></li>
+        </ul>
+      </div>
+      <div class="job">
+        <div class="hd rv"><h5><span class="l-en">Sales, Marketing &amp; Brand Leadership</span><span class="l-tr">Satış, Pazarlama ve Marka Liderliği</span> <i>| <span class="l-en">Selected Organizations</span><span class="l-tr">Seçili Kurumlar</span></i></h5><span class="when">2011 – 2022</span></div>
+        <ul>
+          <li class="rv"><span class="l-en">Held marketing, sales, branding, market research, and advisory roles with Almas Film, The One Iranian, Tisanaz, Haft Honar, Behsan Keifiat Asia, Behrang, Siaho Sefid Advertising Company, and Atieh Dental Clinic.</span><span class="l-tr">Almas Film, The One Iranian, Tisanaz, Haft Honar, Behsan Keifiat Asia, Behrang, Siaho Sefid Advertising Company ve Atieh Diş Kliniği’nde pazarlama, satış, markalaşma, pazar araştırması ve danışmanlık rolleri üstlendi.</span></li>
+          <li class="rv"><span class="l-en">Developed marketing and business plans for cross-border projects, including the BamBam DÖNER project in Barcelona and BioSa in Türkiye.</span><span class="l-tr">Barselona’daki BamBam DÖNER projesi ve Türkiye’deki BioSa dahil sınır ötesi projeler için pazarlama ve iş planları geliştirdi.</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="sec">
+      <h3 class="rv"><span class="l-en">Selected AI Products &amp; Research</span><span class="l-tr">Seçili YZ Ürünleri ve Araştırmalar</span></h3>
+      <div class="job">
+        <div class="hd rv"><h5>iQlinic <i>| <span class="l-en">Healthcare Decision Intelligence</span><span class="l-tr">Sağlıkta Karar Zekâsı</span></i></h5><span class="when"><span class="l-en">Primary Product</span><span class="l-tr">Ana Ürün</span></span></div>
+        <ul><li class="rv"><span class="l-en">A production-oriented platform combining clinical operations, patient behavior, financial signals, scheduling constraints, and decision-support workflows in a secure read-only architecture.</span><span class="l-tr">Klinik operasyonları, hasta davranışını, finansal sinyalleri, randevu kısıtlarını ve karar destek iş akışlarını güvenli, salt okunur bir mimaride birleştiren üretim odaklı bir platform.</span></li></ul>
+      </div>
+      <div class="job">
+        <div class="hd rv"><h5>Selphlyze <i>| <span class="l-en">Behavioral AI &amp; Psychometric R&amp;D</span><span class="l-tr">Davranışsal YZ ve Psikometrik Ar-Ge</span></i></h5><span class="when"><span class="l-en">Research Initiative</span><span class="l-tr">Araştırma Girişimi</span></span></div>
+        <ul>
+          <li class="rv"><span class="l-en">Designed a multilayer behavioral intelligence concept combining self-reported information with indirect behavioral and aesthetic signals, structured as interpretable, ML-ready psychological features.</span><span class="l-tr">Beyana dayalı bilgileri dolaylı davranışsal ve estetik sinyallerle birleştiren, yorumlanabilir ve makine öğrenmesine hazır psikolojik özellikler olarak yapılandırılmış çok katmanlı bir davranışsal zekâ konsepti tasarladı.</span></li>
+          <li class="rv"><span class="l-en">Developed research modules for aesthetic-driven psychometrics, temporal emotional analysis, behavioral pattern modeling, and AI-assisted insight generation. Performance claims from early pilot documents are intentionally excluded pending independent validation.</span><span class="l-tr">Estetik temelli psikometri, zamansal duygu analizi, davranışsal örüntü modelleme ve YZ destekli içgörü üretimi için araştırma modülleri geliştirdi. Erken pilot belgelerindeki performans iddiaları, bağımsız doğrulama tamamlanana kadar bilinçli olarak dahil edilmemiştir.</span></li>
+        </ul>
+      </div>
+      <div class="job">
+        <div class="hd rv"><h5>Contlyze <i>| <span class="l-en">AI Marketing Intelligence</span><span class="l-tr">YZ Pazarlama Zekâsı</span></i></h5><span class="when"><span class="l-en">Product Concept</span><span class="l-tr">Ürün Konsepti</span></span></div>
+        <ul><li class="rv"><span class="l-en">Designed an AI-assisted marketing analysis system for content-performance evaluation, behavioral engagement signals, structured insights, and decision-support dashboards.</span><span class="l-tr">İçerik performansı değerlendirmesi, davranışsal etkileşim sinyalleri, yapılandırılmış içgörüler ve karar destek panoları için YZ destekli bir pazarlama analiz sistemi tasarladı.</span></li></ul>
+      </div>
+    </div>
+
+    <div class="sec">
+      <h3 class="rv"><span class="l-en">Technical Toolkit</span><span class="l-tr">Teknik Araç Seti</span></h3>
+      <div class="tk">
+        <div class="rv"><b><span class="l-en">AI Product</span><span class="l-tr">YZ Ürünü</span></b><span class="l-en">Product discovery, PRDs, roadmaps, MVP planning, workflow design, AI feasibility, human-in-the-loop systems</span><span class="l-tr">Ürün keşfi, PRD’ler, yol haritaları, MVP planlama, iş akışı tasarımı, YZ fizibilitesi, insan-döngüde sistemler</span></div>
+        <div class="rv"><b><span class="l-en">Development</span><span class="l-tr">Geliştirme</span></b><span class="l-en">Git, GitHub, Visual Studio Code, Vercel, PyInstaller, PowerShell, AI coding agents, REST API concepts</span><span class="l-tr">Git, GitHub, Visual Studio Code, Vercel, PyInstaller, PowerShell, YZ kodlama ajanları, REST API kavramları</span></div>
+        <div class="rv"><b><span class="l-en">AI &amp; Analytics</span><span class="l-tr">YZ ve Analitik</span></b><span class="l-en">LLMs, prompt engineering, decision engines, scoring and ranking, behavioral modeling, supervised learning concepts, model-output evaluation</span><span class="l-tr">LLM’ler, prompt mühendisliği, karar motorları, skorlama ve sıralama, davranışsal modelleme, denetimli öğrenme kavramları, model çıktısı değerlendirme</span></div>
+        <div class="rv"><b><span class="l-en">Product &amp; Design</span><span class="l-tr">Ürün ve Tasarım</span></b><span class="l-en">Figma, Canva, Adobe Photoshop, CorelDRAW, PowerPoint, executive dashboards, UX workflow design</span><span class="l-tr">Figma, Canva, Adobe Photoshop, CorelDRAW, PowerPoint, yönetici panoları, UX iş akışı tasarımı</span></div>
+        <div class="rv"><b><span class="l-en">Programming &amp; Data</span><span class="l-tr">Programlama ve Veri</span></b><span class="l-en">Python, SQL, FastAPI, SQLite, Microsoft SQL Server, pandas, NumPy, SQLAlchemy, JSON/CSV pipelines</span><span class="l-tr">Python, SQL, FastAPI, SQLite, Microsoft SQL Server, pandas, NumPy, SQLAlchemy, JSON/CSV veri hatları</span></div>
+        <div class="rv"><b><span class="l-en">Business &amp; Growth</span><span class="l-tr">İş ve Büyüme</span></b><span class="l-en">Market research, competitive intelligence, brand strategy, consumer behavior, SEO, digital marketing, go-to-market planning</span><span class="l-tr">Pazar araştırması, rekabet istihbaratı, marka stratejisi, tüketici davranışı, SEO, dijital pazarlama, pazara giriş planlaması</span></div>
+      </div>
+    </div>
+
+    <div class="sec">
+      <h3 class="rv"><span class="l-en">Education</span><span class="l-tr">Eğitim</span></h3>
+      <div class="ed rv"><h6><span class="l-en">Master’s Degree in Electronic Business (E-Commerce)</span><span class="l-tr">Elektronik İşletme (E-Ticaret) Yüksek Lisansı</span></h6><span><span class="l-en">Urmia University</span><span class="l-tr">Urmiye Üniversitesi</span></span></div>
+      <div class="ed rv"><h6><span class="l-en">Bachelor’s Degree in Business Management — Marketing</span><span class="l-tr">İşletme Yönetimi (Pazarlama) Lisansı</span></h6><span><span class="l-en">Urmia University</span><span class="l-tr">Urmiye Üniversitesi</span></span></div>
+    </div>
+
+    <div class="sec">
+      <h3 class="rv"><span class="l-en">Certifications &amp; Professional Development</span><span class="l-tr">Sertifikalar ve Mesleki Gelişim</span></h3>
+      <div class="chips">
+        <span class="rv"><span class="l-en">Strategic Management — TÜV England</span><span class="l-tr">Stratejik Yönetim — TÜV England</span></span><span class="rv"><span class="l-en">Sales &amp; Marketing — QAL, United Kingdom</span><span class="l-tr">Satış ve Pazarlama — QAL, Birleşik Krallık</span></span><span class="rv"><span class="l-en">Advanced Import &amp; Export — Iran Chamber of Commerce</span><span class="l-tr">İleri İthalat ve İhracat — İran Ticaret Odası</span></span><span class="rv"><span class="l-en">Entrepreneurship Management — Urmia University</span><span class="l-tr">Girişimcilik Yönetimi — Urmiye Üniversitesi</span></span><span class="rv"><span class="l-en">Marketing Management Strategy — IQS</span><span class="l-tr">Pazarlama Yönetimi Stratejisi — IQS</span></span><span class="rv"><span class="l-en">Sales Strategy Management — ANCCP</span><span class="l-tr">Satış Stratejisi Yönetimi — ANCCP</span></span><span class="rv"><span class="l-en">Sales &amp; Marketing Management — DNW Austria</span><span class="l-tr">Satış ve Pazarlama Yönetimi — DNW Austria</span></span><span class="rv"><span class="l-en">Ongoing Professional Development in Data Science and Applied AI</span><span class="l-tr">Veri Bilimi ve Uygulamalı YZ alanında sürekli mesleki gelişim</span></span>
+      </div>
+    </div>
+
+    <div class="sec">
+      <h3 class="rv"><span class="l-en">Selected Teaching &amp; International Engagements</span><span class="l-tr">Seçili Eğitimler ve Uluslararası Etkinlikler</span></h3>
+      <ul>
+        <li class="rv"><span class="l-en">Delivered a three-day seminar at Wyndham Grand Istanbul covering social media communication, online-shopping psychology, and digital marketing.</span><span class="l-tr">Wyndham Grand İstanbul’da sosyal medya iletişimi, online alışveriş psikolojisi ve dijital pazarlama konulu üç günlük bir seminer verdi.</span></li>
+        <li class="rv"><span class="l-en">Led a three-day professional training camp on consumer behavior, negotiation techniques, and personal branding.</span><span class="l-tr">Tüketici davranışı, müzakere teknikleri ve kişisel markalaşma üzerine üç günlük bir profesyonel eğitim kampı yönetti.</span></li>
+        <li class="rv"><span class="l-en">Delivered seminars and workshops across customer behavior, branding, sales psychology, team management, organizational behavior, and business negotiation.</span><span class="l-tr">Müşteri davranışı, markalaşma, satış psikolojisi, ekip yönetimi, örgütsel davranış ve iş müzakeresi konularında seminer ve atölyeler verdi.</span></li>
+      </ul>
+    </div>
+
+    <div class="sec">
+      <h3 class="rv"><span class="l-en">Professional Positioning</span><span class="l-tr">Profesyonel Konumlandırma</span></h3>
+      <p class="rv"><span class="l-en">Target roles: AI Product Manager, Applied AI Product Manager, Decision Intelligence Product Lead, AI Transformation Consultant, and Healthcare AI Product Lead.</span><span class="l-tr">Hedef pozisyonlar: Yapay Zekâ Ürün Yöneticisi, Uygulamalı YZ Ürün Yöneticisi, Karar Zekâsı Ürün Lideri, YZ Dönüşüm Danışmanı ve Sağlıkta YZ Ürün Lideri.</span></p>
     </div>
   </div>
-  <a class="next" href="#reza"><span>Dr. Reza Safaralizadeh</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></a>
+ </article>
+ <div class="next"><a href="#reza">Dr. Reza Safaralizadeh <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></a></div>
 </section>
 
-<section class="page" id="reza">
-  <div class="pf gold"><div class="bg"></div><div class="glow"></div><div class="person"><img src="/team/reza.webp" alt="Dr. Reza Safaralizadeh"></div></div>
-  <div class="txt">
-    <div class="kick ri" style="--i:0"><span class="l-en">Clinical leadership</span><span class="l-tr">Klinik liderlik</span></div>
-    <h2 class="ri" style="--i:1"><small>Dr.</small>Reza <em>Safaralizadeh</em></h2>
-    <p class="role ri" style="--i:2"><span class="l-en">Dentist · Specialist · PhD — Polyclinic Owner &amp; Technical Director</span><span class="l-tr">Diş Hekimi · Uzman · PhD — Poliklinik Sahibi ve Mesul Müdür</span></p>
-    <p class="lead ri" style="--i:3"><span class="l-en">24 years in clinical dentistry and 23 years leading a large multi-specialty dental polyclinic — as clinician, educator and speaker.</span><span class="l-tr">24 yıllık klinik diş hekimliği deneyimi ve 23 yıldır büyük, çok branşlı bir diş polikliniğinin yönetimi — hekim, eğitmen ve konuşmacı olarak.</span></p>
-    <div class="nums ri" style="--i:4">
-      <div><b>21</b><span class="l-en">treatment units</span><span class="l-tr">tedavi ünitesi</span></div>
-      <div><b>82</b><span class="l-en">staff</span><span class="l-tr">personel</span></div>
-      <div><b>41</b><span class="l-en">dentists</span><span class="l-tr">diş hekimi</span></div>
+<!-- ===================== REZA ===================== -->
+<section class="page reza" id="reza">
+ <article class="cv">
+  <aside class="side">
+    <div class="pf"><div class="bg"></div><div class="glow"></div><div class="person"><img src="/team/reza.webp" alt="Dr. Reza Safaralizadeh"></div></div>
+    <div class="nm">Reza<br>Safaralizadeh</div>
+    <div class="sub"><span class="l-en">Dentist • Specialist • PhD • Clinical Leader</span><span class="l-tr">Diş Hekimi • Uzman • PhD • Klinik Lider</span></div>
+    <h4 class="rv"><span class="l-en">Clinical Scale</span><span class="l-tr">Klinik Ölçek</span></h4>
+    <div class="stats">
+      <div class="stat rv"><b data-to="24" data-suf="+">24+</b><span><span class="l-en">years in clinical dentistry</span><span class="l-tr">yıl klinik diş hekimliği</span></span></div>
+      <div class="stat rv"><b data-to="23" data-suf="">23</b><span><span class="l-en">years as polyclinic owner &amp; technical director</span><span class="l-tr">yıl poliklinik sahibi ve mesul müdür</span></span></div>
+      <div class="stat rv"><b data-to="21" data-suf="">21</b><span><span class="l-en">dental treatment units</span><span class="l-tr">diş tedavi ünitesi</span></span></div>
+      <div class="stat rv"><b data-to="82" data-suf="">82</b><span><span class="l-en">formally employed staff</span><span class="l-tr">kayıtlı çalışan personel</span></span></div>
+      <div class="stat rv"><b data-to="41" data-suf="">41</b><span><span class="l-en">specialist &amp; general dentists</span><span class="l-tr">uzman ve genel diş hekimi</span></span></div>
     </div>
-    <ul class="list">
-      <li class="ri" style="--i:5"><span class="l-en"><b>PhD &amp; Specialty Training</b> — Ankara University</span><span class="l-tr"><b>Doktora ve Uzmanlık Eğitimi</b> — Ankara Üniversitesi</span></li>
-      <li class="ri" style="--i:6"><span class="l-en"><b>Full-Mouth Reconstruction</b> (2-year program) — NYU</span><span class="l-tr"><b>Tam Ağız Rekonstrüksiyonu</b> (2 yıllık program) — NYU</span></li>
-      <li class="ri" style="--i:7"><span class="l-en"><b>Fellowship in Laser Dentistry</b> — University of Genoa</span><span class="l-tr"><b>Lazer Diş Hekimliği Fellowship</b> — Cenova Üniversitesi</span></li>
-      <li class="ri" style="--i:8"><span class="l-en"><b>DDS</b> — Shahid Beheshti University, Tehran</span><span class="l-tr"><b>Diş Hekimliği (DDS)</b> — Shahid Beheshti Üniversitesi, Tahran</span></li>
-      <li class="ri" style="--i:9"><span class="l-en">Speaker at <b>15+ congresses</b> · ceramic dentistry course instructor</span><span class="l-tr"><b>15+ kongrede</b> konuşmacı · seramik diş hekimliği kurs eğitmeni</span></li>
-      <li class="ri" style="--i:10"><span class="l-en">Scientific Secretary — Iranian Dental Association, West Azerbaijan</span><span class="l-tr">Bilimsel Sekreter — İran Diş Hekimleri Birliği, Batı Azerbaycan</span></li>
+    <h4 class="rv"><span class="l-en">Professional Focus</span><span class="l-tr">Mesleki Odak</span></h4>
+    <ul>
+      <li class="rv"><span class="l-en">Advanced restorative dentistry</span><span class="l-tr">İleri restoratif diş hekimliği</span></li><li class="rv"><span class="l-en">Full-mouth rehabilitation</span><span class="l-tr">Tam ağız rehabilitasyonu</span></li><li class="rv"><span class="l-en">Ceramic dentistry</span><span class="l-tr">Seramik diş hekimliği</span></li><li class="rv"><span class="l-en">Laser dentistry</span><span class="l-tr">Lazer diş hekimliği</span></li><li class="rv"><span class="l-en">Clinical education &amp; professional training</span><span class="l-tr">Klinik eğitim ve mesleki öğretim</span></li><li class="rv"><span class="l-en">Multi-specialty polyclinic leadership</span><span class="l-tr">Çok branşlı poliklinik yönetimi</span></li>
     </ul>
+  </aside>
+
+  <div class="main">
+    <div class="kick rv"><span class="l-en">Professional Curriculum Vitae</span><span class="l-tr">Profesyonel Özgeçmiş</span></div>
+    <h1 class="rv">Dr. Reza Safaralizadeh</h1>
+    <div class="role rv"><span class="l-en">Dentist | Specialist | PhD | Polyclinic Owner &amp; Technical Director | Dental Educator &amp; Speaker</span><span class="l-tr">Diş Hekimi | Uzman | PhD | Poliklinik Sahibi ve Mesul Müdür | Diş Hekimliği Eğitmeni ve Konuşmacı</span></div>
+
+    <div class="sec">
+      <h3 class="rv"><span class="l-en">Executive Profile</span><span class="l-tr">Yönetici Profili</span></h3>
+      <p class="rv"><span class="l-en">Senior dental professional with approximately 24 years of clinical practice and 23 years of experience leading a large multi-specialty dental polyclinic. His background combines specialist and doctoral (PhD) training, international continuing education, academic engagement, professional association leadership, and extensive experience managing multidisciplinary dental teams and operations.</span><span class="l-tr">Yaklaşık 24 yıllık klinik deneyime ve 23 yıldır büyük, çok branşlı bir diş polikliniğini yönetme tecrübesine sahip kıdemli bir diş hekimi. Uzmanlık ve doktora (PhD) eğitimini; uluslararası sürekli eğitim, akademik faaliyetler, mesleki dernek yöneticiliği ve multidisipliner diş hekimliği ekiplerini ve operasyonlarını yönetme konusundaki kapsamlı deneyimiyle birleştiriyor.</span></p>
+    </div>
+
+    <div class="sec">
+      <h3 class="rv"><span class="l-en">Professional Experience</span><span class="l-tr">Profesyonel Deneyim</span></h3>
+      <div class="job">
+        <div class="hd rv"><h5><span class="l-en">Owner &amp; Technical Director</span><span class="l-tr">Sahip ve Mesul Müdür</span> <i>— <span class="l-en">Multi-Specialty Dental Polyclinic</span><span class="l-tr">Çok Branşlı Diş Polikliniği</span></i></h5><span class="when"><span class="l-en">Approximately 23 years</span><span class="l-tr">Yaklaşık 23 yıl</span></span></div>
+        <ul>
+          <li class="rv"><span class="l-en">Leads a dental polyclinic with 21 treatment units and a multidisciplinary team of 41 specialist and general dentists.</span><span class="l-tr">21 tedavi ünitesine ve 41 uzman ve genel diş hekiminden oluşan multidisipliner bir ekibe sahip bir diş polikliniğini yönetiyor.</span></li>
+          <li class="rv"><span class="l-en">Oversees a formally employed workforce of 82 staff members, alongside clinical and operational responsibilities.</span><span class="l-tr">Klinik ve operasyonel sorumlulukların yanı sıra 82 kayıtlı çalışandan oluşan bir kadroyu yönetiyor.</span></li>
+          <li class="rv"><span class="l-en">Combines direct patient care with technical supervision, clinical governance, team coordination, and service delivery oversight.</span><span class="l-tr">Doğrudan hasta bakımını teknik denetim, klinik yönetişim, ekip koordinasyonu ve hizmet sunumu gözetimiyle birleştiriyor.</span></li>
+        </ul>
+      </div>
+      <div class="job">
+        <div class="hd rv"><h5><span class="l-en">Clinical Dentistry Practice</span><span class="l-tr">Klinik Diş Hekimliği Pratiği</span></h5><span class="when"><span class="l-en">Approximately 24 years</span><span class="l-tr">Yaklaşık 24 yıl</span></span></div>
+        <ul>
+          <li class="rv"><span class="l-en">Long-standing clinical practice in dentistry with advanced training in restorative, ceramic, laser, and full-mouth rehabilitation disciplines.</span><span class="l-tr">Restoratif, seramik, lazer ve tam ağız rehabilitasyonu alanlarında ileri eğitimle desteklenen uzun soluklu klinik diş hekimliği pratiği.</span></li>
+          <li class="rv"><span class="l-en">Active involvement in professional education, congress presentations, and specialist training courses.</span><span class="l-tr">Mesleki eğitim, kongre sunumları ve uzmanlık eğitim kurslarında aktif rol.</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="sec">
+      <h3 class="rv"><span class="l-en">Academic &amp; Advanced Clinical Education</span><span class="l-tr">Akademik ve İleri Klinik Eğitim</span></h3>
+      <div class="ed rv"><h6><span class="l-en">Doctor of Dental Surgery (6-year program)</span><span class="l-tr">Diş Hekimliği (DDS, 6 yıllık program)</span></h6><span><span class="l-en">Shahid Beheshti University, Tehran, Iran — Graduated in 1381 SH (2002/2003)</span><span class="l-tr">Shahid Beheshti Üniversitesi, Tahran, İran — Mezuniyet 1381 (2002/2003)</span></span></div>
+      <div class="ed rv"><h6><span class="l-en">Specialty Training (Specialist Dentist)</span><span class="l-tr">Uzmanlık Eğitimi (Uzman Diş Hekimi)</span></h6><span><span class="l-en">Ankara University, Türkiye</span><span class="l-tr">Ankara Üniversitesi, Türkiye</span></span></div>
+      <div class="ed rv"><h6><span class="l-en">Doctor of Philosophy (PhD)</span><span class="l-tr">Doktora (PhD)</span></h6><span><span class="l-en">Ankara University, Türkiye</span><span class="l-tr">Ankara Üniversitesi, Türkiye</span></span></div>
+      <div class="ed rv"><h6><span class="l-en">Fellowship in Laser Dentistry</span><span class="l-tr">Lazer Diş Hekimliği Fellowship Programı</span></h6><span><span class="l-en">University of Genoa, Italy</span><span class="l-tr">Cenova Üniversitesi, İtalya</span></span></div>
+      <div class="ed rv"><h6><span class="l-en">Advanced Full-Mouth Reconstruction Program (2-year program)</span><span class="l-tr">İleri Tam Ağız Rekonstrüksiyonu Programı (2 yıllık program)</span></h6><span><span class="l-en">New York University (NYU), United States</span><span class="l-tr">New York Üniversitesi (NYU), ABD</span></span></div>
+    </div>
+
+    <div class="sec">
+      <h3 class="rv"><span class="l-en">Academic, Teaching &amp; Professional Engagement</span><span class="l-tr">Akademik, Eğitim ve Mesleki Faaliyetler</span></h3>
+      <ul>
+        <li class="rv"><span class="l-en">Speaker at more than 15 specialist and international dental congresses.</span><span class="l-tr">15’ten fazla uzmanlık ve uluslararası diş hekimliği kongresinde konuşmacı.</span></li>
+        <li class="rv"><span class="l-en">Organizer and instructor of specialist courses in ceramic dentistry.</span><span class="l-tr">Seramik diş hekimliği alanında uzmanlık kurslarının organizatörü ve eğitmeni.</span></li>
+        <li class="rv"><span class="l-en">Scientific Secretary, Iranian Dental Association — West Azerbaijan Province Branch.</span><span class="l-tr">Bilimsel Sekreter, İran Diş Hekimleri Birliği — Batı Azerbaycan Eyaleti Şubesi.</span></li>
+      </ul>
+    </div>
+    <div class="foot rv"><span class="l-en">Selected professional profile • Prepared from supplied biographical information</span><span class="l-tr">Seçilmiş mesleki profil • Sağlanan biyografik bilgilerden hazırlanmıştır</span></div>
   </div>
+ </article>
 </section>
+<footer>iQlinic · 2026</footer>
 
 <script>
 (()=>{
@@ -232,20 +418,38 @@ h2 small{font-size:.5em;color:var(--gold);margin-right:.15em;vertical-align:.55e
   if(!l){const nl=(navigator.languages||[navigator.language||'']).join(',').toLowerCase();l=/(^|,)tr/.test(nl)?'tr':'en'}
   setLang(l,false);
   btns.forEach(b=>b.addEventListener('click',()=>{store.set('tp-lang',b.dataset.lang);setLang(b.dataset.lang,true)}));
-  // pages: reveal + dots
-  const pages=[...document.querySelectorAll('.page')],dots=[...document.querySelectorAll('.dots a')];
-  const io=new IntersectionObserver(es=>es.forEach(e=>{
-    if(e.isIntersecting){e.target.classList.add('in');dots.forEach(d=>d.classList.toggle('on',d.dataset.k===e.target.id))}
-  }),{threshold:.35});
-  pages.forEach(p=>io.observe(p));
-  setTimeout(()=>{const r=pages[0].getBoundingClientRect();if(r.top<innerHeight)pages[0].classList.add('in')},60);
-  // portrait depth parallax
-  if(matchMedia('(pointer:fine)').matches&&!reduce){
-    pages.forEach(pg=>{const pf=pg.querySelector('.pf');
-      pg.addEventListener('pointermove',e=>{const r=pf.getBoundingClientRect();
+
+  const showAll=()=>document.querySelectorAll('.rv,.cv').forEach(e=>e.classList.add('in'));
+  if(reduce||!('IntersectionObserver' in window)){showAll();return}
+
+  // count-up
+  function count(b){const to=+b.dataset.to,suf=b.dataset.suf||'',t0=performance.now();
+    const st=t=>{const p=Math.min(1,(t-t0)/1300);b.textContent=Math.round(to*(1-Math.pow(1-p,4)))+suf;if(p<1)requestAnimationFrame(st)};requestAnimationFrame(st)}
+  // sheets
+  const cio=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');cio.unobserve(e.target)}}),{threshold:.04});
+  document.querySelectorAll('.cv').forEach(c=>cio.observe(c));
+  // items: reveal one after another, top to bottom
+  let queue=[],timer=null,last=0;
+  function flush(){
+    queue.sort((a,b)=>a.getBoundingClientRect().top-b.getBoundingClientRect().top||a.getBoundingClientRect().left-b.getBoundingClientRect().left);
+    const now=performance.now(),base=Math.min(250,Math.max(0,last-now));
+    queue.forEach((el,i)=>{const d=base+Math.min(i,10)*85+Math.max(0,i-10)*25;el.style.setProperty('--d',d+'ms');el.classList.add('in');
+      const b=el.querySelector('b[data-to]');if(b)setTimeout(()=>count(b),d);});
+    last=now+base+Math.min(queue.length,10)*85;queue=[];timer=null;
+  }
+  const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){queue.push(e.target);io.unobserve(e.target)}});if(!timer)timer=setTimeout(flush,30)},{threshold:.1,rootMargin:'0px 0px -6% 0px'});
+  document.querySelectorAll('.rv').forEach(e=>io.observe(e));
+  // nav highlight
+  const segs=[...document.querySelectorAll('.seg a')];
+  const pio=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)segs.forEach(s=>s.classList.toggle('on',s.dataset.k===e.target.id))}),{rootMargin:'-45% 0px -50% 0px'});
+  document.querySelectorAll('.page').forEach(p=>pio.observe(p));
+  // portrait depth
+  if(matchMedia('(pointer:fine)').matches){
+    document.querySelectorAll('.side').forEach(sd=>{const pf=sd.querySelector('.pf');
+      sd.addEventListener('pointermove',e=>{const r=pf.getBoundingClientRect();
         pf.style.setProperty('--px',Math.max(-1,Math.min(1,((e.clientX-r.left)/r.width-.5)*2)).toFixed(3));
         pf.style.setProperty('--py',Math.max(-1,Math.min(1,((e.clientY-r.top)/r.height-.5)*2)).toFixed(3));});
-      pg.addEventListener('pointerleave',()=>{pf.style.setProperty('--px',0);pf.style.setProperty('--py',0)});
+      sd.addEventListener('pointerleave',()=>{pf.style.setProperty('--px',0);pf.style.setProperty('--py',0)});
     });
   }
 })();
