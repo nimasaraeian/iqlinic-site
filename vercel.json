@@ -68,7 +68,7 @@
   "rewrites": [
     {
       "source": "/team/:who/",
-      "destination": "/team/index.html"
+      "destination": "/team/"
     }
   ]
 }
