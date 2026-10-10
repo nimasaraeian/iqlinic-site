@@ -10,17 +10,17 @@ const EXTRA = {
   fa: {
     staff: { subtitle: 'چه کسی بیمار را با نوبتِ بعدی مرخص می‌کند، چه کسی نه — ۱۲ ماه اخیر.', visits: 'ویزیت‌های ۱۲ ماه', visitsSub: 'همه‌ی پزشکان', leak: 'بدونِ نوبتِ بعدی', leakSub: 'بیمارانی که بی‌نوبت رفتند', active: 'پذیرشِ فعال', activeSub: 'کاربرانِ ثبت‌کننده‌ی نوبت', best: 'بهترین نرخِ نوبتِ بعدی', trendTitle: 'روندِ نوبتِ سرِ ویزیت', trendSub: 'سهمِ بیمارانی که با نوبتِ بعدی مرخص شدند', tableTitle: 'به تفکیکِ پذیرش', col: { who: 'کاربر', visits: 'ویزیت', rebooked: 'نوبتِ بعدی', rate: 'نرخ' }, good: 'خوب', mid: 'متوسط', low: 'نیاز به بررسی', anon: 'در دموی عمومی، نام کاربران ناشناس شده است.' },
     twin: { subtitle: 'قبل از تغییرِ برنامه، اثرش را روی ظرفیت، انتظار و درآمد ببینید.', demand: 'تقاضا', capacity: 'ظرفیت', fill: 'پرشدگیِ ظرفیت', fillSub: 'هفته‌ی آینده', wait: 'میانگینِ انتظار', waitSub: 'از نوبت تا ویزیت', min: 'دقیقه', revenue: 'اثر روی درآمد', revenueSub: 'نسبت به برنامه‌ی فعلی', conflict: 'ریسکِ تداخل', conflictSub: 'هم‌پوشانیِ نوبت‌ها', chartTitle: 'تقاضا در برابرِ ظرفیت', chartSub: 'به تفکیکِ روزِ هفته', whatIf: 'سناریوی انتخاب‌شده', whatIfBody: 'تغییراتی که این سناریو روی برنامه اعمال می‌کند:', recTitle: 'پیشنهادِ دوقلو', apply: 'اعمال در برنامه' },
-    demo: { lockedTitle: 'این بخش در نسخه‌ی کامل در دسترس است', lockedBody: 'در دموی عمومی فقط ماژول‌های هوشمند فعال‌اند. برای دیدنِ پذیرش، نوبت‌دهی و مدیریتِ کاربران با داده‌ی خودتان، درخواست بررسی بدهید.', contact: 'درخواست بررسی', marked: 'پیگیری ثبت شد (نمایشی)', refreshed: 'بروزرسانی شد', applied: 'سناریو اعمال شد (نمایشی)', pages: 'صفحه‌ها', user: 'کاربر نمایشی', back: 'بازگشت به سایت' },
+    demo: { lockedTitle: 'این بخش در نسخه‌ی کامل در دسترس است', lockedBody: 'در دموی عمومی فقط ماژول‌های هوشمند فعال‌اند. برای دیدنِ پذیرش، نوبت‌دهی و مدیریتِ کاربران با داده‌ی خودتان، درخواست بررسی بدهید.', contact: 'درخواست بررسی', marked: 'پیگیری ثبت شد (نمایشی)', openFile: 'پرونده‌ی کامل', imgNote: 'تصاویر این دمو نمونه‌ی ساختگی‌اند و متعلق به هیچ بیماری نیستند.', refreshed: 'بروزرسانی شد', applied: 'سناریو اعمال شد (نمایشی)', pages: 'صفحه‌ها', user: 'کاربر نمایشی', back: 'بازگشت به سایت' },
   },
   en: {
     staff: { subtitle: 'Who sends patients home with a next appointment, and who doesn’t — last 12 months.', visits: 'Visits (12 months)', visitsSub: 'all doctors', leak: 'No next appointment', leakSub: 'patients who left unbooked', active: 'Active receptionists', activeSub: 'users who book appointments', best: 'Best rebooking rate', trendTitle: 'Chairside rebooking trend', trendSub: 'share of patients discharged with a next appointment', tableTitle: 'By receptionist', col: { who: 'User', visits: 'Visits', rebooked: 'Rebooked', rate: 'Rate' }, good: 'Good', mid: 'Average', low: 'Needs review', anon: 'User names are anonymised in the public demo.' },
     twin: { subtitle: 'See the effect on capacity, waiting time and revenue before changing the schedule.', demand: 'Demand', capacity: 'Capacity', fill: 'Capacity fill', fillSub: 'next week', wait: 'Average wait', waitSub: 'booking to visit', min: 'min', revenue: 'Revenue effect', revenueSub: 'vs. current plan', conflict: 'Conflict risk', conflictSub: 'overlapping slots', chartTitle: 'Demand vs capacity', chartSub: 'by weekday', whatIf: 'Selected scenario', whatIfBody: 'Changes this scenario applies to the schedule:', recTitle: 'Twin recommendation', apply: 'Apply to schedule' },
-    demo: { lockedTitle: 'Available in the full version', lockedBody: 'Only the intelligence modules are enabled in the public demo. To see reception, scheduling and user management on your own data, request a review.', contact: 'Request a review', marked: 'Follow-up recorded (demo)', refreshed: 'Refreshed', applied: 'Scenario applied (demo)', pages: 'Pages', user: 'Demo user', back: 'Back to site' },
+    demo: { lockedTitle: 'Available in the full version', lockedBody: 'Only the intelligence modules are enabled in the public demo. To see reception, scheduling and user management on your own data, request a review.', contact: 'Request a review', marked: 'Follow-up recorded (demo)', openFile: 'Full file', imgNote: 'Images in this demo are synthetic samples and belong to no patient.', refreshed: 'Refreshed', applied: 'Scenario applied (demo)', pages: 'Pages', user: 'Demo user', back: 'Back to site' },
   },
   tr: {
     staff: { subtitle: 'Kim hastayı sonraki randevuyla uğurluyor, kim uğurlamıyor — son 12 ay.', visits: 'Ziyaret (12 ay)', visitsSub: 'tüm hekimler', leak: 'Sonraki randevu yok', leakSub: 'randevusuz ayrılan hastalar', active: 'Aktif resepsiyonist', activeSub: 'randevu kaydeden kullanıcılar', best: 'En iyi randevu oranı', trendTitle: 'Koltuk başı randevu eğilimi', trendSub: 'sonraki randevuyla ayrılan hasta payı', tableTitle: 'Resepsiyoniste göre', col: { who: 'Kullanıcı', visits: 'Ziyaret', rebooked: 'Randevu verildi', rate: 'Oran' }, good: 'İyi', mid: 'Orta', low: 'İnceleme gerekli', anon: 'Herkese açık demoda kullanıcı adları anonimleştirilmiştir.' },
     twin: { subtitle: 'Planı değiştirmeden önce kapasite, bekleme ve gelire etkisini görün.', demand: 'Talep', capacity: 'Kapasite', fill: 'Kapasite doluluğu', fillSub: 'gelecek hafta', wait: 'Ortalama bekleme', waitSub: 'randevudan ziyarete', min: 'dk', revenue: 'Gelire etkisi', revenueSub: 'mevcut plana göre', conflict: 'Çakışma riski', conflictSub: 'örtüşen randevular', chartTitle: 'Talep ve kapasite', chartSub: 'haftanın günlerine göre', whatIf: 'Seçili senaryo', whatIfBody: 'Bu senaryonun plana uyguladığı değişiklikler:', recTitle: 'İkiz önerisi', apply: 'Plana uygula' },
-    demo: { lockedTitle: 'Tam sürümde kullanılabilir', lockedBody: 'Herkese açık demoda yalnızca zekâ modülleri açıktır. Resepsiyon, randevu ve kullanıcı yönetimini kendi verinizle görmek için inceleme talep edin.', contact: 'İnceleme talep et', marked: 'Takip kaydedildi (demo)', refreshed: 'Yenilendi', applied: 'Senaryo uygulandı (demo)', pages: 'Sayfalar', user: 'Demo kullanıcısı', back: 'Siteye dön' },
+    demo: { lockedTitle: 'Tam sürümde kullanılabilir', lockedBody: 'Herkese açık demoda yalnızca zekâ modülleri açıktır. Resepsiyon, randevu ve kullanıcı yönetimini kendi verinizle görmek için inceleme talep edin.', contact: 'İnceleme talep et', marked: 'Takip kaydedildi (demo)', openFile: 'Tam dosya', imgNote: 'Bu demodaki görüntüler sentetik örneklerdir ve hiçbir hastaya ait değildir.', refreshed: 'Yenilendi', applied: 'Senaryo uygulandı (demo)', pages: 'Sayfalar', user: 'Demo kullanıcısı', back: 'Siteye dön' },
   },
 };
 
@@ -78,7 +78,29 @@ function dataset(lang) {
     { name: 'One more doctor on Tuesday', cap: [60, 70, 82, 100, 96, 50], fill: 86, wait: 6, rev: 11, conf: 'Low', rec: 'Adding a Tuesday shift fits 22 waiting patients into next week.', changes: [['New shift', 'Tue 14–20'], ['Extra capacity', '+22 slots']] },
     { name: '20-minute slots', cap: [72, 84, 98, 84, 110, 60], fill: 91, wait: 4, rev: 18, conf: 'Medium', rec: 'Shorter slots raise revenue but increase cascading-delay risk on Wednesday.', changes: [['Slot length', '30 → 20 min'], ['Extra capacity', '+78 slots'], ['Risk', 'cascading delays']] },
   ];
+  const dt = (i) => fa ? ['۱۴۰۳/۰۲/۱۴', '۱۴۰۳/۰۹/۰۳', '۱۴۰۴/۰۱/۲۰', '۱۴۰۴/۰۶/۰۸', '۱۴۰۵/۰۳/۱۹', '۱۴۰۵/۰۶/۲۴'][i] : ['2024-05-03', '2024-11-23', '2025-04-09', '2025-08-30', '2026-06-09', '2026-09-15'][i];
+  const file = {
+    teeth: {
+      '16': { state: 'done', history: [{ date: dt(0), specialty: 'restor' }] },
+      '14': { state: 'done', history: [{ date: dt(1), specialty: 'endo' }, { date: dt(2), specialty: 'prosth' }] },
+      '11': { state: 'done', history: [{ date: dt(3), specialty: 'restor' }] },
+      '21': { state: 'done', history: [{ date: dt(3), specialty: 'restor' }] },
+      '26': { state: 'done', history: [{ date: dt(2), specialty: 'endo' }] },
+      '36': { state: 'active', history: [{ date: dt(4), specialty: 'surgery' }, { date: dt(5), specialty: 'implant' }] },
+      '37': { state: 'done', history: [{ date: dt(1), specialty: 'restor' }] },
+      '46': { state: 'implant', history: [{ date: dt(0), specialty: 'implant' }, { date: dt(2), specialty: 'prosth' }] },
+      '38': { state: 'missing', history: [{ date: dt(0), specialty: 'surgery' }] },
+      '48': { state: 'missing', history: [{ date: dt(0), specialty: 'surgery' }] },
+      '45': { state: 'done', history: [{ date: dt(3), specialty: 'restor' }] },
+    },
+    images: { opg: [{ src: '/demo/img/opg-sample.jpg', date: dt(5) }, { src: '/demo/img/opg-sample.jpg', date: dt(0) }], intra: [{ src: '/demo/img/pa-1.jpg', date: dt(5), tooth: '36' }, { src: '/demo/img/pa-2.jpg', date: dt(2), tooth: '14' }, { src: '/demo/img/pa-3.jpg', date: dt(0), tooth: '46' }] },
+    next: { step: 'prosth', days: 21, normal: 14 },
+    kpi: { done: 9, open: 1, lost: 1 },
+    appts: { came: 13, booked: 15, missed: 2 },
+    episodes: [{ from: dt(4), to: '', state: 'waiting', steps: ['surgery', 'implant', 'prosth'] }, { from: dt(1), to: dt(3), state: 'closed', steps: ['endo', 'prosth', 'restor'] }, { from: dt(0), to: dt(0), state: 'closed', steps: ['exam', 'restor', 'surgery'] }],
+  };
   return {
+    file,
     user: EXTRA[lang].demo.user, today: fa ? '۱۴۰۵/۰۷/۱۸' : '2026-10-10',
     note: fa ? 'همه‌ی نام‌ها، اعداد و رخدادها ساختگی‌اند.' : lang === 'tr' ? 'Tüm adlar, sayılar ve olaylar sentetiktir.' : 'All names, numbers and events are synthetic.',
     summary: { opportunity: 218600000, avgDays: 87 },
@@ -136,14 +158,15 @@ for (const lang of ['fa', 'en', 'tr']) {
   head = head.replace(/<link[^>]*(demo\/|styles\.css|site-v)[^>]*>\n?/g, '').replace(/<script[^>]*(demo\/|site-v|contact-widget)[^>]*><\/script>\n?/g, '');
   head = head.replace(/<script id="v4-early">[\s\S]*?<\/script>\n?/g, '').replace(/<link[^>]*id="v4-(core|shell)"[^>]*>\n?/g, '').replace(/<script[^>]*id="v4-js"[^>]*><\/script>\n?/g, '');
   head = head.replace(/<meta name="theme-color" content="[^"]*">/, '<meta name="theme-color" content="#0a0a0c">');
-  head += `<link rel="stylesheet" href="/demo/app.css?v=${V}">\n<link rel="stylesheet" href="/demo/v4.css?v=${V}">\n<script>(function(){try{var v=localStorage.getItem('iq-demo-theme')||'dark';document.documentElement.setAttribute('data-theme',v);}catch(e){document.documentElement.setAttribute('data-theme','dark');}})();</script>\n</head>\n`;
+  head += `<link rel="stylesheet" href="/demo/app.css?v=${V}">\n<link rel="stylesheet" href="/demo/profiles.css?v=${V}">\n<link rel="stylesheet" href="/demo/v4.css?v=${V}">\n<script>(function(){try{var v=localStorage.getItem('iq-demo-theme')||'dark';document.documentElement.setAttribute('data-theme',v);}catch(e){document.documentElement.setAttribute('data-theme','dark');}})();</script>\n</head>\n`;
   const loc = JSON.parse(fs.readFileSync(path.join(ROOT, 'demo', 'locales', `loc_${lang}.json`), 'utf8'));
   const p360 = lang === 'fa' ? { title: 'Patient 360', basics: 'اطلاعات پایه', currentInsurance: 'بیمه فعلی', realVisits: 'روزهای مراجعه', firstVisit: 'اولین مراجعه', lastVisit: 'آخرین مراجعه', value: 'ارزش مالی', level: 'سطح', score: 'امتیاز', totalServices: 'کل خدمات', totalReceived: 'کل دریافتی', balance: 'مانده', payments: 'وضعیت مالی', received: 'مبلغ دریافتی', lastVisits: 'آخرین مراجعه‌ها' }
     : lang === 'tr' ? { title: 'Patient 360', basics: 'Temel bilgiler', currentInsurance: 'Mevcut sigorta', realVisits: 'Ziyaret günleri', firstVisit: 'İlk ziyaret', lastVisit: 'Son ziyaret', value: 'Finansal değer', level: 'Seviye', score: 'Puan', totalServices: 'Toplam hizmet', totalReceived: 'Toplam tahsilat', balance: 'Bakiye', payments: 'Finansal durum', received: 'Tahsil edilen', lastVisits: 'Son ziyaretler' }
     : { title: 'Patient 360', basics: 'Basics', currentInsurance: 'Current insurance', realVisits: 'Visit days', firstVisit: 'First visit', lastVisit: 'Last visit', value: 'Financial value', level: 'Level', score: 'Score', totalServices: 'Total services', totalReceived: 'Total received', balance: 'Balance', payments: 'Financial status', received: 'Received', lastVisits: 'Recent visits' };
-  const t = Object.assign({}, loc, { p360 }, EXTRA[lang]);
+  const ptl = JSON.parse(fs.readFileSync(path.join(ROOT, 'demo', 'locales', `loc_pt_${lang}.json`), 'utf8'));
+  const t = Object.assign({}, loc, { p360 }, ptl, EXTRA[lang]);
   const cfg = { lang, t, demo: dataset(lang), contact: `/${lang}/#contact` };
-  const body = `<body class="demo-v4">\n${shell(lang, t, EXTRA[lang])}\n<script>window.IQ_DEMO=${JSON.stringify(cfg)};</script>\n<script defer src="/demo/v4.js?v=${V}"></script>\n</body>\n</html>\n`;
+  const body = `<body class="demo-v4">\n${shell(lang, t, EXTRA[lang])}\n<script>window.IQ_DEMO=${JSON.stringify(cfg)};</script>\n<script defer src="/demo/teeth.js?v=${V}"></script>\n<script defer src="/demo/v4.js?v=${V}"></script>\n</body>\n</html>\n`;
   fs.writeFileSync(file, head + body);
   console.log('built demo', lang);
 }
