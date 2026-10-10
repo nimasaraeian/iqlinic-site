@@ -1,0 +1,71 @@
+/* iQlinic v4 core — page-transition veil + 3D extruded logo. Safe to load on any page. */
+:root{--accr:57,208,224; --ease:cubic-bezier(.2,.7,.2,1)}
+/* ---------- early cover (set from <head> before paint when arriving via a menu link) ---------- */
+html.v4-enter::before{content:""; position:fixed; inset:0; z-index:99998; background:var(--v4-cover,#050912)}
+html.v4-enter[data-kind="home"]{--v4-cover:#061522} html.v4-enter[data-kind="product"]{--v4-cover:#071533}
+html.v4-enter[data-kind="insights"]{--v4-cover:#120d2e} html.v4-enter[data-kind="demo"]{--v4-cover:#06201c}
+html.v4-enter[data-kind="team"]{--v4-cover:#241a07} html.v4-enter[data-kind="contact"],html.v4-enter[data-kind="lang"]{--v4-cover:#0a1424}
+html.v4-enter.v4-veil-ready::before{display:none}
+html.v4-enter::before{animation:v4coverSafety 0s 2.8s forwards}
+@keyframes v4coverSafety{to{visibility:hidden; opacity:0}}
+
+/* ---------- veil (page transition) ---------- */
+.v4-veil{position:fixed; inset:0; z-index:99999; pointer-events:none; display:none; --vc:#39D0E0; --vd:#061522}
+.v4-veil.show{display:block; pointer-events:auto}
+.v4-veil .slats{position:absolute; inset:0; display:grid; grid-template-columns:repeat(6,1fr)}
+.v4-veil .slats i{display:block; background:linear-gradient(180deg,var(--vd),color-mix(in srgb,var(--vd) 70%,var(--vc))); transform:scaleY(0); transform-origin:top; box-shadow:inset 0 0 0 1px rgba(255,255,255,.04)}
+.v4-veil .iris{position:absolute; inset:0; background:var(--vd); clip-path:circle(0% at 50% 50%)}
+.v4-veil .wipe{position:absolute; inset:0; background:linear-gradient(135deg,var(--vd),color-mix(in srgb,var(--vd) 70%,var(--vc))); clip-path:polygon(0 0,0 0,0 100%,0 100%)}
+.v4-veil .fade{position:absolute; inset:0; background:var(--vd); opacity:0; backdrop-filter:blur(0px)}
+.v4-veil .logo{position:absolute; left:50%; top:50%; width:min(22vw,150px); transform:translate(-50%,-50%); opacity:0; filter:drop-shadow(0 0 24px rgba(var(--accr),.7))}
+.v4-veil .logo svg{width:100%; height:auto; display:block}
+.v4-veil .word{position:absolute; left:50%; top:calc(50% + min(14vw,100px)); width:min(40vw,240px); transform:translate(-50%,0); opacity:0}
+.v4-veil .word svg{width:100%; height:auto; display:block}
+.v4-veil .ring{position:absolute; left:50%; top:50%; width:min(40vw,320px); aspect-ratio:1; transform:translate(-50%,-50%) scale(.6); border-radius:50%; border:1px solid rgba(255,255,255,.18); opacity:0; box-shadow:0 0 0 1px rgba(var(--accr),.25), 0 0 80px -20px rgba(var(--accr),.9)}
+/* --- OUT (cover the current page) --- */
+.v4-veil.out.slats-top .slats i{animation:slatIn .46s var(--ease) forwards} .v4-veil.out.slats-top .slats i:nth-child(n){animation-delay:calc(var(--i)*.045s)}
+.v4-veil.out.slats-bottom .slats i{transform-origin:bottom; animation:slatIn .46s var(--ease) forwards; animation-delay:calc((5 - var(--i))*.045s)}
+.v4-veil.out.iris .iris{animation:irisIn .6s var(--ease) forwards}
+.v4-veil.out.wipe .wipe{animation:wipeIn .55s var(--ease) forwards}
+.v4-veil.out.fade .fade{animation:fadeIn .45s ease forwards}
+.v4-veil.out .logo{animation:logoIn .6s .18s var(--ease) forwards}
+.v4-veil.out .ring{animation:ringIn .8s .1s var(--ease) forwards}
+/* --- IN (reveal the new page) --- */
+.v4-veil.in .slats i{transform:scaleY(1)} .v4-veil.in .iris{clip-path:circle(150% at 50% 50%)} .v4-veil.in .wipe{clip-path:polygon(0 0,100% 0,100% 100%,0 100%)} .v4-veil.in .fade{opacity:1}
+.v4-veil.in .logo{opacity:1; transform:translate(-50%,-50%) rotateY(0deg)}
+.v4-veil.in .word{opacity:1}
+.v4-veil.in.go.slats-top .slats i{transform-origin:bottom; animation:slatOut .55s var(--ease) forwards; animation-delay:calc(var(--i)*.05s + .25s)}
+.v4-veil.in.go.slats-bottom .slats i{transform-origin:top; animation:slatOut .55s var(--ease) forwards; animation-delay:calc((5 - var(--i))*.05s + .25s)}
+.v4-veil.in.go.iris .iris{animation:irisOut .7s .25s var(--ease) forwards}
+.v4-veil.in.go.wipe .wipe{animation:wipeOut .6s .25s var(--ease) forwards}
+.v4-veil.in.go.fade .fade{animation:fadeOut .5s .2s ease forwards}
+.v4-veil.in.go .logo{animation:logoOut .5s var(--ease) forwards}
+.v4-veil.in.go .word{animation:wordOut .4s var(--ease) forwards}
+@keyframes slatIn{to{transform:scaleY(1)}} @keyframes slatOut{to{transform:scaleY(0)}}
+@keyframes irisIn{to{clip-path:circle(150% at 50% 50%)}} @keyframes irisOut{to{clip-path:circle(0% at 50% 50%)}}
+@keyframes wipeIn{to{clip-path:polygon(0 0,100% 0,100% 100%,0 100%)}} @keyframes wipeOut{to{clip-path:polygon(100% 0,100% 0,100% 100%,100% 100%)}}
+@keyframes fadeIn{to{opacity:1}} @keyframes fadeOut{to{opacity:0}}
+@keyframes logoIn{0%{opacity:0; transform:translate(-50%,-50%) rotateY(-90deg) scale(.7)} 100%{opacity:1; transform:translate(-50%,-50%) rotateY(0) scale(1)}}
+@keyframes logoOut{to{opacity:0; transform:translate(-50%,-50%) rotateY(90deg) scale(1.15)}}
+@keyframes wordOut{to{opacity:0; transform:translate(-50%,10px)}}
+@keyframes ringIn{0%{opacity:0; transform:translate(-50%,-50%) scale(.5)} 60%{opacity:1} 100%{opacity:0; transform:translate(-50%,-50%) scale(1.6)}}
+/* content rise on enter */
+html.v4-enter main, html.v4-enter .v4-rise{animation:v4rise .9s .35s var(--ease) both}
+@keyframes v4rise{from{opacity:0; transform:translateY(22px)} to{opacity:1; transform:none}}
+
+/* ---------- 3D extruded logo ---------- */
+.lg3d{display:inline-block; perspective:700px; cursor:grab; touch-action:none; user-select:none; -webkit-user-drag:none}
+.lg3d.drag{cursor:grabbing}
+.lg3d .st{display:block; position:relative; transform-style:preserve-3d; width:var(--w,40px); aspect-ratio:350/460; will-change:transform}
+.lg3d .st i{position:absolute; inset:0; display:block; background:var(--lc,#fff); -webkit-mask:url("/assets/logo-mark.svg") center/contain no-repeat; mask:url("/assets/logo-mark.svg") center/contain no-repeat; transform:translateZ(calc(var(--k) * var(--dz,1px))); backface-visibility:visible}
+.lg3d .st i.f{background:linear-gradient(160deg,#ffffff,#cfe6ff 55%,#9fd4ff); filter:drop-shadow(0 0 10px rgba(var(--accr),.55))}
+.lg3d .st i.b{background:#0b1a33}
+.lg3d .st i.m{background:linear-gradient(160deg,#4e6a96,#1e3357)}
+.lg3d.big .st{--w:min(42vw,240px); --dz:2.2px}
+.lg3d.big .st i.f{filter:drop-shadow(0 0 30px rgba(var(--accr),.55)) drop-shadow(0 20px 40px rgba(0,0,0,.6))}
+
+
+@media (prefers-reduced-motion:reduce){
+  .v4-veil,.v4-veil *{animation:none !important; transition:none !important}
+  html.v4-enter main, html.v4-enter .v4-rise{animation:none}
+}

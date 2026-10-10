@@ -1,0 +1,84 @@
+/* iQlinic v4 shell — shared across every page: tokens, 3D logo, header, footer, page transitions.
+   Loaded after page-specific CSS so its tokens win. */
+@font-face{font-family:"Vazirmatn";src:url("/assets/fonts/vazirmatn-arabic-400-normal.woff2") format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:"Vazirmatn";src:url("/assets/fonts/vazirmatn-arabic-500-normal.woff2") format("woff2");font-weight:500;font-display:swap}
+@font-face{font-family:"Vazirmatn";src:url("/assets/fonts/vazirmatn-arabic-600-normal.woff2") format("woff2");font-weight:600;font-display:swap}
+@font-face{font-family:"Vazirmatn";src:url("/assets/fonts/vazirmatn-arabic-700-normal.woff2") format("woff2");font-weight:700;font-display:swap}
+@font-face{font-family:"Vazirmatn";src:url("/assets/fonts/vazirmatn-arabic-800-normal.woff2") format("woff2");font-weight:800;font-display:swap}
+
+:root{
+  --bg:#050912; --bg2:#07101d; --panel:rgba(12,22,42,.62); --panel-solid:#0b1527;
+  --text:#F2F6FF; --ink:#F2F6FF; --ink-2:#AEB9CF; --ink-3:#6E7B93; --muted:#AEB9CF;
+  --line:rgba(160,190,255,.16); --line-strong:rgba(120,170,255,.4); --glass:rgba(16,28,52,.55);
+  --blue:#4EA3FF; --cyan:#39D0E0; --teal:#2DD4BF; --violet:#9B7BFF; --green:#2DD4BF; --amber:#F2B544; --red:#FF7A7A; --ice:#BFE9FF; --coral:#FF7A7A;
+  --accr:57,208,224;
+  --fa:"Vazirmatn", ui-sans-serif, Tahoma, Arial, sans-serif;
+  --ease:cubic-bezier(.2,.7,.2,1);
+  --shadow:0 32px 100px rgba(0,0,0,.5);
+  --hdr-h:76px;
+}
+html{background:var(--bg); color-scheme:dark}
+body{font-family:var(--fa)}
+body:before{display:none}
+.noise,.cursor-glow{display:none}
+
+/* ---------- header ---------- */
+.v4-header{position:fixed; top:0; left:0; right:0; z-index:9000; height:var(--hdr-h); transition:background .35s, border-color .35s, backdrop-filter .35s}
+.v4-header::before{content:""; position:absolute; inset:0; background:linear-gradient(180deg,rgba(5,9,18,.92),rgba(5,9,18,.55)); border-bottom:1px solid transparent; backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px); opacity:0; transition:opacity .35s}
+.v4-header.scrolled::before{opacity:1; border-bottom-color:var(--line)}
+.v4-header .in{position:relative; max-width:1280px; margin:0 auto; padding-inline:26px; height:100%; display:flex; align-items:center; gap:22px}
+.v4-brand{display:flex; align-items:center; gap:12px; color:var(--text); text-decoration:none; height:100%}
+.v4-brand .lg3d .st{--w:34px; --dz:.9px}
+.v4-brand .wm{height:22px; width:auto; display:block; filter:drop-shadow(0 2px 8px rgba(0,0,0,.5))}
+.v4-brand small{display:block; font-size:9px; letter-spacing:.26em; color:var(--ink-3); font-weight:600; margin-top:2px}
+.v4-nav{display:flex; gap:4px; margin-inline:auto}
+.v4-nav a{color:var(--ink-2); text-decoration:none; font-size:14.5px; font-weight:500; padding:9px 14px; border-radius:10px; position:relative; transition:color .2s, background .2s}
+.v4-nav a:hover,.v4-nav a[aria-current="page"]{color:var(--text); background:rgba(120,170,255,.08)}
+.v4-nav a::after{content:""; position:absolute; left:14px; right:14px; bottom:5px; height:2px; border-radius:2px; background:linear-gradient(90deg,var(--cyan),var(--violet)); transform:scaleX(0); transform-origin:inline-start; transition:transform .3s var(--ease)}
+.v4-nav a:hover::after,.v4-nav a[aria-current="page"]::after{transform:scaleX(1)}
+.v4-actions{display:flex; align-items:center; gap:10px}
+.v4-langs{display:flex; border:1px solid var(--line); border-radius:999px; padding:3px; background:rgba(10,18,34,.5)}
+.v4-langs a{color:var(--ink-3); text-decoration:none; font-size:11.5px; font-weight:700; padding:5px 9px; border-radius:999px; letter-spacing:.06em}
+.v4-langs a.on{color:#fff; background:linear-gradient(90deg,#2F7BFF,#39D0E0)}
+.v4-btn{font-family:var(--fa); font-weight:700; font-size:14px; border-radius:12px; padding:10px 18px; cursor:pointer; border:1px solid transparent; display:inline-flex; align-items:center; gap:8px; text-decoration:none; color:var(--text); transition:transform .15s, box-shadow .25s, filter .25s, border-color .2s; white-space:nowrap}
+.v4-btn.pri{background:linear-gradient(90deg,#2F7BFF,#4FB1FF); color:#fff; box-shadow:0 10px 30px -8px rgba(60,140,255,.7), inset 0 1px 0 rgba(255,255,255,.25)}
+.v4-btn.pri:hover{transform:translateY(-2px); filter:brightness(1.06)}
+.v4-btn.out{background:transparent; border-color:rgba(120,170,255,.45)} .v4-btn.out:hover{border-color:#fff}
+.v4-btn.ghost{background:rgba(20,32,58,.55); border-color:var(--line); backdrop-filter:blur(8px)} .v4-btn.ghost:hover{border-color:var(--line-strong)}
+.v4-menu{display:none; width:42px; height:42px; border-radius:12px; border:1px solid var(--line); background:rgba(10,18,34,.6); cursor:pointer; place-items:center; gap:5px; flex-direction:column; padding:0}
+.v4-menu span{display:block; width:18px; height:2px; background:#fff; border-radius:2px; transition:transform .3s, opacity .3s}
+.v4-menu[aria-expanded="true"] span:first-child{transform:translateY(3.5px) rotate(45deg)} .v4-menu[aria-expanded="true"] span:last-child{transform:translateY(-3.5px) rotate(-45deg)}
+.v4-drawer{position:fixed; inset:var(--hdr-h) 0 0 0; z-index:8999; background:rgba(5,9,18,.96); backdrop-filter:blur(18px); display:flex; flex-direction:column; padding:22px 26px; gap:4px; transform:translateY(-8px); opacity:0; pointer-events:none; transition:opacity .3s, transform .3s}
+.v4-drawer.open{opacity:1; transform:none; pointer-events:auto}
+.v4-drawer a{color:var(--text); text-decoration:none; font-size:20px; font-weight:700; padding:14px 6px; border-bottom:1px solid var(--line)}
+.v4-drawer .langs{display:flex; gap:10px; margin-top:16px} .v4-drawer .langs a{font-size:14px; border:1px solid var(--line); border-radius:999px; padding:8px 16px}
+@media (max-width:980px){ .v4-nav{display:none} .v4-menu{display:grid} .v4-actions .v4-btn,.v4-actions .v4-langs{display:none} .v4-brand small{display:none} }
+/* pages that used an absolute/other header: make room for the fixed one */
+body.v4-page main{padding-top:0}
+body > header:not(.v4-header){display:none}
+.v3-header{display:none}
+
+/* ---------- footer ---------- */
+.v4-footer{position:relative; z-index:2; margin-top:40px; border-top:1px solid var(--line); background:linear-gradient(180deg,rgba(5,9,18,0),#03060c 40%); overflow:hidden}
+.v4-footer .glow{position:absolute; left:50%; top:-120px; width:900px; height:420px; transform:translateX(-50%); background:radial-gradient(50% 50% at 50% 50%, rgba(var(--accr),.16), transparent 70%); filter:blur(30px); pointer-events:none}
+.v4-footer .in{position:relative; max-width:1280px; margin:0 auto; padding:64px 26px 28px; display:grid; grid-template-columns:1.2fr 1fr 1fr 1fr; gap:40px; align-items:start}
+.v4-footer .brandcol{display:grid; justify-items:start; gap:14px}
+.v4-footer .brandcol .lg3d{margin-bottom:6px}
+.v4-footer .brandcol .wm{width:180px; height:auto; display:block}
+.v4-footer .brandcol .tg{width:180px; height:auto; display:block; opacity:.55}
+.v4-footer .brandcol p{color:var(--ink-2); font-size:14px; max-width:34em; margin:6px 0 0; line-height:1.8}
+.v4-footer .hint{font-size:12px; color:var(--ink-3)}
+.v4-footer h4{margin:0 0 14px; font-size:13px; letter-spacing:.08em; color:var(--ink-3); font-weight:700}
+.v4-footer .col a{display:block; color:var(--ink-2); text-decoration:none; font-size:14.5px; padding:6px 0; transition:color .2s, transform .2s} .v4-footer .col a:hover{color:#fff; transform:translateX(calc(var(--dir,1) * -3px))}
+.v4-footer .bottom{max-width:1280px; margin:0 auto; padding:18px 26px 26px; border-top:1px solid var(--line); display:flex; justify-content:space-between; gap:14px; flex-wrap:wrap; color:var(--ink-3); font-size:12.5px}
+.v4-footer .bottom .tags{display:flex; gap:14px; flex-wrap:wrap; letter-spacing:.14em; font-size:10.5px; font-weight:700}
+.v4-footer .bottom .tags span::before{content:"•"; margin-inline-end:8px; color:var(--cyan)}
+@media (max-width:900px){ .v4-footer .in{grid-template-columns:1fr 1fr; gap:30px} .v4-footer .brandcol{grid-column:1/-1} }
+@media (max-width:520px){ .v4-footer .in{grid-template-columns:1fr} }
+body > footer:not(.v4-footer){display:none}
+
+/* ---------- global polish for legacy content pages ---------- */
+body.v4-page .btn.primary,body.v4-page .btn-primary{background:linear-gradient(90deg,#2F7BFF,#4FB1FF); color:#fff; border-color:transparent; box-shadow:0 10px 30px -8px rgba(60,140,255,.7)}
+body.v4-page a{-webkit-tap-highlight-color:transparent}
+body.v4-page ::selection{background:rgba(57,208,224,.35)}
+body.v4-page :focus-visible{outline:2px solid var(--cyan); outline-offset:3px; border-radius:6px}
