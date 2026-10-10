@@ -1,0 +1,11 @@
+/* public-demo extras on top of the product design system */
+html[lang="fa"] body{font-family:var(--font-fa)}
+.ring-anim{transition:stroke-dasharray .9s cubic-bezier(.2,.7,.2,1)}
+.bar-anim{animation:barUp .8s cubic-bezier(.2,.7,.2,1) both; transform-origin:bottom}
+@keyframes barUp{from{transform:scaleY(0)}}
+.kpi-value.fade-in{animation:kpiIn .6s cubic-bezier(.2,.7,.2,1) both}
+@keyframes kpiIn{from{opacity:0;transform:translateY(6px)}}
+.nav-item .icon.faint{margin-inline-start:auto}
+@media (prefers-reduced-motion:reduce){.ring-anim,.bar-anim,.kpi-value.fade-in{animation:none;transition:none}}
+@media (max-width:1500px){ .demo-v4 .reception-grid.two{grid-template-columns:minmax(0,1fr)} .demo-v4 .booking-col .sticky-col{display:grid;grid-template-columns:1fr 1fr;gap:16px;position:static;align-items:start} }
+@media (max-width:700px){ .demo-v4 .booking-col .sticky-col{grid-template-columns:1fr} }
