@@ -124,3 +124,13 @@ Track weekly:
 - organic demo/contact conversions.
 
 Prioritize changes using Search Console query/page evidence rather than keyword density.
+
+
+## Search Console findings (last 3 months, exported 2026-10-11)
+- 174 clicks / ~3.1k impressions. Iran = 157 clicks; Turkey = 1.6k impressions but 7 clicks.
+- Turkish impressions are mostly navigational searches for another brand ("ıq clinic giriş", "iq klinik"): name collision, not winnable traffic. Do not optimise /tr/ for it; consider brand disambiguation for the Turkish market.
+- «هوش مصنوعی کلینیک دندانپزشکی»: avg position 10.6, CTR 40% — the main lever. Goal: top 5. Confirm which URL ranks (query → Pages) before changing ownership.
+- Top click pages: /fa/insights/ai-dental-clinic/ (63), /fa/dental-clinic-ai-software/ (41).
+- EN pages sit at position 9–30 with 0 clicks; need ranking gains (links/depth), not just meta edits.
+- Clicks fell to 0 from 2026-09-29 while average position stayed ~10–15: demand/impression drop, not a penalty.
+- 2026-10-11 fixes: EN product H1 now contains "Dental clinic AI software"; FA receptionist H1 now starts with «منشی هوش مصنوعی کلینیک دندانپزشکی» (query pos 82).
