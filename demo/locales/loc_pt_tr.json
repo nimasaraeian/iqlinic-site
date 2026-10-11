@@ -1,0 +1,365 @@
+{
+ "pt": {
+  "list": {
+   "title": "Sonraki adımı bekleyen {n} hasta",
+   "sub": "En acil olan önce. Tam dosyayı görmek için bir hastayı açın.",
+   "search": "Bu listede ara",
+   "patient": "Hasta",
+   "step": "Geciken adım",
+   "doctor": "Hekim",
+   "waiting": "Bekliyor",
+   "note": "Dosyalar açıldığında klinik sisteminden okunur ve iQlinic'te saklanmaz. Her görüntüleme adınıza kaydedilir."
+  },
+  "searchTitle": "Hasta dosyası aç",
+  "searchSub": "Dosya numarasını girin. Dosya o anda klinik sisteminden okunur ve iQlinic'te saklanmaz.",
+  "notFound": "Klinik sisteminde bu bilgilere sahip hasta bulunamadı.",
+  "unavailable": "Dosya şu anda açılamıyor",
+  "reading": "Dosya klinik sisteminden okunuyor…",
+  "back": "Geri",
+  "privacy": "Bu dosya az önce klinik sisteminden okundu ve iQlinic'te saklanmıyor. Bu görüntüleme adınıza kaydedildi.",
+  "since": "{d} tarihinden beri hasta",
+  "doctors": "Hekimler:",
+  "seeJourney": "Tedavi yolculuğunu gör",
+  "next": "Sonraki adım",
+  "nextWhy": "Son seanstan bu yana {n} gün geçti; genellikle {a} gün içinde yapılır.",
+  "nextDoc": "Hekim: {d}.",
+  "nextBooked": "Randevusu var.",
+  "btn": {
+   "booked": "Randevu aldı",
+   "noAnswer": "Cevap yok",
+   "later": "Sonra"
+  },
+  "out": {
+   "booked": "Kaydedildi: randevu aldı.",
+   "no_answer": "Kaydedildi: cevap yok. Yarın yine arama listesinde.",
+   "later": "Kaydedildi: sonra kendisi arayacak.",
+   "notOnList": "Bu adım bugünkü arama listesinde değil; sonucu arama listesinden kaydedin."
+  },
+  "noNext": "Geciken adım yok",
+  "noNextSub": "Sonraki ziyaret gerektiren tüm tedaviler ya tamamlandı ya da olağan süresi içinde.",
+  "k": {
+   "days": "Ziyaret günleri",
+   "episodes": "{n} tedavi döneminde",
+   "done": "Tamamlanan tedaviler",
+   "openLost": "{a} devam ediyor, {b} yarım kaldı",
+   "came": "Randevulara geldi",
+   "ofN": "{b} içinde {a}",
+   "missed": "{n} kez gelmedi",
+   "value": "Kaydedilen hizmet değeri",
+   "valueNote": "Brüt değer, nakit ödeme değil"
+  },
+  "sec": {
+   "images": "Görüntüleme",
+   "teeth": "Dişler",
+   "journey": "Tedavi yolculuğu",
+   "visits": "Randevular ve aramalar"
+  },
+  "teethSub": "Geçmişini görmek için bir dişe tıklayın.",
+  "teethAria": "Diş şeması; {n} dişin tedavi geçmişi var",
+  "right": "Hastanın sağı",
+  "left": "Hastanın solu",
+  "legend": {
+   "filling": "Dolgu",
+   "endo": "Kanal tedavisi",
+   "crown": "Kron",
+   "implant": "İmplant",
+   "active": "Yarım kalan"
+  },
+  "tooth": {
+   "older": "{n} eski kayıt daha.",
+   "done": "Tedavi edildi",
+   "implant": "İmplant",
+   "active": "Yarım kaldı",
+   "missing": "Çekildi",
+   "label": "Diş",
+   "none": "Bu diş için kayıt yok.",
+   "primary": "Süt dişi"
+  },
+  "noTeeth": "Bu hasta için diş numarası kaydedilmemiş, bu yüzden diş şeması yok.",
+  "journeySub": "En yeniden en eskiye. Bir dönem, aralarında bir yıldan az olan ziyaretlerdir.",
+  "ep": {
+   "current": "Güncel dönem, {d} tarihinden beri",
+   "range": "{a} – {b}",
+   "waiting": "Sonraki adımı bekliyor",
+   "active": "Devam ediyor",
+   "closed": "Bitti",
+   "less": "Eski dönemleri gizle",
+   "more": "Eski dönemler ({n})"
+  },
+  "today": "Bugün",
+  "waitingFor": "Bekleniyor: {s}",
+  "sep": ", ",
+  "appts": {
+   "title": "Randevular",
+   "aria": "{a} kez geldi, {b} kez gelmedi, {c} kez iptal etti",
+   "came": "Geldi",
+   "missed": "Gelmedi",
+   "cancelled": "İptal etti",
+   "none": "Kayıtlı randevu yok.",
+   "next": "Sonraki randevu: {d}, {doc}",
+   "noUpcoming": "Gelecek randevu yok."
+  },
+  "value": {
+   "title": "Tedaviye göre hizmet değeri"
+  },
+  "calls": {
+   "title": "Takip aramaları",
+   "none": "Henüz arama kaydedilmedi.",
+   "called": "Arandı",
+   "no_answer": "Cevap yok",
+   "booked": "Randevu aldı"
+  }
+ },
+ "pf": {
+  "list": {
+   "title": "{n} aktif hekim",
+   "sub": "Sayfasını görmek için bir hekimi açın. Sayılar son 12 aya aittir.",
+   "doctor": "Hekim",
+   "patients": "Hastalar",
+   "new": "Yeni hasta",
+   "missed": "Gelinmeyen randevu",
+   "loss": "Tedaviden ayrılma",
+   "waiting": "Bekleyen",
+   "sortBy": "Sırala",
+   "sort": {
+    "patients": "En çok hasta",
+    "loss": "En çok ayrılma",
+    "name": "A–Z"
+   },
+   "more": "Beklenenden %{p} fazla",
+   "less": "Beklenenden %{p} az",
+   "same": "Beklendiği gibi",
+   "showFormer": "Eski hekimler ({n})",
+   "hideFormer": "Eski hekimleri gizle"
+  },
+  "unavailable": "Bu sayfa şu anda kullanılamıyor",
+  "notEnough": "Bu hekimin son bir yılda sayfa için yeterli etkinliği yok.",
+  "allDoctors": "Tüm hekimler",
+  "sections": "Sayfa bölümleri",
+  "managerOnly": "Yalnızca yöneticiler görür",
+  "last12": "Son 12 ay",
+  "drName": "Dr. {name}",
+  "drId": "Hekim #{id}",
+  "drCode": "Hekim kodu {id}",
+  "active": "Aktif",
+  "former": "Artık klinikte değil",
+  "account": "Ortak hesap",
+  "since": "{y} yılından beri bu klinikte",
+  "daysWeek": "Genellikle haftada {n} gün",
+  "glance": "Bir bakışta",
+  "and": " ve ",
+  "ctaWaiting": "Bekleyen {n} hastayı gör",
+  "ctaHours": "Çalışma saatlerini gör",
+  "kpis": "Temel sayılar",
+  "none": "Gösterilecek veri yok.",
+  "days": "{n} gün",
+  "openFile": "Dosyayı aç",
+  "footer": "Kliniğin son bir yıllık takma adlı verisinden oluşturuldu. Hizmet değeri, kaydedilen brüt değerdir; tahsil edilen nakit değildir.",
+  "dir": {
+   "title": "Hekimler",
+   "sub": "Tüm çalışmasını tek yerde görmek için bir hekimi açın. Ayrılan hekimler daha soluk gösterilir.",
+   "search": "Hekim adı ara",
+   "fileNo": "Hasta dosya numarası",
+   "openFile": "Dosyayı aç",
+   "accounts": "Ortak hesaplar",
+   "accountsSub": "Klinik sisteminde bir kişiye ait olmayan hesaplar (klinik veya resepsiyon hesabı gibi). Çalışmaları ayrı gösterilir.",
+   "patients": "Geçen yıl {n} hasta"
+  },
+  "k": {
+   "patients": "Tedavi edilen hasta",
+   "visits": "{n} ziyaret günü",
+   "new": "Kliniğe yeni",
+   "newShare": "Kliniğe ilk ziyaretleri bu hekimleydi; hastalarının {p} kadarı",
+   "missed": "Gelinmeyen randevular",
+   "booked": "Ayrılmadan randevu",
+   "clinic": "Klinik {p}"
+  },
+  "s": {
+   "work": "Son 12 ayda {n} hastayı tedavi etti; çoğunlukla {a}.",
+   "workPlain": "Son 12 ayda {n} hasta gördü.",
+   "lossBetter": "Hastaları tedaviden beklenenden %{p} daha az ayrıldı.",
+   "lossWorse": "Hastaları tedaviden beklenenden %{p} daha fazla ayrıldı.",
+   "lossSame": "Hastalarının tedaviden ayrılması, iş türünden beklenen düzeyde.",
+   "missed": "Hastalarının randevuya gelmeme oranı ({a}) klinik ortalamasından ({b}) yüksek.",
+   "booked": "Hastaları ayrılmadan bir sonraki adım için klinikten daha az randevu alıyor ({a} / {b}).",
+   "busy": "En yoğun zamanı: {d} saat {h}:00."
+  },
+  "sec": {
+   "clinical": "Klinik çalışma",
+   "clinicalSub": "Ne yapıyor ve tedavileri nereye varıyor.",
+   "time": "Zaman",
+   "timeSub": "Ne zaman çalışıyor, ne zaman yoğun, ne zaman yoktu.",
+   "patients": "Hastalar",
+   "patientsSub": "Kimler bekliyor ve bazıları neden devam etmedi.",
+   "money": "Eğilim ve değer",
+   "moneySub": "Son 12 ay, ay ay."
+  },
+  "radar": {
+   "title": "Çalışma imzası",
+   "doctor": "Bu hekim",
+   "clinic": "Klinik ortalaması",
+   "aria": "Bu hekimin işinde her tedavi türünün payı, klinik ortalamasının yanında",
+   "note": "Yaptığı tedavilerde her türün payı. Görüntüleme, muayene, malzeme ve ödemeler sayılmaz."
+  },
+  "out": {
+   "title": "Sonraki ziyaret gerektiren tedaviler",
+   "done": "Tamamlandı",
+   "open": "Devam ediyor",
+   "lost": "Sonraki adım yapılmadı",
+   "steps": "Son 2 yılda {n} tedavi adımı"
+  },
+  "loss": {
+   "title": "Beklenene göre tedaviden ayrılma",
+   "better": "Beklenenden %{p} iyi",
+   "worse": "Beklenenden %{p} fazla",
+   "same": "Beklendiği gibi",
+   "actual": "Gerçek",
+   "expected": "İş türüne göre beklenen"
+  },
+  "heat": {
+   "title": "Haftanın yoğun saatleri",
+   "quiet": "Sakin",
+   "busy": "Yoğun",
+   "aria": "Haftanın her saatinde ortalama randevu sayısı",
+   "tip": "{d} saat {h}:00: haftada ortalama {n} randevu",
+   "note": "Her hücre, o saatteki haftalık ortalama randevu sayısıdır. Sayıyı görmek için hücrenin üzerine gelin."
+  },
+  "off": {
+   "title": "Ziyaretsiz iş günleri",
+   "total": "Yılda {n} gün",
+   "note": "Kliniğin açık olduğu ve hekimin genellikle çalıştığı, ama hiç ziyaret ve randevusu olmayan günler. Bu izin değildir; izin bilgisi verimizde yok."
+  },
+  "wait": {
+   "title": "Sonraki adımı bekleyen {n} hasta",
+   "none": "Bu hekimin hastalarından bugünkü arama listesinde kimse yok.",
+   "top": "Arama listesindeki en acil {n} kişi:"
+  },
+  "why": {
+   "title": "Neden devam etmediler?",
+   "sub": "Nedeni kaydedilen {n} takip aramasından",
+   "none": "Bu hekimin hastaları için henüz neden kaydedilmedi. Resepsiyon \"arandı\" sonrası neden seçtiğinde burada toplanır."
+  },
+  "bars": {
+   "visits": "Aylık ziyaret günleri",
+   "value": "Aylık kaydedilen hizmet değeri",
+   "pick": "Grafik türü",
+   "visitsBtn": "Ziyaret",
+   "valueBtn": "Hizmet değeri",
+   "avg": "Ortalama {v}",
+   "note": "Son soluk sütun, henüz bitmemiş içinde bulunulan aydır."
+  },
+  "money": {
+   "title": "Finansal performans",
+   "value": "Kaydedilen hizmet değeri, 12 ay",
+   "rank": "Hekimler arasında sıra",
+   "rankOf": "{b} içinde {a}",
+   "perVisit": "Ziyaret günü başına",
+   "change": "Önceki 12 aya göre",
+   "up": "{p} fazla",
+   "down": "{p} az",
+   "share": "Klinikteki payı",
+   "note": "Kaydedilen hizmetlerin brüt değeri, alınan nakit değil. Geçen yıla göre artışın bir kısmı fiyat artışıdır."
+  },
+  "month": {
+   "1": "Ferverdin",
+   "2": "Ordibeheşt",
+   "3": "Hordad",
+   "4": "Tir",
+   "5": "Mordad",
+   "6": "Şehriver",
+   "7": "Mehr",
+   "8": "Aban",
+   "9": "Azer",
+   "10": "Dey",
+   "11": "Behmen",
+   "12": "Esfend"
+  },
+  "wd": {
+   "0": "Pazartesi",
+   "1": "Salı",
+   "2": "Çarşamba",
+   "3": "Perşembe",
+   "4": "Cuma",
+   "5": "Cumartesi",
+   "6": "Pazar"
+  }
+ },
+ "tw": {
+  "fileNo": "Dosya {n}"
+ },
+ "tw4": {
+  "stage": {
+   "exam": "Muayene",
+   "referral": "Sevk",
+   "restor": "Restoratif",
+   "endo": "Kanal tedavisi",
+   "perio": "Diş eti",
+   "implant": "İmplant",
+   "prosth": "Protez",
+   "ortho": "Ortodonti",
+   "peds": "Pedodonti",
+   "surgery": "Cerrahi ve çekim",
+   "imaging": "Görüntüleme",
+   "followup": "Kontrol ziyareti"
+  }
+ },
+ "pi": {
+  "title": "Görüntüleme",
+  "sub": "Bu hastanın OPG, tek diş röntgeni ve ağız içi fotoğrafları; klinik görüntü klasöründen anlık okunur, iQlinic'te saklanmaz.",
+  "locks": "Her görüntü üç kontrolden geçti: bu dosya numarasının klasöründe, dosya adı klinik yazılımının kalıbında ve görüntü tarihinde bu hasta klinikte kabul edilmiş.",
+  "summary": "{a} OPG, {b} diğer görüntü, {c} seans",
+  "filter": {
+   "aria": "Görüntü türü",
+   "all": "Tümü",
+   "opg": "OPG",
+   "intraoral": "Ağız içi ve tek diş"
+  },
+  "opgStrip": "OPG’ler, en yeniden eskiye",
+  "noOpg": "Bu hasta için OPG yok.",
+  "noIntra": "Ağız içi veya tek diş görüntüsü yok.",
+  "latest": "En yeni",
+  "count": "{n} görüntü",
+  "moreDays": "Daha eski seanslar ({n})",
+  "lessDays": "Sadece son seanslar",
+  "open": "{d} görüntüsünü aç",
+  "loading": "Görüntüler klinik klasöründen okunuyor…",
+  "none": "Klinik görüntü klasöründe bu hastaya ait görüntü bulunamadı.",
+  "unavailable": "Klinik görüntü klasörüne şu anda erişilemiyor.",
+  "failed": "Görüntüler okunamadı. Biraz sonra tekrar deneyin.",
+  "ambiguous": "Bu dosya numarasıyla eşleşen iki görüntü klasörü var. Karışıklığı önlemek için görüntü gösterilmiyor. Lütfen sistem yöneticisine bildirin.",
+  "cut": "Bu hastanın çok fazla görüntüsü var; yalnızca bir kısmı okundu.",
+  "kind": {
+   "opg": "OPG",
+   "intraoral": "Ağız içi / tek diş",
+   "small": "Önizleme",
+   "unknown": "Görüntü"
+  },
+  "check": {
+   "title": "{n} görüntü ayrı tutuldu",
+   "sub": "Bu görüntüler hastanın klasöründe ama kontrollerden birini geçemedi, bu yüzden galeride değiller. Kullanmadan önce inceleyin.",
+   "show": "İncelemek için göster",
+   "hide": "Kapat",
+   "no_visit": "Görüntü tarihinde bu hasta için kabul kaydı yok",
+   "name": "Dosya adı olağan kalıpta değil"
+  },
+  "tooth": {
+   "more": "{n} tane daha",
+   "title": "Bu dişin tedavi günlerindeki görüntüler",
+   "none": "Bu dişin tedavi günlerinde görüntü alınmamış."
+  },
+  "v": {
+   "aria": "{d} görüntüsü",
+   "close": "Kapat",
+   "prev": "Önceki görüntü",
+   "next": "Sonraki görüntü",
+   "zoomIn": "Yakınlaştır",
+   "zoomOut": "Uzaklaştır",
+   "reset": "Orijinal boyut ve ışık",
+   "brightness": "Parlaklık",
+   "contrast": "Kontrast",
+   "invert": "Negatif",
+   "of": "{a} / {b}",
+   "loading": "Görüntü açılıyor…"
+  }
+ }
+}
