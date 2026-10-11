@@ -251,8 +251,7 @@ h1 .g{background:linear-gradient(90deg,#6EB7FF,#4F8DFF 60%,#8C7BFF); -webkit-bac
 
 /* LTR pages: product screen reads left-to-right; stage sits on the right */
 [dir="ltr"] .screen{direction:ltr}
-[dir="ltr"] .hero{grid-template-columns:1.1fr 1fr}
-[dir="ltr"] .stage{order:2}
+@media (min-width:961px){ [dir="ltr"] .hero{grid-template-columns:1.1fr 1fr} [dir="ltr"] .stage{order:2} }
 .xr{top:auto; bottom:-14px; inset-inline-end:0}
 .hint{left:auto; inset-inline-start:0; transform:none; bottom:-8px}
 @media (max-width:960px){ [dir="ltr"] .stage{order:-1} .xr{bottom:-10px} .hint{display:none} }
@@ -275,3 +274,5 @@ h1 .g{background:linear-gradient(90deg,#6EB7FF,#4F8DFF 60%,#8C7BFF); -webkit-bac
 }
 @media (max-width:560px){ .mods{grid-template-columns:1fr} }
 @media (prefers-reduced-motion:reduce){ .mod.on .prog{animation:none} .live i{animation:none} }
+@media (max-width:560px){ .chip.c3{display:none} }
+@media (max-width:960px){ .xr{position:relative; top:auto; bottom:auto; inset-inline-end:auto; margin-top:26px; justify-self:center} }

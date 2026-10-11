@@ -109,7 +109,8 @@ function apply(file) {
     html = cutLegacy(html);
     html = html.replace(/(<body[^>]*>)/i, (m) => {
       const cls = / class="([^"]*)"/.exec(m);
-      const tag = cls ? m.replace(cls[0], ` class="${cls[1]} v4-page"`) : m.replace(/>$/, ' class="v4-page">');
+      const base = cls ? cls[1].split(/\s+/).filter((c) => c && c !== 'v4-page').join(' ') : '';
+      const tag = cls ? m.replace(cls[0], ` class="${(base + ' v4-page').trim()}"`) : m.replace(/>$/, ' class="v4-page">');
       return `${tag}\n${header(l, lang, kind)}`;
     });
     html = html.replace(/<\/body>/i, `${footer(l, lang)}\n</body>`);
