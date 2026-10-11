@@ -93,7 +93,7 @@ function dataset(lang) {
       '48': { state: 'missing', history: [{ date: dt(0), specialty: 'surgery' }] },
       '45': { state: 'done', history: [{ date: dt(3), specialty: 'restor' }] },
     },
-    images: { ready: fs.existsSync(path.join(ROOT, 'demo', 'img', 'opg.jpg')), opg: [{ src: '/demo/img/opg.jpg', date: dt(5) }, { src: '/demo/img/opg.jpg', date: dt(0) }], intra: [{ src: '/demo/img/pa-1.jpg', date: dt(5), tooth: '36' }, { src: '/demo/img/pa-2.jpg', date: dt(2), tooth: '14' }, { src: '/demo/img/pa-3.jpg', date: dt(0), tooth: '46' }] },
+    images: { ready: fs.existsSync(path.join(ROOT, 'demo', 'img', 'opg.jpg')), opg: [{ src: '/demo/img/opg.jpg', date: dt(5) }, { src: '/demo/img/opg-2.jpg', date: dt(0) }], intra: [{ src: '/demo/img/pa-1.jpg', date: dt(5), tooth: '36' }, { src: '/demo/img/pa-2.jpg', date: dt(2), tooth: '14' }, { src: '/demo/img/pa-3.jpg', date: dt(0), tooth: '46' }] },
     next: { step: 'prosth', days: 21, normal: 14 },
     kpi: { done: 9, open: 1, lost: 1 },
     appts: { came: 13, booked: 15, missed: 2 },
