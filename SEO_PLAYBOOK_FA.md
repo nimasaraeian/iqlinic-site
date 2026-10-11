@@ -40,6 +40,17 @@ Do not intentionally release one language first and leave the other two for late
 | سیستم پشتیبان تصمیم هوش مصنوعی کلینیک | `/fa/insights/dental-clinic-ai-decision-support/` | Decision-support intent. |
 | اتوماسیون هوش مصنوعی کلینیک دندانپزشکی | `/fa/insights/dental-clinic-ai-automation/` | Workflow automation / operational AI intent. |
 | بازگشت بیمار کلینیک دندانپزشکی | `/fa/insights/patient-treatment-plan-follow-up/` | Patient recovery / continuity intent. |
+| CRM کلینیک دندانپزشکی / CRM دندانپزشکی | `/fa/insights/dental-clinic-crm/` | Owner/operations buyer intent (added 2026-10-11; en `dental-clinic-crm`, tr `dis-klinigi-crm`). |
+| نرم افزار پیگیری بیماران دندانپزشکی | `/fa/insights/dental-clinic-crm/` | Secondary keyword of the CRM article; product page links to it. |
+
+### Next owner-intent targets (not yet published — one owner page each, fa/en/tr together)
+| Planned intent | Proposed slug | Why |
+|---|---|---|
+| افزایش درآمد کلینیک دندانپزشکی | `/fa/insights/dental-clinic-revenue-growth/` | High owner intent; SERP is generic marketing advice, no decision-layer angle. |
+| مدیریت پذیرش و منشی کلینیک دندانپزشکی | `/fa/insights/dental-front-desk-performance/` | Reception performance / staff KPIs; avoid overlap with AI receptionist page. |
+| طرح درمان پذیرفته‌نشده (treatment plan acceptance) | `/fa/insights/treatment-plan-acceptance/` | Case acceptance rate; complements patient-recovery page. |
+| بیماران غیرفعال / فراخوان بیماران دندانپزشکی | `/fa/insights/dental-patient-reactivation/` | Recall/reactivation intent. |
+Rule: before publishing, check none of these cannibalise the home or product page keywords above. Validate with Google Search Console query data once connected.
 
 ## Anti-cannibalization rules
 1. Do not create another landing page whose primary keyword is `هوش مصنوعی کلینیک دندانپزشکی` or `نرم افزار هوش مصنوعی کلینیک دندانپزشکی`.

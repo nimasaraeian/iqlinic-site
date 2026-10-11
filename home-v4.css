@@ -276,3 +276,8 @@ h1 .g{background:linear-gradient(90deg,#6EB7FF,#4F8DFF 60%,#8C7BFF); -webkit-bac
 @media (prefers-reduced-motion:reduce){ .mod.on .prog{animation:none} .live i{animation:none} }
 @media (max-width:560px){ .chip.c3{display:none} }
 @media (max-width:960px){ .xr{position:relative; top:auto; bottom:auto; inset-inline-end:auto; margin-top:26px; justify-self:center} }
+
+/* SEO: primary keyword as the first line of the H1, styled as an eyebrow */
+h1 .kw{display:flex; align-items:center; gap:10px; font-size:clamp(13px,1.1vw,15px); font-weight:700; letter-spacing:0; color:var(--cyan); margin-bottom:14px; line-height:1.4}
+h1 .kw::after{content:""; width:6px; height:6px; border-radius:50%; background:var(--cyan); box-shadow:0 0 10px var(--cyan); flex:0 0 auto}
+[dir="ltr"] h1 .kw{letter-spacing:.02em}

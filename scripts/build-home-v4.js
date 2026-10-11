@@ -68,6 +68,7 @@ return x;};})();`;
 /* ---------- page copy ---------- */
 const C = {
   fa: {
+    kw: 'هوش مصنوعی کلینیک دندانپزشکی',
     lang: 'fa', dir: 'rtl',
     ey: 'CLINICAL INTELLIGENCE FOR A HEALTHIER TOMORROW',
     h1a: 'داده‌های کلینیک شما', h1b: 'به تصمیم‌های بهتر، فرداهای سالم‌تر',
@@ -87,6 +88,7 @@ const C = {
     cta: { kick: 'از امکان‌سنجی شروع کنیم', h2: 'ببینیم داده کلینیک شما واقعاً چه چیزی را پشتیبانی می‌کند.', lead: 'یک workflow مشخص را انتخاب می‌کنیم، حداقل داده لازم را مشخص می‌کنیم و تعریف می‌کنیم پایلوت دقیقاً باید چه چیزی را اثبات کند.', b1: 'درخواست بررسی کلینیک', b2: 'اول دمو را ببینم', tagsLead: 'طراحی‌شده برای کلینیک‌های داده‌محور' },
   },
   en: {
+    kw: 'Dental clinic AI for patient recovery',
     lang: 'en', dir: 'ltr',
     ey: 'CLINICAL INTELLIGENCE FOR A HEALTHIER TOMORROW',
     h1a: 'Your clinic’s data,', h1b: 'turned into better decisions',
@@ -106,6 +108,7 @@ const C = {
     cta: { kick: 'Start with feasibility', h2: 'See what your clinic data can actually support.', lead: 'Choose one workflow, define the minimum data required, and agree on exactly what a controlled pilot needs to prove.', b1: 'Request clinic assessment', b2: 'Explore the demo first', tagsLead: 'Designed for data-driven clinics' },
   },
   tr: {
+    kw: 'Hasta geri kazanımı için diş kliniği yapay zekâsı',
     lang: 'tr', dir: 'ltr',
     ey: 'CLINICAL INTELLIGENCE FOR A HEALTHIER TOMORROW',
     h1a: 'Kliniğinizin verisi,', h1b: 'daha iyi kararlara dönüşsün',
@@ -161,8 +164,7 @@ function body(c) {
   <main>
   <section class="wrap hero" id="hero">
     <div class="copy">
-      <div class="ey">${c.ey}</div>
-      <h1>${c.h1a}<br><span class="g">${c.h1b}</span></h1>
+      <h1><span class="kw">${c.kw}</span>${c.h1a}<br><span class="g">${c.h1b}</span></h1>
       <p class="sub">${c.sub}</p>
       <div class="mods" id="mods" role="tablist">
         ${mods}
