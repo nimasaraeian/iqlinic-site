@@ -63,6 +63,15 @@
           "value": "SAMEORIGIN"
         }
       ]
+    },
+    {
+      "source": "/acibadem/(.*)",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow, noarchive"
+        }
+      ]
     }
   ],
   "rewrites": [
