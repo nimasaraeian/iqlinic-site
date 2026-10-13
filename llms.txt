@@ -15,7 +15,9 @@ iQlinic does not claim that a general AI model replaces a dentist, physician or 
 
 - Persian product page: https://www.iqlinic.ir/fa/dental-clinic-ai-software/
 - English product page: https://www.iqlinic.ir/en/dental-clinic-ai-software/
+- Turkish product page: https://www.iqlinic.ir/tr/dis-klinikleri-icin-yapay-zeka/
 - Demo: https://www.iqlinic.ir/fa/demo/
+- Integration: read-only connector for the Rozaneh dental practice system (Iran), installed on the clinic's own server.
 
 ## Primary authority guides
 
@@ -35,6 +37,8 @@ iQlinic does not claim that a general AI model replaces a dentist, physician or 
 - Dental clinic AI data integration: https://www.iqlinic.ir/fa/insights/dental-clinic-ai-data-integration/
 - Patient-data privacy for clinic AI: https://www.iqlinic.ir/fa/insights/dental-clinic-ai-data-privacy/
 - AI receptionist for dental clinics: https://www.iqlinic.ir/fa/insights/dental-clinic-ai-receptionist/
+- Dental clinic CRM vs patient follow-up software: https://www.iqlinic.ir/en/insights/dental-clinic-crm/
+- Increase dental clinic revenue without new patients (7 revenue leaks): https://www.iqlinic.ir/en/insights/dental-clinic-revenue-growth/ (fa: https://www.iqlinic.ir/fa/insights/dental-clinic-revenue-growth/, tr: https://www.iqlinic.ir/tr/insights/dis-klinigi-gelir-artirma/)
 
 ## Editorial and evidence policy
 

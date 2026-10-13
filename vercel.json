@@ -8,6 +8,11 @@
       "permanent": true
     },
     {
+      "source": "/team/:path*",
+      "destination": "/fa/",
+      "permanent": true
+    },
+    {
       "source": "/fa/insights/ai-orthodontics/",
       "destination": "/fa/insights/ai-orthodontics-dentistry/",
       "permanent": true

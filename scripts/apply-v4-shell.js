@@ -4,7 +4,7 @@
 const fs = require('fs');
 const path = require('path');
 const ROOT = path.resolve(__dirname, '..');
-const V = '4';
+const V = '5';
 
 const L = {
   fa: { dir: 'rtl', home: '/fa/', product: '/fa/dental-clinic-ai-software/', insights: '/fa/insights/', demo: '/fa/demo/', team: '/team/', contact: '/fa/#contact',
@@ -48,10 +48,10 @@ function header(l, lang, kind) {
   const langs = ['fa', 'en', 'tr'].map(x => `<a href="/${x}/" data-kind="lang"${x === lang ? ' class="on"' : ''}>${x.toUpperCase()}</a>`).join('');
   return `<header class="v4-header" id="v4-header"><div class="in">
 <a class="v4-brand" href="${l.home}" data-kind="home" aria-label="iQlinic"><span class="lg3d" data-layers="12" data-auto aria-hidden="true"></span><span><img class="wm" src="/assets/logo-word.svg" alt="iQlinic" width="600" height="140"><small>INTELLIGENT CLINICAL OPERATIONS</small></span></a>
-<nav class="v4-nav" aria-label="${l.navLabel}"><a href="${l.product}" data-kind="product"${cur('product')}>${l.nav.product}</a><a href="${l.insights}" data-kind="insights"${cur('insights')}>${l.nav.insights}</a><a href="${l.demo}" data-kind="demo"${cur('demo')}>${l.nav.demo}</a><a href="${l.team}" data-kind="team"${cur('team')}>${l.nav.team}</a><a href="${l.contact}" data-kind="contact">${l.nav.contact}</a></nav>
+<nav class="v4-nav" aria-label="${l.navLabel}"><a href="${l.product}" data-kind="product"${cur('product')}>${l.nav.product}</a><a href="${l.insights}" data-kind="insights"${cur('insights')}>${l.nav.insights}</a><a href="${l.demo}" data-kind="demo"${cur('demo')}>${l.nav.demo}</a><a href="${l.contact}" data-kind="contact">${l.nav.contact}</a></nav>
 <div class="v4-actions"><div class="v4-langs">${langs}</div><a class="v4-btn pri" href="${l.contact}" data-kind="contact">${l.cta}</a><button class="v4-menu" type="button" aria-label="${l.menu}" aria-expanded="false" aria-controls="v4-drawer"><span></span><span></span></button></div>
 </div></header>
-<div class="v4-drawer" id="v4-drawer"><a href="${l.product}" data-kind="product">${l.nav.product}</a><a href="${l.insights}" data-kind="insights">${l.nav.insights}</a><a href="${l.demo}" data-kind="demo">${l.nav.demo}</a><a href="${l.team}" data-kind="team">${l.nav.team}</a><a href="${l.contact}" data-kind="contact">${l.nav.contact}</a><div class="langs">${langs}</div></div>`;
+<div class="v4-drawer" id="v4-drawer"><a href="${l.product}" data-kind="product">${l.nav.product}</a><a href="${l.insights}" data-kind="insights">${l.nav.insights}</a><a href="${l.demo}" data-kind="demo">${l.nav.demo}</a><a href="${l.contact}" data-kind="contact">${l.nav.contact}</a><div class="langs">${langs}</div></div>`;
 }
 function footer(l, lang) {
   const dir = l.dir === 'rtl' ? '1' : '-1';
@@ -59,7 +59,7 @@ function footer(l, lang) {
 <div class="brandcol"><span class="lg3d big" data-layers="22" data-auto aria-label="iQlinic 3D logo"></span><img class="wm" src="/assets/logo-word.svg" alt="iQlinic" width="600" height="140"><img class="tg" src="/assets/logo-tag.svg" alt="Intelligent Clinical Operations" width="600" height="50"><p>${l.tagline}</p><span class="hint">⟲ ${l.hint}</span></div>
 <div class="col"><h4>${l.cols.product}</h4><a href="${l.product}" data-kind="product">${l.links.guide}</a><a href="${l.home}#how" data-kind="home">${l.links.how}</a><a href="${l.demo}" data-kind="demo">${l.nav.demo}</a></div>
 <div class="col"><h4>${l.cols.resources}</h4><a href="${l.insights}" data-kind="insights">${l.nav.insights}</a><a href="${l.editorialHref}" data-kind="insights">${l.links.editorial}</a></div>
-<div class="col"><h4>${l.cols.company}</h4><a href="${l.team}" data-kind="team">${l.nav.team}</a><a href="${l.contact}" data-kind="contact">${l.nav.contact}</a><h4 style="margin-top:18px">${l.links.langs}</h4><a href="/fa/" data-kind="lang">فارسی</a><a href="/en/" data-kind="lang">English</a><a href="/tr/" data-kind="lang">Türkçe</a></div>
+<div class="col"><h4>${l.cols.company}</h4><a href="${l.contact}" data-kind="contact">${l.nav.contact}</a><h4 style="margin-top:18px">${l.links.langs}</h4><a href="/fa/" data-kind="lang">فارسی</a><a href="/en/" data-kind="lang">English</a><a href="/tr/" data-kind="lang">Türkçe</a></div>
 </div><div class="bottom"><span>${l.copy} · © ${new Date().getFullYear()} iQlinic</span><div class="tags">${l.tags.map(t => `<span>${t}</span>`).join('')}</div></div></footer>`;
 }
 
