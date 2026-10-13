@@ -74,9 +74,14 @@
     for(var i=0;i<n;i++){ var l=document.createElement('i'); l.style.setProperty('--k',i-(n-1)); l.className=i===n-1?'f':(i===0?'b':'m'); st.appendChild(l); }
     el.innerHTML=''; el.appendChild(st);
     var rx=0, ry=0, vx=0, vy=0, drag=false, lx=0, ly=0, idle=Math.random()*6.28, auto=el.hasAttribute('data-auto');
-    function down(e){ var p=e.touches?e.touches[0]:e; drag=true; el.classList.add('drag'); lx=p.clientX; ly=p.clientY; vx=vy=0; if(e.cancelable)e.preventDefault(); }
-    function move(e){ if(!drag)return; var p=e.touches?e.touches[0]:e; vx=(p.clientX-lx)*0.6; vy=-(p.clientY-ly)*0.5; ry+=vx; rx+=vy; lx=p.clientX; ly=p.clientY; if(e.cancelable)e.preventDefault(); }
-    function up(){ drag=false; el.classList.remove('drag'); }
+    // touch: wait for the first few pixels; a mostly vertical swipe is a page scroll, not a turn
+    var pend=false, sx=0, sy=0;
+    function down(e){ var p=e.touches?e.touches[0]:e; lx=sx=p.clientX; ly=sy=p.clientY; vx=vy=0;
+      if(e.touches){ pend=true; return; } drag=true; el.classList.add('drag'); if(e.cancelable)e.preventDefault(); }
+    function move(e){ var p=e.touches?e.touches[0]:e;
+      if(pend){ var ax=Math.abs(p.clientX-sx), ay=Math.abs(p.clientY-sy); if(ax+ay<7)return; pend=false; if(ay>ax)return; drag=true; el.classList.add('drag'); }
+      if(!drag)return; vx=(p.clientX-lx)*0.6; vy=e.touches?0:-(p.clientY-ly)*0.5; ry+=vx; rx+=vy; lx=p.clientX; ly=p.clientY; if(e.cancelable)e.preventDefault(); }
+    function up(){ pend=false; drag=false; el.classList.remove('drag'); }
     el.addEventListener('mousedown',down); window.addEventListener('mousemove',move); window.addEventListener('mouseup',up);
     el.addEventListener('touchstart',down,{passive:false}); window.addEventListener('touchmove',move,{passive:false}); window.addEventListener('touchend',up);
     el.addEventListener('click',function(e){ if(Math.abs(vx)+Math.abs(vy)>0.5)e.preventDefault(); });

@@ -54,7 +54,7 @@ html.v4-enter main, html.v4-enter .v4-rise{animation:v4rise .9s .35s var(--ease)
 @keyframes v4rise{from{opacity:0; transform:translateY(22px)} to{opacity:1; transform:none}}
 
 /* ---------- 3D extruded logo ---------- */
-.lg3d{display:inline-block; perspective:700px; cursor:grab; touch-action:none; user-select:none; -webkit-user-drag:none}
+.lg3d{display:inline-block; perspective:700px; cursor:grab; touch-action:pan-y; user-select:none; -webkit-user-drag:none}
 .lg3d.drag{cursor:grabbing}
 .lg3d .st{display:block; position:relative; transform-style:preserve-3d; width:var(--w,40px); aspect-ratio:350/460; will-change:transform}
 .lg3d .st i{position:absolute; inset:0; display:block; background:var(--lc,#fff); -webkit-mask:url("/assets/logo-mark.svg") center/contain no-repeat; mask:url("/assets/logo-mark.svg") center/contain no-repeat; transform:translateZ(calc(var(--k) * var(--dz,1px))); backface-visibility:visible}

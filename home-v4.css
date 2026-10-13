@@ -167,11 +167,17 @@ h1 .g{background:linear-gradient(90deg,#6EB7FF,#4F8DFF 60%,#8C7BFF); -webkit-bac
 .device.boot .edge{transform:translateZ(-420px); opacity:0} .device.boot .edge.e2{transform:translateZ(-300px); opacity:0}
 .device.boot .frame{transform:translateZ(-120px); opacity:0} .device.boot .screen{transform:translateZ(240px); opacity:0} .device.boot .glass{transform:translateZ(380px); opacity:0}
 .device.boot .board{opacity:0}
-/* shutter transition: a grid of accent tiles wipes across the screen */
-.shutter{position:absolute; inset:0; z-index:10; display:grid; grid-template-columns:repeat(10,1fr); grid-template-rows:repeat(6,1fr); pointer-events:none}
-.shutter i{background:linear-gradient(135deg, rgba(var(--accr),.95), rgba(255,255,255,.75)); transform:scaleY(0); transform-origin:top; opacity:0}
-.shutter.go i{animation:tile .62s cubic-bezier(.3,.8,.3,1) var(--d) both}
-@keyframes tile{0%{transform:scaleY(0);opacity:0}35%{transform:scaleY(1);opacity:.95}65%{transform:scaleY(1);opacity:.95}100%{transform:scaleY(0);transform-origin:bottom;opacity:0}}
+/* switch transition: the new page is revealed under a light scan line, the old one sinks back and blurs */
+.shutter{position:absolute; left:0; right:0; top:0; height:2px; z-index:10; pointer-events:none; opacity:0;
+  background:linear-gradient(90deg, transparent, rgba(var(--accr),1) 18%, #fff 50%, rgba(var(--accr),1) 82%, transparent);
+  box-shadow:0 0 14px 3px rgba(var(--accr),.65), 0 0 40px 8px rgba(var(--accr),.25)}
+.shutter::before{content:""; position:absolute; left:0; right:0; bottom:2px; height:90px; background:linear-gradient(180deg, transparent, rgba(var(--accr),.16)); pointer-events:none}
+.shutter.go{animation:scan .78s cubic-bezier(.25,.75,.25,1) both}
+@keyframes scan{0%{top:0; opacity:0}8%{opacity:1}88%{opacity:1}100%{top:100%; opacity:0}}
+.app.reveal{animation:reveal .78s cubic-bezier(.25,.75,.25,1) both}
+@keyframes reveal{0%{clip-path:inset(0 0 100% 0); filter:brightness(1.8) saturate(1.3)}70%{filter:brightness(1.15)}100%{clip-path:inset(0 0 0 0); filter:none}}
+.app.out{animation:sink .6s ease both}
+@keyframes sink{to{opacity:0; filter:blur(5px) brightness(.6)}}
 /* flash on switch */
 .flash{position:absolute; inset:-40%; z-index:0; pointer-events:none; background:radial-gradient(40% 40% at 50% 50%, rgba(var(--accr),.55), transparent 70%); opacity:0}
 .flash.go{animation:flash .9s ease-out}
@@ -188,7 +194,7 @@ h1 .g{background:linear-gradient(90deg,#6EB7FF,#4F8DFF 60%,#8C7BFF); -webkit-bac
 .xr .sw::after{content:""; position:absolute; top:2px; left:2px; width:12px; height:12px; border-radius:50%; background:#fff; transition:transform .25s}
 .xr.on .sw{background:var(--acc)} .xr.on .sw::after{transform:translateX(12px)}
 @media (max-width:960px){ .stage{-webkit-box-reflect:none} .xr{top:auto; bottom:-10px} }
-@media (prefers-reduced-motion:reduce){ .copy>*{animation:none; opacity:1; transform:none} .board::after,.shutter.go i,.flash.go{animation:none} }
+@media (prefers-reduced-motion:reduce){ .copy>*{animation:none; opacity:1; transform:none} .board::after,.shutter.go,.app.reveal,.app.out,.flash.go{animation:none} }
 
 /* ---------- sections ---------- */
 .sec{position:relative; z-index:2; padding-block:72px}
@@ -281,3 +287,77 @@ h1 .g{background:linear-gradient(90deg,#6EB7FF,#4F8DFF 60%,#8C7BFF); -webkit-bac
 h1 .kw{display:flex; align-items:center; gap:10px; font-size:clamp(13px,1.1vw,15px); font-weight:700; letter-spacing:0; color:var(--cyan); margin-bottom:14px; line-height:1.4}
 h1 .kw::after{content:""; width:6px; height:6px; border-radius:50%; background:var(--cyan); box-shadow:0 0 10px var(--cyan); flex:0 0 auto}
 [dir="ltr"] h1 .kw{letter-spacing:.02em}
+
+/* ---------- v5: hero 3D logo ---------- */
+.hero-mark{display:flex; align-items:center; gap:14px; margin-bottom:6px}
+.hero .hero-mark .lg3d .st{--w:clamp(72px,7vw,100px); --dz:1.7px}
+.hero .hero-mark .lg3d .st i.f{filter:drop-shadow(0 0 26px rgba(var(--accr),.6)) drop-shadow(0 18px 34px rgba(0,0,0,.55))}
+.copy>:nth-child(6){animation-delay:.95s}
+@media (max-width:960px){ .hero-mark{justify-content:center} .hero .hero-mark .lg3d .st{--w:84px} }
+
+/* ---------- v5: inside view shows the other app pages as layers ---------- */
+.pl{position:absolute; inset:14px; border-radius:14px; overflow:hidden; background:#0a1424; color:var(--app-ink); font-size:11.5px; direction:rtl;
+  opacity:0; transform:translateZ(-12px); pointer-events:none; transition:transform 1.1s cubic-bezier(.2,.8,.2,1), opacity .8s ease, box-shadow .3s;
+  box-shadow:0 0 0 1px rgba(var(--accr),.35), 0 30px 60px -20px rgba(0,0,0,.9)}
+[dir="ltr"] .pl{direction:ltr}
+.pl .app{transition:none}
+.pl::after{content:""; position:absolute; inset:0; background:linear-gradient(180deg, rgba(5,9,18,.05), rgba(5,9,18,.35)); pointer-events:none; transition:opacity .3s}
+.pl-tag{position:absolute; top:8px; inset-inline-start:8px; z-index:3; font-size:10.5px; font-weight:700; padding:4px 9px; border-radius:999px; background:rgba(5,10,20,.8); border:1px solid rgba(var(--accr),.55); color:#fff; white-space:nowrap}
+.device.x .pl{opacity:.94; pointer-events:auto; cursor:pointer}
+.device{--xs:-4%} [dir="ltr"] .device{--xs:4%}
+.device.x .pl.l1{transform:translate3d(calc(var(--xs)*1),-14%,-70px)} .device.x .pl.l2{transform:translate3d(calc(var(--xs)*2),-28%,-140px)} .device.x .pl.l3{transform:translate3d(calc(var(--xs)*3),-42%,-210px)} .device.x .pl.l4{transform:translate3d(calc(var(--xs)*4),-56%,-280px)}
+.device.x .chip.on{opacity:0; animation:none}
+.device.x .pl:hover{opacity:1; box-shadow:0 0 0 1.5px rgba(var(--accr),.95), 0 0 40px -6px rgba(var(--accr),.6)} .device.x .pl:hover::after{opacity:0}
+.device.x .edge,.device.x .edge.e2,.device.x .board{opacity:0}
+.device.x .screen{transform:translateZ(40px); background:#0a1424} .device.x .glass{transform:translateZ(80px)}
+.device.x .frame{opacity:0}
+.stage .xhint{position:absolute; bottom:-8px; inset-inline-start:0; z-index:14; font-size:12px; color:var(--ink-2); opacity:0; transition:opacity .4s; pointer-events:none}
+.stage.xon .xhint{opacity:1} .stage.xon .hint{opacity:0}
+@media (max-width:960px){ .device.x .pl.l1{transform:translate3d(0,-11%,-50px)} .device.x .pl.l2{transform:translate3d(0,-22%,-100px)} .device.x .pl.l3{transform:translate3d(0,-33%,-150px)} .device.x .pl.l4{transform:translate3d(0,-44%,-200px)} .device.x{margin-top:22%} .stage .xhint{position:static; order:3; margin-top:8px; text-align:center} }
+@media (prefers-reduced-motion:reduce){ .pl{transition:opacity .3s} }
+
+/* ---------- v5: phones scroll normally over the hero; only a sideways drag on the device turns it ---------- */
+@media (hover:none){ .hero{cursor:auto} .stage{touch-action:pan-y} }
+
+/* ---------- v5 polish: calmer hero, compact module tabs, on-device controls ---------- */
+.hero{cursor:auto}
+.hero .hero-mark{margin-bottom:0}
+.hero .hero-mark .lg3d .st{--w:clamp(64px,5.6vw,84px)}
+h1{margin-top:10px}
+.mods{display:flex; flex-wrap:wrap; gap:8px; margin-top:28px}
+.mod{padding:8px 14px 9px; border-radius:999px; gap:8px; background:rgba(14,24,44,.42)}
+.mod:hover{transform:none; border-color:rgba(120,170,255,.4)}
+.mod .k{width:auto; height:auto; background:none; font-size:13px}
+.mod .t{font-size:13.5px; font-weight:600; white-space:nowrap}
+.mod .d,.mod .bar{display:none}
+.mod.on{background:rgba(57,208,224,.1); box-shadow:none}
+.mod.on .t{color:#fff}
+.mod .prog{left:14px; right:14px; bottom:3px; border-radius:2px; opacity:.7}
+.mod-desc{margin:14px 0 0; min-height:1.7em; color:var(--ink-2); font-size:14.5px; transition:opacity .35s, transform .35s}
+.mod-desc.swap{opacity:0; transform:translateY(4px)}
+.cta{margin-top:26px}
+.chip.c3{display:none}
+.streams{opacity:.5}
+.stage{cursor:grab} .hero.drag .stage{cursor:grabbing}
+.screen{cursor:pointer}
+.hint{display:none}
+.dctl{position:absolute; bottom:-18px; left:50%; transform:translateX(-50%); z-index:14; display:flex; align-items:center; gap:6px; padding:5px 6px; border-radius:999px; background:var(--glass); border:1px solid var(--line); backdrop-filter:blur(10px); white-space:nowrap}
+.dctl .nav{width:30px; height:30px; border-radius:50%; border:0; background:transparent; color:var(--ink-2); font-size:17px; line-height:1; cursor:pointer; display:grid; place-items:center; transition:background .2s, color .2s}
+.dctl .nav:hover{background:rgba(255,255,255,.08); color:#fff}
+.dctl .dots{display:flex; gap:6px; padding:0 4px}
+.dctl .dots button{width:7px; height:7px; padding:0; border:0; border-radius:999px; background:rgba(255,255,255,.25); cursor:pointer; transition:width .3s, background .3s}
+.dctl .dots button.on{width:22px; background:var(--acc)}
+.dctl .sep{width:1px; height:18px; background:var(--line); margin:0 4px}
+.dctl .xr{position:static; margin:0; padding:5px 10px; border:0; background:transparent; backdrop-filter:none}
+.stage .xhint{position:absolute; bottom:24px; left:50%; inset-inline-start:auto; transform:translateX(-50%); white-space:nowrap}
+:focus-visible{outline:2px solid var(--cyan); outline-offset:2px}
+@media (max-width:960px){
+  .hero .hero-mark{display:none}
+  .mods{justify-content:center} .copy{text-align:center} .sub{margin-inline:auto} .cta{justify-content:center} h1 .kw{justify-content:center}
+  .dctl{position:relative; bottom:auto; left:auto; transform:none; margin-top:22px; justify-self:center}
+  .stage .xhint{position:static; transform:none; margin-top:8px}
+}
+@media (max-width:420px){ .dctl .xr{font-size:11.5px} .mod{padding:7px 11px 8px} .mod .t{font-size:12.5px} }
+.hero.paused .mod.on .prog{animation-play-state:paused}
+.mod .k{display:none} .mod{padding:7px 13px 9px} .mods{gap:7px}
+@media (max-width:960px){ .stage{-webkit-box-reflect:initial !important} .device .chip{display:none} }
