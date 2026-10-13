@@ -8,7 +8,17 @@
       "permanent": true
     },
     {
-      "source": "/team/:path*",
+      "source": "/team",
+      "destination": "/fa/",
+      "permanent": true
+    },
+    {
+      "source": "/team/",
+      "destination": "/fa/",
+      "permanent": true
+    },
+    {
+      "source": "/team/:path+",
       "destination": "/fa/",
       "permanent": true
     },
